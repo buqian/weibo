@@ -18,8 +18,11 @@
 #define redirect_uri @"http://www.boyacai.com"
 #define AppSecret @"94c74f183bb14f35146b06c0f61ea8a3"
 #define weibo_url @"https://api.weibo.com/oauth2/"
+#define weibo_url2 @"https://api.weibo.com/2/"
 #define client_secret @"94c74f183bb14f35146b06c0f61ea8a3"
 #define grant_type @"authorization_code"
+
+#define HYColor(r,g,b) ([UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0])
 
 #endif /* weibo_pch */
 

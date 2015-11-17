@@ -20,7 +20,7 @@ static NSString *code;
 
 +(NSString *)getAccess_token
 {
-    return access_token;
+    return @"2.00d4N9BGdVo9dB549f6f9986cYceGE";
 }
 
 +(void)setCode:(NSString *)_code

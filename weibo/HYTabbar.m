@@ -39,8 +39,12 @@
     CGRect frame = CGRectMake(0, [[UIScreen mainScreen] bounds].size.height - tabbarH, [[UIScreen mainScreen] bounds].size.width, tabbarH);
     if(self = [super initWithFrame:frame])
     {
-        self.alpha = 0.7;
-        [self setBackgroundColor:[UIColor whiteColor]];
+        self.alpha = 0.99f;
+        [self setBackgroundColor:HYColor(250, 250, 250)];
+        
+        UIImageView *backImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_compose_below_background"]];
+        backImage.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+        [self addSubview:backImage];
         UIButton *composeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [composeBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button"] forState:UIControlStateNormal];
         [composeBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_compose_button_highlighted"] forState:UIControlStateHighlighted];
@@ -49,6 +53,14 @@
         composeBtn.bounds = CGRectMake(0, 0, composeBtn.currentBackgroundImage.size.width, composeBtn.currentBackgroundImage.size.height);
         [self addSubview:composeBtn];
         self.composeBtn = composeBtn;
+        
+//        self.layer.borderWidth=1;
+//        self.layer.borderColor=[[UIColor blackColor] CGColor];
+        
+        self.layer.shadowOffset = CGSizeMake(0, -1);
+        self.layer.shadowOpacity = 0.2;
+        self.layer.shadowRadius = 1;
+        self.layer.shadowColor = [[UIColor blackColor] CGColor];
     }
     return self;
 }

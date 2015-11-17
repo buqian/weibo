@@ -477,12 +477,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
 				GCC_PREFIX_HEADER = "${SRCROOT}/weibo/weibo.pch";
 				INFOPLIST_FILE = weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25798d95-085d-4307-b681-7bf52d37df67";
 			};
 			name = Debug;
 		};
@@ -497,6 +499,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25798d95-085d-4307-b681-7bf52d37df67";
 			};
 			name = Release;
 		};
