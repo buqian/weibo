@@ -1,0 +1,25 @@
+//
+//  weibo.pch
+//  weibo
+//
+//  Created by zhangfuqiang on 15/11/16.
+//  Copyright © 2015年 zhangfuqiang. All rights reserved.
+//
+
+#ifndef weibo_pch
+#define weibo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "HYHelper.h"
+
+#define client_id @"1499277281"
+#define redirect_uri @"http://www.boyacai.com"
+#define AppSecret @"94c74f183bb14f35146b06c0f61ea8a3"
+#define weibo_url @"https://api.weibo.com/oauth2/"
+#define client_secret @"94c74f183bb14f35146b06c0f61ea8a3"
+#define grant_type @"authorization_code"
+
+#endif /* weibo_pch */
+

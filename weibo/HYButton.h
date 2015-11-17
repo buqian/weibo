@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HYButton.h
 //  test
 //
 //  Created by zhangfuqiang on 15/11/12.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class HYButton;
 
-@interface ViewController : UITabBarController
+@interface HYButton : UIButton
 
+@property (nonatomic, strong) UITabBarItem *item;
 
 @end
-

@@ -7,25 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
 		AF85B8461BF4B70F00044DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8451BF4B70F00044DF4 /* main.m */; };
 		AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8481BF4B70F00044DF4 /* AppDelegate.m */; };
-		AF85B84C1BF4B70F00044DF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B84B1BF4B70F00044DF4 /* ViewController.m */; };
 		AF85B84F1BF4B70F00044DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF85B84D1BF4B70F00044DF4 /* Main.storyboard */; };
 		AF85B8511BF4B70F00044DF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF85B8501BF4B70F00044DF4 /* Assets.xcassets */; };
 		AF85B8541BF4B70F00044DF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF85B8521BF4B70F00044DF4 /* LaunchScreen.storyboard */; };
+		AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8921BF4E69900044DF4 /* HYButton.m */; };
+		AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8941BF4E69900044DF4 /* HYTabbar.m */; };
+		AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8981BF4E69900044DF4 /* ViewController.m */; };
+		AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A01BF5C6C000EABE40 /* HYDiscoverController.m */; };
+		AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A31BF5C6D000EABE40 /* HYMeController.m */; };
+		AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */; };
+		AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */; };
+		AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */; };
+		AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF74AFB1BF9863E003B8C61 /* HYLoginLogoView.m */; };
+		AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B011BF9D467003B8C61 /* HYHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
+		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
 		AF85B8411BF4B70F00044DF4 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF85B8451BF4B70F00044DF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF85B8471BF4B70F00044DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF85B8481BF4B70F00044DF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF85B84A1BF4B70F00044DF4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF85B84B1BF4B70F00044DF4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AF85B84E1BF4B70F00044DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF85B8501BF4B70F00044DF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF85B8531BF4B70F00044DF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF85B8551BF4B70F00044DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF85B8911BF4E69900044DF4 /* HYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYButton.h; sourceTree = "<group>"; };
+		AF85B8921BF4E69900044DF4 /* HYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYButton.m; sourceTree = "<group>"; };
+		AF85B8931BF4E69900044DF4 /* HYTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTabbar.h; sourceTree = "<group>"; };
+		AF85B8941BF4E69900044DF4 /* HYTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTabbar.m; sourceTree = "<group>"; };
+		AF85B8971BF4E69900044DF4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AF85B8981BF4E69900044DF4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AFA7F89F1BF5C6C000EABE40 /* HYDiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDiscoverController.h; sourceTree = "<group>"; };
+		AFA7F8A01BF5C6C000EABE40 /* HYDiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDiscoverController.m; sourceTree = "<group>"; };
+		AFA7F8A21BF5C6D000EABE40 /* HYMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMeController.h; sourceTree = "<group>"; };
+		AFA7F8A31BF5C6D000EABE40 /* HYMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYMeController.m; sourceTree = "<group>"; };
+		AFA7F8A51BF5C6E100EABE40 /* HYMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMessageController.h; sourceTree = "<group>"; };
+		AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYMessageController.m; sourceTree = "<group>"; };
+		AFA7F8A81BF5C76D00EABE40 /* HYHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYHomeController.h; sourceTree = "<group>"; };
+		AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHomeController.m; sourceTree = "<group>"; };
+		AFA7F8AB1BF5D1E700EABE40 /* HyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyNavigationController.h; sourceTree = "<group>"; };
+		AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyNavigationController.m; sourceTree = "<group>"; };
+		AFF74AFA1BF9863E003B8C61 /* HYLoginLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginLogoView.h; sourceTree = "<group>"; };
+		AFF74AFB1BF9863E003B8C61 /* HYLoginLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginLogoView.m; sourceTree = "<group>"; };
+		AFF74AFD1BF9ADE3003B8C61 /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
+		AFF74B001BF9D467003B8C61 /* HYHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYHelper.h; sourceTree = "<group>"; };
+		AFF74B011BF9D467003B8C61 /* HYHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF36CE341BF6326100238C59 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74AF91BF98605003B8C61 /* view */,
+				AFF74AF81BF985FA003B8C61 /* controller */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
 		AF85B8381BF4B70F00044DF4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +98,10 @@
 		AF85B8431BF4B70F00044DF4 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
+				AFA7F8911BF5BFD100EABE40 /* classes */,
+				AF85B85B1BF4C0EB00044DF4 /* tabbar */,
 				AF85B8471BF4B70F00044DF4 /* AppDelegate.h */,
 				AF85B8481BF4B70F00044DF4 /* AppDelegate.m */,
-				AF85B84A1BF4B70F00044DF4 /* ViewController.h */,
-				AF85B84B1BF4B70F00044DF4 /* ViewController.m */,
 				AF85B84D1BF4B70F00044DF4 /* Main.storyboard */,
 				AF85B8501BF4B70F00044DF4 /* Assets.xcassets */,
 				AF85B8521BF4B70F00044DF4 /* LaunchScreen.storyboard */,
@@ -75,8 +115,172 @@
 			isa = PBXGroup;
 			children = (
 				AF85B8451BF4B70F00044DF4 /* main.m */,
+				AFF74AFD1BF9ADE3003B8C61 /* weibo.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF85B85B1BF4C0EB00044DF4 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = tabbar;
+			sourceTree = "<group>";
+		};
+		AFA7F88F1BF5BFBD00EABE40 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F8951BF5C00400EABE40 /* controller */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		AFA7F8901BF5BFCB00EABE40 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F8941BF5BFEE00EABE40 /* model */,
+				AFA7F8931BF5BFE900EABE40 /* view */,
+				AFA7F8921BF5BFE200EABE40 /* controller */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		AFA7F8911BF5BFD100EABE40 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74AFE1BF9D444003B8C61 /* other */,
+				AF36CE341BF6326100238C59 /* login */,
+				AFA7F89B1BF5C68800EABE40 /* discover */,
+				AFA7F89A1BF5C67100EABE40 /* me */,
+				AFA7F8991BF5C66A00EABE40 /* message */,
+				AFA7F8901BF5BFCB00EABE40 /* main */,
+				AFA7F88F1BF5BFBD00EABE40 /* home */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		AFA7F8921BF5BFE200EABE40 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF85B8971BF4E69900044DF4 /* ViewController.h */,
+				AF85B8981BF4E69900044DF4 /* ViewController.m */,
+				AFA7F8AB1BF5D1E700EABE40 /* HyNavigationController.h */,
+				AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		AFA7F8931BF5BFE900EABE40 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AF85B8911BF4E69900044DF4 /* HYButton.h */,
+				AF85B8921BF4E69900044DF4 /* HYButton.m */,
+				AF85B8931BF4E69900044DF4 /* HYTabbar.h */,
+				AF85B8941BF4E69900044DF4 /* HYTabbar.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		AFA7F8941BF5BFEE00EABE40 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		AFA7F8951BF5C00400EABE40 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F8A81BF5C76D00EABE40 /* HYHomeController.h */,
+				AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		AFA7F8991BF5C66A00EABE40 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F89E1BF5C69A00EABE40 /* controller */,
+			);
+			name = message;
+			sourceTree = "<group>";
+		};
+		AFA7F89A1BF5C67100EABE40 /* me */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F89D1BF5C69300EABE40 /* controller */,
+			);
+			name = me;
+			sourceTree = "<group>";
+		};
+		AFA7F89B1BF5C68800EABE40 /* discover */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F89C1BF5C68D00EABE40 /* controller */,
+			);
+			name = discover;
+			sourceTree = "<group>";
+		};
+		AFA7F89C1BF5C68D00EABE40 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F89F1BF5C6C000EABE40 /* HYDiscoverController.h */,
+				AFA7F8A01BF5C6C000EABE40 /* HYDiscoverController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		AFA7F89D1BF5C69300EABE40 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F8A21BF5C6D000EABE40 /* HYMeController.h */,
+				AFA7F8A31BF5C6D000EABE40 /* HYMeController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		AFA7F89E1BF5C69A00EABE40 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AFA7F8A51BF5C6E100EABE40 /* HYMessageController.h */,
+				AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		AFF74AF81BF985FA003B8C61 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF36CE351BF6327400238C59 /* HYLoginController.h */,
+				AF36CE361BF6327400238C59 /* HYLoginController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		AFF74AF91BF98605003B8C61 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74AFA1BF9863E003B8C61 /* HYLoginLogoView.h */,
+				AFF74AFB1BF9863E003B8C61 /* HYLoginLogoView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		AFF74AFE1BF9D444003B8C61 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74AFF1BF9D449003B8C61 /* model */,
+			);
+			name = other;
+			sourceTree = "<group>";
+		};
+		AFF74AFF1BF9D449003B8C61 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AFF74B001BF9D467003B8C61 /* HYHelper.h */,
+				AFF74B011BF9D467003B8C61 /* HYHelper.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +309,7 @@
 		AF85B8391BF4B70F00044DF4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HY;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = zhangfuqiang;
 				TargetAttributes = {
@@ -149,8 +354,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF85B84C1BF4B70F00044DF4 /* ViewController.m in Sources */,
+				AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */,
+				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
+				AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */,
+				AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
+				AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */,
+				AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */,
+				AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */,
+				AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */,
+				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
+				AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */,
+				AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */,
 				AF85B8461BF4B70F00044DF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +476,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "${SRCROOT}/weibo/weibo.pch";
 				INFOPLIST_FILE = weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,7 +490,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "${SRCROOT}/weibo/weibo.pch";
 				INFOPLIST_FILE = weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -298,6 +519,7 @@
 				AF85B85A1BF4B70F00044DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
