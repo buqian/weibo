@@ -43,29 +43,6 @@
     [self parseData:dict];
 }
 
-/**
- *
- @property (nonatomic, strong) HYUser *user;
- @property (nonatomic, copy) NSString *idstr;
- @property (nonatomic, copy) NSString *created_at;
- @property (nonatomic, copy) NSString *text;
- @property (nonatomic, copy) NSString *source;
- @property (nonatomic, strong) NSArray *pic_urls;
- @property (nonatomic, copy) NSString *thumbnail_pic;
- @property (nonatomic, assign) int reposts_count;
- @property (nonatomic, assign) int comments_count;
- @property (nonatomic, assign) int attitudes_count;
- 
- 
- @property (nonatomic, copy) NSString *profile_image_url;
- @property (nonatomic, copy) NSString *avatar_large;
- @property (nonatomic, copy) NSString *name;
- @property (nonatomic, copy) NSString *idstr;
- @property (nonatomic, copy) NSString *mbtype;
- @property (nonatomic, copy) NSString *star;
- *
- *  @param dict <#dict description#>
- */
 -(void)parseData:(NSDictionary *)dict
 {
     NSMutableArray *mutableArray = [NSMutableArray array];
@@ -73,7 +50,15 @@
     {
         HYWeibo *weibo = [[HYWeibo alloc] init];
         HYUser *user = [[HYUser alloc] init];
-        weibo.created_at = d[@"created_at"];
+        NSString *timeStr = d[@"created_at"];
+//        NSLog(@"%@", timeStr);
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"EEE MMM dd H:mm:ss Z yyyy"];
+//        formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        NSDate *date = [formatter dateFromString:timeStr];
+        [formatter setDateFormat:@"yyyy-MM-dd H:mm:ss"];
+//        NSLog(@"%@", [formatter stringFromDate:date]);
+        weibo.created_at = date;
         weibo.text = d[@"text"];
         weibo.idstr = d[@"idstr"];
         weibo.source = d[@"source"];
@@ -104,14 +89,21 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+//    NSLog(@"statusesArray.count = %ld, section = %d", self.statusesArray.count, section);
     return self.statusesArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    HYTableViewCell *cell = [HYTableViewCell cellWithTableView:tableView];
+//    NSLog(@"cellForRowAtIndexPath = %d", indexPath.row);
+//    HYTableViewCell *cell = [HYTableViewCell cellWithTableView:tableView];
+    HYTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cess"];
+    if(cell == nil) {
+        cell = [[HYTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cess"];
+    }
     HYWeibo *weibo = self.statusesArray[indexPath.row];
     cell.weibo = weibo;
+//    cell.textLabel.text = weibo.text;
     return cell;
 }
 

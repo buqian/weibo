@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) HYUser *user;
 @property (nonatomic, copy) NSString *idstr;
-@property (nonatomic, copy) NSString *created_at;
+@property (nonatomic, assign) NSDate *created_at;
 @property (nonatomic, copy) NSString *text;
 @property (nonatomic, copy) NSString *source;
 @property (nonatomic, strong) NSArray *pic_urls;
