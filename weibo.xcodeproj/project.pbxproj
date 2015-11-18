@@ -21,6 +21,9 @@
 		AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */; };
 		AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */; };
 		AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */; };
+		AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */; };
+		AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD968111BFC657A00A9764A /* HYWeibo.m */; };
+		AFD968151BFC65FF00A9764A /* HYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD968141BFC65FF00A9764A /* HYUser.m */; };
 		AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF74AFB1BF9863E003B8C61 /* HYLoginLogoView.m */; };
 		AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B011BF9D467003B8C61 /* HYHelper.m */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,12 @@
 		AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHomeController.m; sourceTree = "<group>"; };
 		AFA7F8AB1BF5D1E700EABE40 /* HyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyNavigationController.h; sourceTree = "<group>"; };
 		AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyNavigationController.m; sourceTree = "<group>"; };
+		AFD9680C1BFC5FB500A9764A /* HYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableViewCell.h; sourceTree = "<group>"; };
+		AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTableViewCell.m; sourceTree = "<group>"; };
+		AFD968101BFC657A00A9764A /* HYWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeibo.h; sourceTree = "<group>"; };
+		AFD968111BFC657A00A9764A /* HYWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWeibo.m; sourceTree = "<group>"; };
+		AFD968131BFC65FF00A9764A /* HYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYUser.h; sourceTree = "<group>"; };
+		AFD968141BFC65FF00A9764A /* HYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYUser.m; sourceTree = "<group>"; };
 		AFF74AFA1BF9863E003B8C61 /* HYLoginLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginLogoView.h; sourceTree = "<group>"; };
 		AFF74AFB1BF9863E003B8C61 /* HYLoginLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginLogoView.m; sourceTree = "<group>"; };
 		AFF74AFD1BF9ADE3003B8C61 /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
@@ -130,6 +139,8 @@
 		AFA7F88F1BF5BFBD00EABE40 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				AFD9680F1BFC655000A9764A /* model */,
+				AFD9680B1BFC5F6A00A9764A /* view */,
 				AFA7F8951BF5C00400EABE40 /* controller */,
 			);
 			name = home;
@@ -248,6 +259,26 @@
 			name = controller;
 			sourceTree = "<group>";
 		};
+		AFD9680B1BFC5F6A00A9764A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				AFD9680C1BFC5FB500A9764A /* HYTableViewCell.h */,
+				AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		AFD9680F1BFC655000A9764A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AFD968101BFC657A00A9764A /* HYWeibo.h */,
+				AFD968111BFC657A00A9764A /* HYWeibo.m */,
+				AFD968131BFC65FF00A9764A /* HYUser.h */,
+				AFD968141BFC65FF00A9764A /* HYUser.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		AFF74AF81BF985FA003B8C61 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +387,8 @@
 			files = (
 				AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */,
 				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
+				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
+				AFD968151BFC65FF00A9764A /* HYUser.m in Sources */,
 				AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */,
 				AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
@@ -365,6 +398,7 @@
 				AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */,
 				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
 				AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */,
+				AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */,
 				AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */,
 				AF85B8461BF4B70F00044DF4 /* main.m in Sources */,
 			);
@@ -477,14 +511,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Xiaofeng Zhang (77G675B8QT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "${SRCROOT}/weibo/weibo.pch";
 				INFOPLIST_FILE = weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25798d95-085d-4307-b681-7bf52d37df67";
+				PROVISIONING_PROFILE = "e0bc84f7-92f6-452b-bf73-3e1a363399f9";
 			};
 			name = Debug;
 		};
@@ -493,13 +528,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "${SRCROOT}/weibo/weibo.pch";
 				INFOPLIST_FILE = weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25798d95-085d-4307-b681-7bf52d37df67";
+				PROVISIONING_PROFILE = "e0bc84f7-92f6-452b-bf73-3e1a363399f9";
 			};
 			name = Release;
 		};

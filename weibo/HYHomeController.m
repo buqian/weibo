@@ -7,6 +7,9 @@
 //
 
 #import "HYHomeController.h"
+#import "HYWeibo.h"
+#import "HYUser.h"
+#import "HYTableViewCell.h"
 
 @interface HYHomeController ()
 
@@ -34,8 +37,64 @@
     NSURLResponse *resp;
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&resp error:&error];
+//    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    self.statusesArray = dict[@"statuses"];
+
+    [self parseData:dict];
+}
+
+/**
+ *
+ @property (nonatomic, strong) HYUser *user;
+ @property (nonatomic, copy) NSString *idstr;
+ @property (nonatomic, copy) NSString *created_at;
+ @property (nonatomic, copy) NSString *text;
+ @property (nonatomic, copy) NSString *source;
+ @property (nonatomic, strong) NSArray *pic_urls;
+ @property (nonatomic, copy) NSString *thumbnail_pic;
+ @property (nonatomic, assign) int reposts_count;
+ @property (nonatomic, assign) int comments_count;
+ @property (nonatomic, assign) int attitudes_count;
+ 
+ 
+ @property (nonatomic, copy) NSString *profile_image_url;
+ @property (nonatomic, copy) NSString *avatar_large;
+ @property (nonatomic, copy) NSString *name;
+ @property (nonatomic, copy) NSString *idstr;
+ @property (nonatomic, copy) NSString *mbtype;
+ @property (nonatomic, copy) NSString *star;
+ *
+ *  @param dict <#dict description#>
+ */
+-(void)parseData:(NSDictionary *)dict
+{
+    NSMutableArray *mutableArray = [NSMutableArray array];
+    for(NSDictionary *d in dict[@"statuses"])
+    {
+        HYWeibo *weibo = [[HYWeibo alloc] init];
+        HYUser *user = [[HYUser alloc] init];
+        weibo.created_at = d[@"created_at"];
+        weibo.text = d[@"text"];
+        weibo.idstr = d[@"idstr"];
+        weibo.source = d[@"source"];
+        weibo.thumbnail_pic = d[@"thumbnail_pic"];
+        weibo.reposts_count = (int)d[@"reposts_count"];
+        weibo.comments_count = (int)d[@"comments_count"];
+        weibo.attitudes_count = (int)d[@"attitudes_count"];
+        weibo.pic_urls = d[@"pic_urls"];
+        
+        NSDictionary *dictUser = d[@"user"];
+        user.profile_image_url = dictUser[@"profile_image_url"];
+        user.avatar_large = dictUser[@"avatar_large"];
+        user.name = dictUser[@"name"];
+        user.idstr = dictUser[@"idstr"];
+        user.mbtype = dictUser[@"mbtype"];
+        user.star = dictUser[@"star"];
+        
+        weibo.user = user;
+        [mutableArray addObject:weibo];
+    }
+    self.statusesArray = mutableArray;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -50,13 +109,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *ID = @"statuses_home";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if(!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
-    cell.textLabel.text = self.statusesArray[indexPath.row][@"text"];
+    HYTableViewCell *cell = [HYTableViewCell cellWithTableView:tableView];
+    HYWeibo *weibo = self.statusesArray[indexPath.row];
+    cell.weibo = weibo;
     return cell;
 }
 
@@ -72,4 +127,8 @@
     return self;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
+}
 @end
