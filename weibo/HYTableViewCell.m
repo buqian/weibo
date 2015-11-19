@@ -7,6 +7,7 @@
 //
 
 #import "HYTableViewCell.h"
+#import "HYWeiboFrame.h"
 #define margin 10
 
 @interface HYTableViewCell ()
@@ -45,7 +46,8 @@
         UIButton *nameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [nameBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         [nameBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateHighlighted];
-        [nameBtn.titleLabel setFont:[UIFont systemFontOfSize:15 weight:0.5]];
+        [nameBtn.titleLabel setFont:HYNameFont];
+        
         nameBtn.contentHorizontalAlignment = UIViewContentModeLeft;
 
         [self addSubview:nameBtn];
@@ -53,13 +55,13 @@
         
         UILabel *timeLable = [[UILabel alloc] init];
         timeLable.textColor = [UIColor orangeColor];
-        timeLable.font = [UIFont systemFontOfSize:14];
+        timeLable.font = HYTimeFont;
         [self addSubview:timeLable];
         self.timeLable = timeLable;
         
         
         UILabel *sourceLable = [[UILabel alloc] init];
-        sourceLable.font = [UIFont systemFontOfSize:14];
+        sourceLable.font = HYTimeFont;
         [self addSubview:sourceLable];
         self.sourceLable = sourceLable;
         
@@ -70,15 +72,27 @@
         self.arrowBtn = arrowBtn;
         
         UILabel *textLable = [[UILabel alloc] init];
+        [textLable setFont:HYTextFont];
         textLable.numberOfLines = 0;
         [self addSubview:textLable];
         self.textLable = textLable;
+        
+        self.layer.shadowColor = [[UIColor grayColor] CGColor];
+        self.layer.shadowOffset = CGSizeMake(0, 1);
+        self.layer.shadowRadius = 1;
+        self.layer.shadowOpacity = 0.2;
+//        
+//        self.layer.borderWidth = 2;
+//        self.layer.borderColor = [[UIColor redColor] CGColor];
+//
+//        self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableview_sectionheader_background"]];
     }
     return self;
 }
 
 -(void)setFrame:(CGRect)frame
 {
+    frame.size.height -= margin;
     [super setFrame:frame];
 }
 
@@ -96,13 +110,9 @@
     [self.nameBtn setTitle:user.name forState:UIControlStateNormal];
     
     //    [self.timeLable setText:[NSString stringWithFormat:@"%@", weibo.created_at]];
-    [self.timeLable setText:@"刚刚"];
+    [self.timeLable setText:[weibo getCreateTime]];
     
-    NSRange range = [weibo.source rangeOfString:@">"];
-    NSString *str = [weibo.source substringFromIndex:(range.location + range.length)];
-    range = [str rangeOfString:@"<"];
-    str = [str substringToIndex:range.location];
-    [self.sourceLable setText:str];
+    [self.sourceLable setText:weibo.source];
     //    self.sourceLable.attributedText = [[NSAttributedString alloc] initWithData:[weibo.source dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     
     [self.textLable setText:weibo.text];
@@ -110,20 +120,22 @@
 
 -(void)layoutSubviews
 {
-    self.headBtn.frame = CGRectMake(margin, margin, 35, 35);
-    self.headBtn.layer.cornerRadius = self.headBtn.frame.size.width * 0.5;
+    HYWeiboFrame *frame = _weibo.frame;
+    self.headBtn.frame = frame.headFrame;
+    self.headBtn.layer.cornerRadius = frame.headFrame.size.width * 0.5;
     self.headBtn.layer.masksToBounds = YES;
+    self.headBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     
-    self.nameBtn.frame = CGRectMake(CGRectGetMaxX(self.headBtn.frame) + margin, margin, 100, 13);
+    self.nameBtn.frame = frame.nameFrame;
     
-    self.timeLable.frame = CGRectMake(self.nameBtn.frame.origin.x, CGRectGetMaxY(self.nameBtn.frame) + 7, 100, 12);
+    self.timeLable.frame = frame.timeFrame;
     
-    self.sourceLable.frame = CGRectMake(CGRectGetMaxX(self.timeLable.frame), self.timeLable.frame.origin.y, 100, 12);
-    CGFloat arrawW = 12;
-    CGFloat arrawH = arrawW;
-    self.arrowBtn.frame = CGRectMake(self.frame.size.width - margin - arrawW, margin, arrawW, arrawH);
+    self.sourceLable.frame = frame.sourceFrame;
     
-    self.textLable.frame = CGRectMake(margin, CGRectGetMaxY(self.headBtn.frame) + 7, self.frame.size.width - 2 * margin, 50);
+    self.arrowBtn.frame = frame.arrowFrame;
+    
+    self.textLable.frame = frame.textFrame;
+
 }
 
 @end

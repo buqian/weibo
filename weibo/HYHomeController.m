@@ -10,6 +10,7 @@
 #import "HYWeibo.h"
 #import "HYUser.h"
 #import "HYTableViewCell.h"
+#import "HYWeiboFrame.h"
 
 @interface HYHomeController ()
 
@@ -21,6 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+    self.tableView.backgroundColor = HYColor(226, 226, 226);
+    
     
     [self getWeiboPublicList];
 }
@@ -37,7 +43,7 @@
     NSURLResponse *resp;
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&resp error:&error];
-//    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 
     [self parseData:dict];
@@ -54,7 +60,7 @@
 //        NSLog(@"%@", timeStr);
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateFormat:@"EEE MMM dd H:mm:ss Z yyyy"];
-//        formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
         NSDate *date = [formatter dateFromString:timeStr];
         [formatter setDateFormat:@"yyyy-MM-dd H:mm:ss"];
 //        NSLog(@"%@", [formatter stringFromDate:date]);
@@ -77,6 +83,11 @@
         user.star = dictUser[@"star"];
         
         weibo.user = user;
+        
+        HYWeiboFrame *frame = [[HYWeiboFrame alloc] initWithHYWeibo:weibo];
+        
+        weibo.frame = frame;
+        
         [mutableArray addObject:weibo];
     }
     self.statusesArray = mutableArray;
@@ -121,6 +132,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200;
+    HYWeibo *weibo = self.statusesArray[indexPath.row];
+    return weibo.frame.height;
 }
 @end

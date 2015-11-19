@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
+		AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */; };
 		AF85B8461BF4B70F00044DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8451BF4B70F00044DF4 /* main.m */; };
 		AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8481BF4B70F00044DF4 /* AppDelegate.m */; };
 		AF85B84F1BF4B70F00044DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF85B84D1BF4B70F00044DF4 /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
 		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
+		AF47261C1BFD91AA00933F3A /* HYWeiboFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeiboFrame.h; sourceTree = "<group>"; };
+		AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWeiboFrame.m; sourceTree = "<group>"; };
 		AF85B8411BF4B70F00044DF4 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF85B8451BF4B70F00044DF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF85B8471BF4B70F00044DF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				AFD968111BFC657A00A9764A /* HYWeibo.m */,
 				AFD968131BFC65FF00A9764A /* HYUser.h */,
 				AFD968141BFC65FF00A9764A /* HYUser.m */,
+				AF47261C1BFD91AA00933F3A /* HYWeiboFrame.h */,
+				AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */,
 				AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */,
 				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,

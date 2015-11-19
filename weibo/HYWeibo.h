@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "HYUser.h"
 
+@class HYWeiboFrame;
+
 @interface HYWeibo : NSObject
 
 @property (nonatomic, strong) HYUser *user;
@@ -22,4 +24,7 @@
 @property (nonatomic, assign) int comments_count;
 @property (nonatomic, assign) int attitudes_count;
 
+@property (nonatomic, strong) HYWeiboFrame *frame;
+
+-(NSString *)getCreateTime;
 @end
