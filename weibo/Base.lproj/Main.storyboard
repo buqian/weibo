@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="164.5" y="259.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="mAc-FI-2n3">
             <objects>
-                <viewController id="WOC-oU-FlS" sceneMemberID="viewController">
+                <viewController id="WOC-oU-FlS" customClass="HYLoginController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hdd-d8-0X6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

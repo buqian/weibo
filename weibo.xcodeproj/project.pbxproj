@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */; };
+		2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847F1BFDFFED006A1E88 /* MapKit.framework */; };
+		2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D84A81BFE071D006A1E88 /* libSDWebImage.a */; };
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
 		AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */; };
 		AF85B8461BF4B70F00044DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8451BF4B70F00044DF4 /* main.m */; };
@@ -29,7 +32,48 @@
 		AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B011BF9D467003B8C61 /* HYHelper.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2D7D84A71BFE071D006A1E88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 53761325155AD0D5005750A4;
+			remoteInfo = SDWebImage;
+		};
+		2D7D84A91BFE071D006A1E88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 537D95C117ECC1FE0097C263;
+			remoteInfo = "SDWebImage+WebP";
+		};
+		2D7D84AB1BFE071D006A1E88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 531041E0157EAFA400BBABC3;
+			remoteInfo = "SDWebImage+MKAnnotation";
+		};
+		2D7D84AD1BFE071D006A1E88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4A2CADFF1AB4BB5300B6BC39;
+			remoteInfo = WebImage;
+		};
+		2D7D84AF1BFE071D006A1E88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 00733A4C1BC487C000A5A117;
+			remoteInfo = "WebImage tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		2D7D847F1BFDFFED006A1E88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "../../../Downloads/SDWebImage-master/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
 		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
 		AF47261C1BFD91AA00933F3A /* HYWeiboFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeiboFrame.h; sourceTree = "<group>"; };
@@ -76,12 +120,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */,
+				2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */,
+				2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D7D84771BFDF23E006A1E88 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		2D7D849F1BFE071C006A1E88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D7D84A81BFE071D006A1E88 /* libSDWebImage.a */,
+				2D7D84AA1BFE071D006A1E88 /* libSDWebImage+WebP.a */,
+				2D7D84AC1BFE071D006A1E88 /* libSDWebImage+MKAnnotation.a */,
+				2D7D84AE1BFE071D006A1E88 /* WebImage.framework */,
+				2D7D84B01BFE071D006A1E88 /* WebImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		AF36CE341BF6326100238C59 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +160,9 @@
 		AF85B8381BF4B70F00044DF4 = {
 			isa = PBXGroup;
 			children = (
+				2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */,
+				2D7D847F1BFDFFED006A1E88 /* MapKit.framework */,
+				2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */,
 				AF85B8431BF4B70F00044DF4 /* weibo */,
 				AF85B8421BF4B70F00044DF4 /* Products */,
 			);
@@ -305,6 +374,7 @@
 		AFF74AFE1BF9D444003B8C61 /* other */ = {
 			isa = PBXGroup;
 			children = (
+				2D7D84771BFDF23E006A1E88 /* lib */,
 				AFF74AFF1BF9D449003B8C61 /* model */,
 			);
 			name = other;
@@ -365,12 +435,56 @@
 			mainGroup = AF85B8381BF4B70F00044DF4;
 			productRefGroup = AF85B8421BF4B70F00044DF4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2D7D849F1BFE071C006A1E88 /* Products */;
+					ProjectRef = 2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AF85B8401BF4B70F00044DF4 /* weibo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2D7D84A81BFE071D006A1E88 /* libSDWebImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSDWebImage.a;
+			remoteRef = 2D7D84A71BFE071D006A1E88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D7D84AA1BFE071D006A1E88 /* libSDWebImage+WebP.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSDWebImage+WebP.a";
+			remoteRef = 2D7D84A91BFE071D006A1E88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D7D84AC1BFE071D006A1E88 /* libSDWebImage+MKAnnotation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSDWebImage+MKAnnotation.a";
+			remoteRef = 2D7D84AB1BFE071D006A1E88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D7D84AE1BFE071D006A1E88 /* WebImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WebImage.framework;
+			remoteRef = 2D7D84AD1BFE071D006A1E88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D7D84B01BFE071D006A1E88 /* WebImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WebImage.framework;
+			remoteRef = 2D7D84AF1BFE071D006A1E88 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AF85B83F1BF4B70F00044DF4 /* Resources */ = {
@@ -523,6 +637,7 @@
 				INFOPLIST_FILE = weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e0bc84f7-92f6-452b-bf73-3e1a363399f9";
@@ -540,6 +655,7 @@
 				INFOPLIST_FILE = weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e0bc84f7-92f6-452b-bf73-3e1a363399f9";

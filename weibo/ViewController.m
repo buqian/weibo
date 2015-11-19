@@ -130,7 +130,7 @@
 
 -(void)tabbar:(HYTabbar *)tabbar tabbarItemClickFrom:(long)from to:(long)to
 {
-    NSLog(@"from %ld to %ld", from, to);
+//    NSLog(@"from %ld to %ld", from, to);
     self.selectedIndex = to;
 }
 

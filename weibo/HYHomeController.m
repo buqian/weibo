@@ -29,6 +29,8 @@
     
     
     [self getWeiboPublicList];
+    
+    NSLog(@"%@", NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
 }
 
 -(void)getWeiboPublicList
@@ -43,7 +45,7 @@
     NSURLResponse *resp;
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&resp error:&error];
-    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+//    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 
     [self parseData:dict];

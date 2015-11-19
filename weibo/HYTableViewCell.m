@@ -8,11 +8,14 @@
 
 #import "HYTableViewCell.h"
 #import "HYWeiboFrame.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "SDWebImage/UIButton+WebCache.h"
 #define margin 10
 
 @interface HYTableViewCell ()
 
 @property (nonatomic, weak) UIButton *headBtn;
+@property (nonatomic, weak) UIImageView *headView;
 @property (nonatomic, weak) UIButton *nameBtn;
 @property (nonatomic, weak) UILabel *timeLable;
 @property (nonatomic, weak) UILabel *sourceLable;
@@ -42,6 +45,12 @@
         headBth.layer.masksToBounds = YES;
         [self addSubview:headBth];
         self.headBtn = headBth;
+        headBth.backgroundColor = [UIColor redColor];
+        [headBth addTarget:self action:@selector(headBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIImageView *headView = [[UIImageView alloc] init];
+        [headBth addSubview:headView];
+        self.headView = headView;
         
         UIButton *nameBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [nameBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
@@ -90,6 +99,11 @@
     return self;
 }
 
+-(void)headBtnClick:(id)sender
+{
+    NSLog(@"%@", sender);
+}
+
 -(void)setFrame:(CGRect)frame
 {
     frame.size.height -= margin;
@@ -103,9 +117,13 @@
     
     HYUser *user = weibo.user;
     
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user.profile_image_url]]];
-    [self.headBtn setImage:image forState:UIControlStateNormal];
-    [self.headBtn setImage:image forState:UIControlStateHighlighted];
+//    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:user.profile_image_url]]];
+//    [self.headBtn setImage:image forState:UIControlStateNormal];
+//    [self.headBtn setImage:image forState:UIControlStateHighlighted];
+    [self.headBtn sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] forState:UIControlStateNormal];
+    [self.headBtn sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] forState:UIControlStateHighlighted];
+    
+    [self.headView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url]];
     
     [self.nameBtn setTitle:user.name forState:UIControlStateNormal];
     
@@ -116,15 +134,12 @@
     //    self.sourceLable.attributedText = [[NSAttributedString alloc] initWithData:[weibo.source dataUsingEncoding:NSUnicodeStringEncoding] options:@{NSDocumentTypeDocumentAttribute:NSHTMLTextDocumentType} documentAttributes:nil error:nil];
     
     [self.textLable setText:weibo.text];
-}
-
--(void)layoutSubviews
-{
+    
     HYWeiboFrame *frame = _weibo.frame;
     self.headBtn.frame = frame.headFrame;
     self.headBtn.layer.cornerRadius = frame.headFrame.size.width * 0.5;
     self.headBtn.layer.masksToBounds = YES;
-    self.headBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    self.headView.frame = self.headBtn.bounds;
     
     self.nameBtn.frame = frame.nameFrame;
     
@@ -135,7 +150,12 @@
     self.arrowBtn.frame = frame.arrowFrame;
     
     self.textLable.frame = frame.textFrame;
-
 }
+
+//-(void)layoutSubviews
+//{
+//    
+//    
+//}
 
 @end
