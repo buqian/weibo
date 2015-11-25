@@ -11,7 +11,9 @@
 
 #define HYNameFont [UIFont systemFontOfSize:15]
 #define HYTimeFont [UIFont systemFontOfSize:12]
-#define HYTextFont [UIFont systemFontOfSize:16]
+#define HYTextFont [UIFont systemFontOfSize:17]
+
+#define margin 10
 
 @class HYWeibo;
 
@@ -23,6 +25,12 @@
 @property (nonatomic, assign) CGRect sourceFrame;
 @property (nonatomic, assign) CGRect arrowFrame;
 @property (nonatomic, assign) CGRect textFrame;
+@property (nonatomic, assign) CGRect topViewFrame;
+@property (nonatomic, assign) CGRect photoViewFrame;
+@property (nonatomic, assign) CGRect toolbarFrame;
+@property (nonatomic, assign) CGRect retweetTextFrame;
+@property (nonatomic, assign) CGRect retweetPhotoViewFrame;
+@property (nonatomic, assign) CGRect retweetFrame;
 
 @property (nonatomic, assign) CGFloat height;
 

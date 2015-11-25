@@ -23,6 +23,7 @@
 @property (nonatomic, assign) int reposts_count;
 @property (nonatomic, assign) int comments_count;
 @property (nonatomic, assign) int attitudes_count;
+@property (nonatomic, strong) HYWeibo *retweet;
 
 @property (nonatomic, strong) HYWeiboFrame *frame;
 

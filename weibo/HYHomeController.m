@@ -15,6 +15,7 @@
 @interface HYHomeController ()
 
 @property (nonatomic, strong) NSArray *statusesArray;
+
 @end
 
 @implementation HYHomeController
@@ -27,10 +28,9 @@
 
     self.tableView.backgroundColor = HYColor(226, 226, 226);
     
-    
     [self getWeiboPublicList];
     
-    NSLog(@"%@", NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
+//    NSLog(@"%@", NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
 }
 
 -(void)getWeiboPublicList
@@ -45,7 +45,7 @@
     NSURLResponse *resp;
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&resp error:&error];
-//    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 
     [self parseData:dict];
@@ -89,6 +89,32 @@
         HYWeiboFrame *frame = [[HYWeiboFrame alloc] initWithHYWeibo:weibo];
         
         weibo.frame = frame;
+        
+        NSDictionary *retweetDict = d[@"retweeted_status"];
+        if(nil != retweetDict)
+        {
+            
+            HYWeibo *retweet = [[HYWeibo alloc] init];
+            HYUser *retweetUser = [[HYUser alloc] init];
+            
+            retweet.text = retweetDict[@"text"];
+            retweet.idstr = retweetDict[@"idstr"];
+            retweet.thumbnail_pic = retweetDict[@"thumbnail_pic"];
+            retweet.pic_urls = retweetDict[@"pic_urls"];
+            
+            NSDictionary *retweetUserDuct = retweetDict[@"user"];
+            retweetUser.profile_image_url = retweetUserDuct[@"profile_image_url"];
+            retweetUser.avatar_large = retweetUserDuct[@"avatar_large"];
+            retweetUser.name = retweetUserDuct[@"name"];
+            retweetUser.idstr = retweetUserDuct[@"idstr"];
+            retweetUser.mbtype = retweetUserDuct[@"mbtype"];
+            retweetUser.star = retweetUserDuct[@"star"];
+            
+            retweet.user = retweetUser;
+            
+            HYWeiboFrame *retweetFrame = [[HYWeiboFrame alloc] initWithHYWeibo:retweet];
+            retweet.frame = retweetFrame;
+        }
         
         [mutableArray addObject:weibo];
     }
@@ -135,6 +161,18 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HYWeibo *weibo = self.statusesArray[indexPath.row];
+//    NSLog(@"%f", weibo.frame.height);
     return weibo.frame.height;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSelector:@selector(unSelectTableViewCell:) withObject:indexPath afterDelay:1];
+}
+
+-(void)unSelectTableViewCell:(id)sender
+{
+    [self.tableView deselectRowAtIndexPath:sender animated:YES];
+}
+
 @end

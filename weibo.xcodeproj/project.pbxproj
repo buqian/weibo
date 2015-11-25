@@ -25,9 +25,14 @@
 		AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */; };
 		AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */; };
 		AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */; };
+		AFBDB6E31C04A72D004794B0 /* HYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBDB6E21C04A72D004794B0 /* HYTableViewController.m */; };
 		AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */; };
 		AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD968111BFC657A00A9764A /* HYWeibo.m */; };
 		AFD968151BFC65FF00A9764A /* HYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD968141BFC65FF00A9764A /* HYUser.m */; };
+		AFF376971C056750003EDA9A /* HYWeiboTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF376961C056750003EDA9A /* HYWeiboTopView.m */; };
+		AFF376A11C056ABB003EDA9A /* HYPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF376A01C056ABB003EDA9A /* HYPhotoView.m */; };
+		AFF376A41C0599E1003EDA9A /* HYWeiboToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF376A31C0599E1003EDA9A /* HYWeiboToolbar.m */; };
+		AFF376AA1C05B905003EDA9A /* HYRetweetView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF376A91C05B905003EDA9A /* HYRetweetView.m */; };
 		AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF74AFB1BF9863E003B8C61 /* HYLoginLogoView.m */; };
 		AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF74B011BF9D467003B8C61 /* HYHelper.m */; };
 /* End PBXBuildFile section */
@@ -102,12 +107,22 @@
 		AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHomeController.m; sourceTree = "<group>"; };
 		AFA7F8AB1BF5D1E700EABE40 /* HyNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyNavigationController.h; sourceTree = "<group>"; };
 		AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyNavigationController.m; sourceTree = "<group>"; };
+		AFBDB6E11C04A72D004794B0 /* HYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableViewController.h; sourceTree = "<group>"; };
+		AFBDB6E21C04A72D004794B0 /* HYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTableViewController.m; sourceTree = "<group>"; };
 		AFD9680C1BFC5FB500A9764A /* HYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableViewCell.h; sourceTree = "<group>"; };
 		AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTableViewCell.m; sourceTree = "<group>"; };
 		AFD968101BFC657A00A9764A /* HYWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeibo.h; sourceTree = "<group>"; };
 		AFD968111BFC657A00A9764A /* HYWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWeibo.m; sourceTree = "<group>"; };
 		AFD968131BFC65FF00A9764A /* HYUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYUser.h; sourceTree = "<group>"; };
 		AFD968141BFC65FF00A9764A /* HYUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYUser.m; sourceTree = "<group>"; };
+		AFF376951C056750003EDA9A /* HYWeiboTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeiboTopView.h; sourceTree = "<group>"; };
+		AFF376961C056750003EDA9A /* HYWeiboTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWeiboTopView.m; sourceTree = "<group>"; };
+		AFF3769F1C056ABB003EDA9A /* HYPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPhotoView.h; sourceTree = "<group>"; };
+		AFF376A01C056ABB003EDA9A /* HYPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPhotoView.m; sourceTree = "<group>"; };
+		AFF376A21C0599E1003EDA9A /* HYWeiboToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeiboToolbar.h; sourceTree = "<group>"; };
+		AFF376A31C0599E1003EDA9A /* HYWeiboToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWeiboToolbar.m; sourceTree = "<group>"; };
+		AFF376A81C05B905003EDA9A /* HYRetweetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRetweetView.h; sourceTree = "<group>"; };
+		AFF376A91C05B905003EDA9A /* HYRetweetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRetweetView.m; sourceTree = "<group>"; };
 		AFF74AFA1BF9863E003B8C61 /* HYLoginLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginLogoView.h; sourceTree = "<group>"; };
 		AFF74AFB1BF9863E003B8C61 /* HYLoginLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginLogoView.m; sourceTree = "<group>"; };
 		AFF74AFD1BF9ADE3003B8C61 /* weibo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = weibo.pch; sourceTree = "<group>"; };
@@ -238,6 +253,8 @@
 				AFA7F8991BF5C66A00EABE40 /* message */,
 				AFA7F8901BF5BFCB00EABE40 /* main */,
 				AFA7F88F1BF5BFBD00EABE40 /* home */,
+				AFBDB6E11C04A72D004794B0 /* HYTableViewController.h */,
+				AFBDB6E21C04A72D004794B0 /* HYTableViewController.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -336,6 +353,14 @@
 			children = (
 				AFD9680C1BFC5FB500A9764A /* HYTableViewCell.h */,
 				AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */,
+				AFF376951C056750003EDA9A /* HYWeiboTopView.h */,
+				AFF376961C056750003EDA9A /* HYWeiboTopView.m */,
+				AFF3769F1C056ABB003EDA9A /* HYPhotoView.h */,
+				AFF376A01C056ABB003EDA9A /* HYPhotoView.m */,
+				AFF376A21C0599E1003EDA9A /* HYWeiboToolbar.h */,
+				AFF376A31C0599E1003EDA9A /* HYWeiboToolbar.m */,
+				AFF376A81C05B905003EDA9A /* HYRetweetView.h */,
+				AFF376A91C05B905003EDA9A /* HYRetweetView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -506,15 +531,20 @@
 			files = (
 				AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */,
 				AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */,
+				AFF376A11C056ABB003EDA9A /* HYPhotoView.m in Sources */,
 				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
 				AFD968151BFC65FF00A9764A /* HYUser.m in Sources */,
+				AFF376AA1C05B905003EDA9A /* HYRetweetView.m in Sources */,
 				AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */,
 				AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
 				AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */,
 				AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */,
+				AFBDB6E31C04A72D004794B0 /* HYTableViewController.m in Sources */,
+				AFF376A41C0599E1003EDA9A /* HYWeiboToolbar.m in Sources */,
 				AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */,
+				AFF376971C056750003EDA9A /* HYWeiboTopView.m in Sources */,
 				AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */,
 				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
 				AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */,
@@ -641,6 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e0bc84f7-92f6-452b-bf73-3e1a363399f9";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -659,6 +690,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.buqian.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "e0bc84f7-92f6-452b-bf73-3e1a363399f9";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
