@@ -10,6 +10,7 @@
 #import "HYWeiboFrame.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "HYPhotoView.h"
+#import "HYRetweetView.h"
 
 @interface HYWeiboTopView ()
 
@@ -21,6 +22,7 @@
 @property (nonatomic, weak) UILabel *textLable;
 @property (nonatomic, weak) UIButton *arrowBtn;
 @property (nonatomic, weak) HYPhotoView *photoView;
+@property (nonatomic, weak) HYRetweetView *retweetView;
 
 @end
 
@@ -77,9 +79,14 @@
         HYPhotoView *photoView = [[HYPhotoView alloc] init];
         [self addSubview:photoView];
         self.photoView = photoView;
-//        
+        
+        HYRetweetView *retweetView = [[HYRetweetView alloc] init];
+        [self addSubview:retweetView];
+        self.retweetView = retweetView;
+        
 //        self.layer.borderWidth = 1;
 //        self.layer.borderColor = [[UIColor redColor] CGColor];
+        
     }
     return self;
 }
@@ -127,7 +134,21 @@
     
     self.textLable.frame = frame.textFrame;
     
-    self.photoView.frame = frame.photoViewFrame;
+    if(nil == weibo.retweet)
+    {
+        self.retweetView.hidden = YES;
+        self.photoView.hidden = NO;
+        self.retweetView.frame = CGRectZero;
+        self.photoView.frame = frame.photoViewFrame;
+    }
+    else
+    {
+        self.retweetView.hidden = NO;
+        self.photoView.hidden = YES;
+        self.retweetView.weibo = weibo;
+        self.photoView.frame = CGRectZero;
+        self.retweetView.frame = frame.retweetFrame;
+    }
 }
 
 

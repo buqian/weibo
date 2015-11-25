@@ -10,6 +10,7 @@
 		2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */; };
 		2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847F1BFDFFED006A1E88 /* MapKit.framework */; };
 		2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D84A81BFE071D006A1E88 /* libSDWebImage.a */; };
+		2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC551EF1C05EBFF008FB12E /* HYModelView.m */; };
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
 		AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */; };
 		AF85B8461BF4B70F00044DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8451BF4B70F00044DF4 /* main.m */; };
@@ -79,6 +80,8 @@
 		2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2D7D847F1BFDFFED006A1E88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "../../../Downloads/SDWebImage-master/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
+		2DC551EE1C05EBFF008FB12E /* HYModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYModelView.h; sourceTree = "<group>"; };
+		2DC551EF1C05EBFF008FB12E /* HYModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYModelView.m; sourceTree = "<group>"; };
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
 		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
 		AF47261C1BFD91AA00933F3A /* HYWeiboFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeiboFrame.h; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 				AFF376A31C0599E1003EDA9A /* HYWeiboToolbar.m */,
 				AFF376A81C05B905003EDA9A /* HYRetweetView.h */,
 				AFF376A91C05B905003EDA9A /* HYRetweetView.m */,
+				2DC551EE1C05EBFF008FB12E /* HYModelView.h */,
+				2DC551EF1C05EBFF008FB12E /* HYModelView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
 				AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */,
+				2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */,
 				AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */,
 				AFBDB6E31C04A72D004794B0 /* HYTableViewController.m in Sources */,
 				AFF376A41C0599E1003EDA9A /* HYWeiboToolbar.m in Sources */,

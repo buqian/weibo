@@ -51,6 +51,9 @@
         
         [self setupLine];
         
+//        self.layer.borderColor = [[UIColor orangeColor] CGColor];
+//        self.layer.borderWidth = 1;
+        
     }
     return self;
 }

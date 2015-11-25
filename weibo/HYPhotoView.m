@@ -9,6 +9,7 @@
 #import "HYPhotoView.h"
 #import "SDWebImage/UIImageView+WebCache.h"
 #import "HYWeiboFrame.h"
+#import "HYModelView.h"
 
 #define ColCount 3;
 #define RowCount 3;
@@ -28,13 +29,33 @@
         NSMutableArray *array = [NSMutableArray array];
         for (int i = 0; i < 9; i ++) {
             UIImageView *imageView = [[UIImageView alloc] init];
+            imageView.tag = i;
+            imageView.userInteractionEnabled = YES;
             imageView.backgroundColor = [UIColor colorWithRed:0.765 green:0.743 blue:0.768 alpha:1.000];
+            UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(photoTap:)];
+            [imageView addGestureRecognizer:recognizer];
             [self addSubview:imageView];
             [array addObject:imageView];
         }
         self.imageViewArray = array;
     }
     return self;
+}
+
+-(void)photoTap:(UITapGestureRecognizer *)recognizer
+{
+    HYModelView *modelView = [[HYModelView alloc] initWithFrame:self.window.bounds];
+    [self.window addSubview:modelView];
+    
+    NSMutableArray *array = [NSMutableArray array];
+    unsigned long count = self.weibo.pic_urls.count;
+    for(int i = 0; i < count; i ++)
+    {
+        [array addObject:self.imageViewArray[i]];
+    }
+    modelView.photoArray = array;
+    
+    modelView.currentView = (UIImageView *)recognizer.view;
 }
 
 -(void)setWeibo:(HYWeibo *)weibo
@@ -48,7 +69,7 @@
     for(int i = 0; i < count; i ++)
     {
         UIImageView *imageView = self.imageViewArray[i];
-        [imageView sd_setImageWithURL:weibo.pic_urls[i]];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:weibo.pic_urls[i][@"thumbnail_pic"]]];
         CGFloat col = i % ColCount;
         CGFloat row = i / RowCount;
         imageView.frame = CGRectMake(col * (width + margin) + margin, row * (height + margin) + margin, width, height);

@@ -54,28 +54,35 @@
         self.retweetTextFrame = CGRectMake(margin, margin, size.width, size.height);
         
         unsigned long count = self.weibo.retweet.pic_urls.count;
-        CGFloat height = ([[UIScreen mainScreen] bounds].size.width - margin * 4) / 3;
-        CGFloat row = (count - 1) / 3 + 1;
-        photoViewHeight = row * (height + margin);
-        
+        if(count > 0)
+        {
+            CGFloat height = ([[UIScreen mainScreen] bounds].size.width - margin * 4) / 3;
+            CGFloat row = (count - 1) / 3 + 1;
+            photoViewHeight = row * (height + margin);
+        }
         self.retweetPhotoViewFrame = CGRectMake(0, CGRectGetMaxY(self.retweetTextFrame), [[UIScreen mainScreen] bounds].size.width, photoViewHeight);
         
-        self.retweetFrame = CGRectMake(0, CGRectGetMaxY(self.textFrame), [[UIScreen mainScreen] bounds].size.width, CGRectGetMaxY(self.retweetPhotoViewFrame));
+        self.retweetFrame = CGRectMake(0, CGRectGetMaxY(self.textFrame), [[UIScreen mainScreen] bounds].size.width, CGRectGetMaxY(self.retweetPhotoViewFrame) + margin);
         
-        self.toolbarFrame = CGRectMake(0, CGRectGetMaxY(self.retweetFrame) + margin, [[UIScreen mainScreen] bounds].size.width, 36);
+        self.toolbarFrame = CGRectMake(0, CGRectGetMaxY(self.retweetFrame), [[UIScreen mainScreen] bounds].size.width, 36);
+        
+        self.topViewFrame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, CGRectGetMaxY(self.retweetFrame));
     }
     else
     {
         unsigned long count = self.weibo.pic_urls.count;
-        CGFloat height = ([[UIScreen mainScreen] bounds].size.width - margin * 4) / 3;
-        CGFloat row = (count - 1) / 3 + 1;
-        photoViewHeight = row * (height + margin);
+        if(count > 0)
+        {
+            CGFloat height = ([[UIScreen mainScreen] bounds].size.width - margin * 4) / 3;
+            CGFloat row = (count - 1) / 3 + 1;
+            photoViewHeight = row * (height + margin);
+        }
         
-        self.photoViewFrame = CGRectMake(0, CGRectGetMaxY(self.textFrame), [[UIScreen mainScreen] bounds].size.width, photoViewHeight);
+        self.photoViewFrame = CGRectMake(0, CGRectGetMaxY(self.textFrame), [[UIScreen mainScreen] bounds].size.width, photoViewHeight + margin);
         
         self.topViewFrame = CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, CGRectGetMaxY(self.photoViewFrame));
         
-        self.toolbarFrame = CGRectMake(0, CGRectGetMaxY(self.photoViewFrame) + margin, [[UIScreen mainScreen] bounds].size.width, 36);
+        self.toolbarFrame = CGRectMake(0, CGRectGetMaxY(self.photoViewFrame), [[UIScreen mainScreen] bounds].size.width, 36);
     }
     
     self.height = (long int)(CGRectGetMaxY(self.toolbarFrame) + margin - 3);

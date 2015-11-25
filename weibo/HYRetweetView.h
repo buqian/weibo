@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HYWeibo.h"
 
 @interface HYRetweetView : UIView
+
+@property (nonatomic, strong) HYWeibo *weibo;
 
 @end

@@ -34,8 +34,22 @@
         HYPhotoView *photoView = [[HYPhotoView alloc] init];
         [self addSubview:photoView];
         self.photoView = photoView;
+        
+        self.backgroundColor = HYColor(245, 245, 245);
     }
     return self;
+}
+
+-(void)setWeibo:(HYWeibo *)weibo
+{
+    _weibo = weibo;
+    HYWeibo *retweetWeibo = weibo.retweet;
+    NSString *retweetText = [NSString stringWithFormat:@"@%@:%@", retweetWeibo.user.name, retweetWeibo.text];
+    self.textLabel.text = retweetText;
+    self.textLabel.frame = weibo.frame.retweetTextFrame;
+    
+    self.photoView.weibo = retweetWeibo;
+    self.photoView.frame = weibo.frame.retweetPhotoViewFrame;
 }
 
 @end

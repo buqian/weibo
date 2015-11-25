@@ -26,7 +26,7 @@
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
-    self.tableView.backgroundColor = HYColor(226, 226, 226);
+    self.tableView.backgroundColor = HYColor(240, 240, 240);
     
     [self getWeiboPublicList];
     
@@ -45,7 +45,7 @@
     NSURLResponse *resp;
     NSError *error;
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&resp error:&error];
-    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+//    NSLog(@"%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
 
     [self parseData:dict];
@@ -86,10 +86,6 @@
         
         weibo.user = user;
         
-        HYWeiboFrame *frame = [[HYWeiboFrame alloc] initWithHYWeibo:weibo];
-        
-        weibo.frame = frame;
-        
         NSDictionary *retweetDict = d[@"retweeted_status"];
         if(nil != retweetDict)
         {
@@ -114,7 +110,13 @@
             
             HYWeiboFrame *retweetFrame = [[HYWeiboFrame alloc] initWithHYWeibo:retweet];
             retweet.frame = retweetFrame;
+            
+            weibo.retweet = retweet;
         }
+        
+        HYWeiboFrame *frame = [[HYWeiboFrame alloc] initWithHYWeibo:weibo];
+        
+        weibo.frame = frame;
         
         [mutableArray addObject:weibo];
     }
