@@ -14,7 +14,6 @@
 @property (nonatomic, weak) UILabel *label;
 @property (nonatomic, assign) BOOL isRefresh;
 @property (nonatomic, assign) BOOL startRefresh;
-@property (nonatomic, assign) UIEdgeInsets contentInset;
 @property (nonatomic, assign) double angle;
 
 @end
@@ -55,8 +54,7 @@
 -(void)setTableView:(UITableView *)tableView
 {
     _tableView = tableView;
-    _contentInset = tableView.contentInset;
-    tableView.contentInset = UIEdgeInsetsMake(-64, self.contentInset.left, self.contentInset.bottom, self.contentInset.right);
+    tableView.contentInset = UIEdgeInsetsMake(-50, tableView.contentInset.left, tableView.contentInset.bottom, tableView.contentInset.right);
     self.angle = 0;
 }
 
@@ -90,14 +88,14 @@
     if(self.isRefresh) {
         self.startRefresh = YES;
         tableView.bounces = NO;
-        tableView.contentInset = UIEdgeInsetsMake(64, self.contentInset.left, self.contentInset.bottom, self.contentInset.right);
+        tableView.contentInset = UIEdgeInsetsMake(64, tableView.contentInset.left, tableView.contentInset.bottom, tableView.contentInset.right);
         self.label.text = @"加载中...";
         self.imageView.image = [UIImage imageNamed:@"tableview_loading"];
         
         self.imageView.transform = CGAffineTransformIdentity;
         [self startRefreshImageViewRotate];
-        [UIView animateWithDuration:0.5 delay:5 options:UIViewAnimationOptionCurveLinear animations:^{
-            tableView.contentInset = UIEdgeInsetsMake(0, self.contentInset.left, self.contentInset.bottom, self.contentInset.right);
+        [UIView animateWithDuration:0.5 delay:2 options:UIViewAnimationOptionCurveLinear animations:^{
+            tableView.contentInset = UIEdgeInsetsMake(14, tableView.contentInset.left, tableView.contentInset.bottom, tableView.contentInset.right);
         } completion:^(BOOL finished) {
             tableView.bounces = YES;
             self.imageView.image = [UIImage imageNamed:@"tableview_pull_refresh"];

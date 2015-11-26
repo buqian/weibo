@@ -12,6 +12,7 @@
 #import "HYTableViewCell.h"
 #import "HYWeiboFrame.h"
 #import "HYRefreshHeaderView.h"
+#import "HYRefreshFooterView.h"
 
 @interface HYHomeController ()
 
@@ -35,6 +36,10 @@
     self.tableView.tableHeaderView = headerView;
     headerView.tableView = self.tableView;
     
+    HYRefreshFooterView *footerView = [[HYRefreshFooterView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    self.tableView.tableFooterView = footerView;
+    footerView.tableView = self.tableView;
+    
 //    NSLog(@"%@", NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
 }
 
@@ -42,17 +47,23 @@
 {
     HYRefreshHeaderView *headerView = (HYRefreshHeaderView *)self.tableView.tableHeaderView;
     [headerView refreshDidEndDragging:self.tableView scrollView:scrollView];
+    
+    HYRefreshFooterView *footerView = (HYRefreshFooterView *)self.tableView.tableFooterView;
+    [footerView refreshDidEndDragging:self.tableView scrollView:scrollView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     HYRefreshHeaderView *headerView = (HYRefreshHeaderView *)self.tableView.tableHeaderView;
     [headerView refreshWithTableView:self.tableView scrollView:scrollView];
+    
+    HYRefreshFooterView *footerView = (HYRefreshFooterView *)self.tableView.tableFooterView;
+    [footerView refreshWithTableView:self.tableView scrollView:scrollView];
 }
 
 -(void)getWeiboPublicList
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@statuses/home_timeline.json?access_token=%@&count=20", weibo_url2, [HYHelper getAccess_token]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@statuses/home_timeline.json?access_token=%@&count=3", weibo_url2, [HYHelper getAccess_token]]];
 //    NSString *param = [NSString stringWithFormat:@"access_token=%@", [HYHelper getAccess_token]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.cachePolicy = NSURLRequestUseProtocolCachePolicy;
@@ -180,8 +191,16 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     HYWeibo *weibo = self.statusesArray[indexPath.row];
+    if(indexPath.row == (self.statusesArray.count - 1))
+    {
+        return weibo.frame.height - margin;
+    }
+    else
+    {
+        return weibo.frame.height;
+    }
 //    NSLog(@"%f", weibo.frame.height);
-    return weibo.frame.height;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

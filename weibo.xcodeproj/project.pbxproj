@@ -11,6 +11,7 @@
 		2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847F1BFDFFED006A1E88 /* MapKit.framework */; };
 		2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D84A81BFE071D006A1E88 /* libSDWebImage.a */; };
 		2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC551EF1C05EBFF008FB12E /* HYModelView.m */; };
+		2DF0F2C41C072F9F00CE7B86 /* HYRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0F2C31C072F9F00CE7B86 /* HYRefreshFooterView.m */; };
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
 		AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */; };
 		AF58FB201C06B598007473BD /* HYRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58FB1F1C06B598007473BD /* HYRefreshHeaderView.m */; };
@@ -83,6 +84,8 @@
 		2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "../../../Downloads/SDWebImage-master/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
 		2DC551EE1C05EBFF008FB12E /* HYModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYModelView.h; sourceTree = "<group>"; };
 		2DC551EF1C05EBFF008FB12E /* HYModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYModelView.m; sourceTree = "<group>"; };
+		2DF0F2C21C072F9F00CE7B86 /* HYRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRefreshFooterView.h; sourceTree = "<group>"; };
+		2DF0F2C31C072F9F00CE7B86 /* HYRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRefreshFooterView.m; sourceTree = "<group>"; };
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
 		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
 		AF47261C1BFD91AA00933F3A /* HYWeiboFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeiboFrame.h; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 				2DC551EF1C05EBFF008FB12E /* HYModelView.m */,
 				AF58FB1E1C06B598007473BD /* HYRefreshHeaderView.h */,
 				AF58FB1F1C06B598007473BD /* HYRefreshHeaderView.m */,
+				2DF0F2C21C072F9F00CE7B86 /* HYRefreshFooterView.h */,
+				2DF0F2C31C072F9F00CE7B86 /* HYRefreshFooterView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -538,6 +543,7 @@
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
 				AFD968151BFC65FF00A9764A /* HYUser.m in Sources */,
 				AFF376AA1C05B905003EDA9A /* HYRetweetView.m in Sources */,
+				2DF0F2C41C072F9F00CE7B86 /* HYRefreshFooterView.m in Sources */,
 				AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */,
 				AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
