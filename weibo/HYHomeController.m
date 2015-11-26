@@ -11,6 +11,7 @@
 #import "HYUser.h"
 #import "HYTableViewCell.h"
 #import "HYWeiboFrame.h"
+#import "HYRefreshHeaderView.h"
 
 @interface HYHomeController ()
 
@@ -30,7 +31,23 @@
     
     [self getWeiboPublicList];
     
+    HYRefreshHeaderView *headerView = [[HYRefreshHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
+    self.tableView.tableHeaderView = headerView;
+    headerView.tableView = self.tableView;
+    
 //    NSLog(@"%@", NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES));
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    HYRefreshHeaderView *headerView = (HYRefreshHeaderView *)self.tableView.tableHeaderView;
+    [headerView refreshDidEndDragging:self.tableView scrollView:scrollView];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    HYRefreshHeaderView *headerView = (HYRefreshHeaderView *)self.tableView.tableHeaderView;
+    [headerView refreshWithTableView:self.tableView scrollView:scrollView];
 }
 
 -(void)getWeiboPublicList
