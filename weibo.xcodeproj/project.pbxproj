@@ -10,7 +10,14 @@
 		2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */; };
 		2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847F1BFDFFED006A1E88 /* MapKit.framework */; };
 		2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D84A81BFE071D006A1E88 /* libSDWebImage.a */; };
+		2DB00E2D1C09980A003052A8 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB00E2C1C09980A003052A8 /* UIImage+ColorAtPixel.m */; };
+		2DB00E361C099830003052A8 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB00E351C099830003052A8 /* OBShapedButton.m */; };
 		2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC551EF1C05EBFF008FB12E /* HYModelView.m */; };
+		2DEFCAC21C087CE200F530F6 /* me.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DEFCAC11C087CE200F530F6 /* me.plist */; };
+		2DEFCAD01C08872900F530F6 /* HYLotteryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEFCACF1C08872900F530F6 /* HYLotteryView.m */; };
+		2DEFCAD91C088F0D00F530F6 /* HYJKCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEFCAD71C088F0D00F530F6 /* HYJKCController.m */; };
+		2DEFCADA1C088F0D00F530F6 /* HYJKCController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEFCAD81C088F0D00F530F6 /* HYJKCController.xib */; };
+		2DEFCADE1C08900700F530F6 /* lottery.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DEFCADD1C08900700F530F6 /* lottery.jpg */; };
 		2DF0F2C41C072F9F00CE7B86 /* HYRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF0F2C31C072F9F00CE7B86 /* HYRefreshFooterView.m */; };
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
 		AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */; };
@@ -82,8 +89,19 @@
 		2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2D7D847F1BFDFFED006A1E88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "../../../Downloads/SDWebImage-master/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
+		2DB00E2B1C09980A003052A8 /* UIImage+ColorAtPixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorAtPixel.h"; sourceTree = "<group>"; };
+		2DB00E2C1C09980A003052A8 /* UIImage+ColorAtPixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorAtPixel.m"; sourceTree = "<group>"; };
+		2DB00E341C099830003052A8 /* OBShapedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBShapedButton.h; sourceTree = "<group>"; };
+		2DB00E351C099830003052A8 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
 		2DC551EE1C05EBFF008FB12E /* HYModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYModelView.h; sourceTree = "<group>"; };
 		2DC551EF1C05EBFF008FB12E /* HYModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYModelView.m; sourceTree = "<group>"; };
+		2DEFCAC11C087CE200F530F6 /* me.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = me.plist; sourceTree = "<group>"; };
+		2DEFCACE1C08872900F530F6 /* HYLotteryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLotteryView.h; sourceTree = "<group>"; };
+		2DEFCACF1C08872900F530F6 /* HYLotteryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLotteryView.m; sourceTree = "<group>"; };
+		2DEFCAD61C088F0D00F530F6 /* HYJKCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYJKCController.h; sourceTree = "<group>"; };
+		2DEFCAD71C088F0D00F530F6 /* HYJKCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYJKCController.m; sourceTree = "<group>"; };
+		2DEFCAD81C088F0D00F530F6 /* HYJKCController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYJKCController.xib; sourceTree = "<group>"; };
+		2DEFCADD1C08900700F530F6 /* lottery.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lottery.jpg; sourceTree = "<group>"; };
 		2DF0F2C21C072F9F00CE7B86 /* HYRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRefreshFooterView.h; sourceTree = "<group>"; };
 		2DF0F2C31C072F9F00CE7B86 /* HYRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRefreshFooterView.m; sourceTree = "<group>"; };
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
@@ -156,6 +174,10 @@
 		2D7D84771BFDF23E006A1E88 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				2DB00E2B1C09980A003052A8 /* UIImage+ColorAtPixel.h */,
+				2DB00E2C1C09980A003052A8 /* UIImage+ColorAtPixel.m */,
+				2DB00E341C099830003052A8 /* OBShapedButton.h */,
+				2DB00E351C099830003052A8 /* OBShapedButton.m */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -170,6 +192,18 @@
 				2D7D84B01BFE071D006A1E88 /* WebImage.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2DEFCAC91C08864200F530F6 /* 即开彩票 */ = {
+			isa = PBXGroup;
+			children = (
+				2DEFCACE1C08872900F530F6 /* HYLotteryView.h */,
+				2DEFCACF1C08872900F530F6 /* HYLotteryView.m */,
+				2DEFCAD61C088F0D00F530F6 /* HYJKCController.h */,
+				2DEFCAD71C088F0D00F530F6 /* HYJKCController.m */,
+				2DEFCAD81C088F0D00F530F6 /* HYJKCController.xib */,
+			);
+			name = "即开彩票";
 			sourceTree = "<group>";
 		};
 		AF36CE341BF6326100238C59 /* login */ = {
@@ -218,8 +252,10 @@
 		AF85B8441BF4B70F00044DF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2DEFCADD1C08900700F530F6 /* lottery.jpg */,
 				AF85B8451BF4B70F00044DF4 /* main.m */,
 				AFF74AFD1BF9ADE3003B8C61 /* weibo.pch */,
+				2DEFCAC11C087CE200F530F6 /* me.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -309,6 +345,7 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				2DEFCAC91C08864200F530F6 /* 即开彩票 */,
 				AFA7F89D1BF5C69300EABE40 /* controller */,
 			);
 			name = me;
@@ -523,9 +560,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DEFCAC21C087CE200F530F6 /* me.plist in Resources */,
 				AF85B8541BF4B70F00044DF4 /* LaunchScreen.storyboard in Resources */,
 				AF85B8511BF4B70F00044DF4 /* Assets.xcassets in Resources */,
+				2DEFCADE1C08900700F530F6 /* lottery.jpg in Resources */,
 				AF85B84F1BF4B70F00044DF4 /* Main.storyboard in Resources */,
+				2DEFCADA1C088F0D00F530F6 /* HYJKCController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +578,7 @@
 			files = (
 				AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */,
 				AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */,
+				2DEFCAD01C08872900F530F6 /* HYLotteryView.m in Sources */,
 				AFF376A11C056ABB003EDA9A /* HYPhotoView.m in Sources */,
 				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
@@ -559,7 +600,10 @@
 				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
 				AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */,
 				AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */,
+				2DB00E361C099830003052A8 /* OBShapedButton.m in Sources */,
 				AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */,
+				2DB00E2D1C09980A003052A8 /* UIImage+ColorAtPixel.m in Sources */,
+				2DEFCAD91C088F0D00F530F6 /* HYJKCController.m in Sources */,
 				AF85B8461BF4B70F00044DF4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

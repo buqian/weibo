@@ -30,7 +30,7 @@
 
     self.tableView.backgroundColor = HYColor(240, 240, 240);
     
-    [self getWeiboPublicList];
+//    [self getWeiboPublicList];
     
     HYRefreshHeaderView *headerView = [[HYRefreshHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
     self.tableView.tableHeaderView = headerView;

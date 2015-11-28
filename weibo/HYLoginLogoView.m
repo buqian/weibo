@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) UIImage *image;
 
+
 @end
 
 @implementation HYLoginLogoView
