@@ -54,6 +54,27 @@
     return item;
 }
 
+-(void)hideTabbar
+{
+//    self.tabBar.hidden = YES;
+    for (UIView *view in [self.view subviews]) {
+        if([view isKindOfClass:NSClassFromString(@"HYTabbar")])
+        {
+            view.hidden = YES;
+        }
+    }
+}
+
+-(void)showTabbar
+{
+    for (UIView *view in [self.view subviews]) {
+        if([view isKindOfClass:NSClassFromString(@"HYTabbar")])
+        {
+            view.hidden = NO;
+        }
+    }
+}
+
 -(void)setupChildControllers
 {
     // home -------------
@@ -113,6 +134,7 @@
     HYTabbar * tabbar = [HYTabbar tabbar];
     tabbar.delegate = self;
     [self.view addSubview:tabbar];
+
     
     
     UITabBarItem *home = [[UITabBarItem alloc] initWithTitle:@"首页" image:[UIImage imageNamed:@"tabbar_home"] selectedImage:[UIImage imageNamed:@"tabbar_home_selected"]];

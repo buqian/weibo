@@ -7,6 +7,7 @@
 //
 
 #import "HYMeController.h"
+#import "HYJKCController.h"
 
 @interface HYMeController ()
 
@@ -18,7 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
     
     self.plistArray = [NSArray arrayWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"me" withExtension:@"plist"]];
    
@@ -52,4 +52,17 @@
     return 1;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tabBarController performSelector:@selector(hideTabbar) withObject:nil];
+    NSString *clazz = self.plistArray[indexPath.row][@"clazz"];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"回家" style:UIBarButtonItemStyleDone target:nil action:nil];
+    UIViewController *vc = [[NSClassFromString(clazz) alloc] initWithNibName:clazz bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.tabBarController performSelector:@selector(showTabbar) withObject:nil];
+}
 @end

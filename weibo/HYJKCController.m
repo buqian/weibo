@@ -10,9 +10,6 @@
 #import "HYLotteryView.h"
 
 @interface HYJKCController ()
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *refreshView;
-- (IBAction)startR:(id)sender;
-- (IBAction)endR:(id)sender;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet HYLotteryView *planView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -23,6 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"即开彩票";
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStyleDone target:self action:@selector(sure)];
     
     self.planView.imageView = self.imageView;
     
@@ -35,17 +36,14 @@
 //    NSLog(@"%ld", array.count);
 }
 
+-(void)sure
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)startR:(id)sender {
-    [self.refreshView startAnimating];
-}
-
-- (IBAction)endR:(id)sender {
-    [self.refreshView stopAnimating];
 }
 
 @end

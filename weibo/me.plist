@@ -4,9 +4,21 @@
 <array>
 	<dict>
 		<key>clazz</key>
-		<string></string>
+		<string>HYJKCController</string>
 		<key>name</key>
 		<string>即开彩票</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYGifController</string>
+		<key>name</key>
+		<string>gif 动画</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYImageLoopController</string>
+		<key>name</key>
+		<string>广告循环图片</string>
 	</dict>
 </array>
 </plist>

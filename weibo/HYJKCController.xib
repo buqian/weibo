@@ -10,7 +10,6 @@
                 <outlet property="imageView" destination="xid-5F-E9n" id="b2C-Hv-4pA"/>
                 <outlet property="label" destination="psi-d4-gXz" id="nhp-Bx-fQ6"/>
                 <outlet property="planView" destination="y98-9d-cdi" id="5mP-2C-x9F"/>
-                <outlet property="refreshView" destination="2i9-GC-l88" id="5Ex-Yk-286"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,46 +18,22 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="prz-sO-Bpb">
-                    <rect key="frame" x="69" y="53" width="20" height="20"/>
-                </activityIndicatorView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFQ-tI-mwH">
-                    <rect key="frame" x="117" y="48" width="46" height="30"/>
-                    <state key="normal" title="Start">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="startR:" destination="-1" eventType="touchUpInside" id="eNG-fB-6U9"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igm-OR-b3i">
-                    <rect key="frame" x="171" y="48" width="46" height="30"/>
-                    <state key="normal" title="End">
-                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="endR:" destination="-1" eventType="touchUpInside" id="ruD-cA-4lg"/>
-                    </connections>
-                </button>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2i9-GC-l88">
-                    <rect key="frame" x="69" y="53" width="20" height="20"/>
-                </activityIndicatorView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lottery.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZSU-az-b7V">
-                    <rect key="frame" x="0.0" y="162" width="375" height="243"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xid-5F-E9n">
-                    <rect key="frame" x="0.0" y="420" width="375" height="243"/>
-                </imageView>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y98-9d-cdi" customClass="HYLotteryView">
-                    <rect key="frame" x="0.0" y="162" width="375" height="243"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psi-d4-gXz">
-                    <rect key="frame" x="0.0" y="101" width="375" height="41"/>
+                    <rect key="frame" x="0.0" y="71" width="375" height="41"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lottery.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZSU-az-b7V">
+                    <rect key="frame" x="0.0" y="120" width="375" height="243"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y98-9d-cdi" customClass="HYLotteryView">
+                    <rect key="frame" x="0.0" y="120" width="375" height="243"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xid-5F-E9n">
+                    <rect key="frame" x="0.0" y="366" width="375" height="243"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

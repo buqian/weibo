@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HYJKCController.h"
 #import "ViewController.h"
+#import "HYGifController.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    self.window.rootViewController = [[HYJKCController alloc] initWithNibName:@"HYJKCController" bundle:nil];
-//    self.window.rootViewController = [[ViewController alloc] init];
-    [self.window makeKeyAndVisible];
+//    self.window.rootViewController = [[HYGifController alloc] initWithNibName:@"HYGifController" bundle:nil];
+////    self.window.rootViewController = [[ViewController alloc] init];
+//    [self.window makeKeyAndVisible];
     
     return YES;
 }
