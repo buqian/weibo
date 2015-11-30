@@ -32,6 +32,11 @@
 		2DF3F10D1C0B0E2000C94C97 /* g-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3F1081C0B0E2000C94C97 /* g-4.jpg */; };
 		2DF3F10E1C0B0E2000C94C97 /* g-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3F1091C0B0E2000C94C97 /* g-5.jpg */; };
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
+		AF3F530B1C0C1723003B867F /* HYTableDrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F53091C0C1723003B867F /* HYTableDrapController.m */; };
+		AF3F53131C0C18DE003B867F /* SightAction@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3F53111C0C18DE003B867F /* SightAction@2x.png */; };
+		AF3F53141C0C18DE003B867F /* SightAction@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3F53121C0C18DE003B867F /* SightAction@3x.png */; };
+		AF3F53201C0C236B003B867F /* HYTableDrapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3F531F1C0C236B003B867F /* HYTableDrapController.xib */; };
+		AF3F53231C0C3688003B867F /* HYDrapBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F53221C0C3688003B867F /* HYDrapBackgroundView.m */; };
 		AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */; };
 		AF58FB201C06B598007473BD /* HYRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF58FB1F1C06B598007473BD /* HYRefreshHeaderView.m */; };
 		AF85B8461BF4B70F00044DF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8451BF4B70F00044DF4 /* main.m */; };
@@ -134,6 +139,13 @@
 		2DF3F1091C0B0E2000C94C97 /* g-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "g-5.jpg"; sourceTree = "<group>"; };
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
 		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
+		AF3F53081C0C1723003B867F /* HYTableDrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableDrapController.h; sourceTree = "<group>"; };
+		AF3F53091C0C1723003B867F /* HYTableDrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTableDrapController.m; sourceTree = "<group>"; };
+		AF3F53111C0C18DE003B867F /* SightAction@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SightAction@2x.png"; sourceTree = "<group>"; };
+		AF3F53121C0C18DE003B867F /* SightAction@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SightAction@3x.png"; sourceTree = "<group>"; };
+		AF3F531F1C0C236B003B867F /* HYTableDrapController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYTableDrapController.xib; sourceTree = "<group>"; };
+		AF3F53211C0C3688003B867F /* HYDrapBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDrapBackgroundView.h; sourceTree = "<group>"; };
+		AF3F53221C0C3688003B867F /* HYDrapBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDrapBackgroundView.m; sourceTree = "<group>"; };
 		AF47261C1BFD91AA00933F3A /* HYWeiboFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeiboFrame.h; sourceTree = "<group>"; };
 		AF47261D1BFD91AA00933F3A /* HYWeiboFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWeiboFrame.m; sourceTree = "<group>"; };
 		AF58FB1E1C06B598007473BD /* HYRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRefreshHeaderView.h; sourceTree = "<group>"; };
@@ -279,6 +291,20 @@
 			name = login;
 			sourceTree = "<group>";
 		};
+		AF3F53011C0C16D0003B867F /* Table下拉样式 */ = {
+			isa = PBXGroup;
+			children = (
+				AF3F53111C0C18DE003B867F /* SightAction@2x.png */,
+				AF3F53121C0C18DE003B867F /* SightAction@3x.png */,
+				AF3F53211C0C3688003B867F /* HYDrapBackgroundView.h */,
+				AF3F53221C0C3688003B867F /* HYDrapBackgroundView.m */,
+				AF3F53081C0C1723003B867F /* HYTableDrapController.h */,
+				AF3F53091C0C1723003B867F /* HYTableDrapController.m */,
+				AF3F531F1C0C236B003B867F /* HYTableDrapController.xib */,
+			);
+			name = "Table下拉样式";
+			sourceTree = "<group>";
+		};
 		AF85B8381BF4B70F00044DF4 = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +437,7 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				AF3F53011C0C16D0003B867F /* Table下拉样式 */,
 				2DF3F0FE1C0B0A7700C94C97 /* 广告循环图片 */,
 				2DF3F0E71C0ACDD800C94C97 /* gif动画 */,
 				2DEFCAC91C08864200F530F6 /* 即开彩票 */,
@@ -631,6 +658,7 @@
 				2DEFCAC21C087CE200F530F6 /* me.plist in Resources */,
 				2DF3F10D1C0B0E2000C94C97 /* g-4.jpg in Resources */,
 				2DF3F1031C0B0AA100C94C97 /* HYImageLoopController.xib in Resources */,
+				AF3F53201C0C236B003B867F /* HYTableDrapController.xib in Resources */,
 				AF85B8541BF4B70F00044DF4 /* LaunchScreen.storyboard in Resources */,
 				AF85B8511BF4B70F00044DF4 /* Assets.xcassets in Resources */,
 				2DEFCADE1C08900700F530F6 /* lottery.jpg in Resources */,
@@ -639,6 +667,8 @@
 				2DEFCADA1C088F0D00F530F6 /* HYJKCController.xib in Resources */,
 				2DF3F0E01C0ACDD000C94C97 /* sleep.jpg in Resources */,
 				2DF3F10C1C0B0E2000C94C97 /* g-3.jpg in Resources */,
+				AF3F53131C0C18DE003B867F /* SightAction@2x.png in Resources */,
+				AF3F53141C0C18DE003B867F /* SightAction@3x.png in Resources */,
 				2DF3F10E1C0B0E2000C94C97 /* g-5.jpg in Resources */,
 				2DF3F0F11C0AD8A000C94C97 /* HYGifController.xib in Resources */,
 				2DF3F10B1C0B0E2000C94C97 /* g-2.jpg in Resources */,
@@ -676,12 +706,14 @@
 				AFF376A41C0599E1003EDA9A /* HYWeiboToolbar.m in Sources */,
 				AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */,
 				AFF376971C056750003EDA9A /* HYWeiboTopView.m in Sources */,
+				AF3F530B1C0C1723003B867F /* HYTableDrapController.m in Sources */,
 				AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */,
 				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
 				AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */,
 				AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */,
 				2DB00E361C099830003052A8 /* OBShapedButton.m in Sources */,
 				AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */,
+				AF3F53231C0C3688003B867F /* HYDrapBackgroundView.m in Sources */,
 				2DB00E2D1C09980A003052A8 /* UIImage+ColorAtPixel.m in Sources */,
 				2DEFCAD91C088F0D00F530F6 /* HYJKCController.m in Sources */,
 				AF85B8461BF4B70F00044DF4 /* main.m in Sources */,

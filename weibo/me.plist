@@ -20,5 +20,11 @@
 		<key>name</key>
 		<string>广告循环图片</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYTableDrapController</string>
+		<key>name</key>
+		<string>Table下拉样式</string>
+	</dict>
 </array>
 </plist>
