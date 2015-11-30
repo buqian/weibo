@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYLuckLoopController">
+            <connections>
+                <outlet property="luckyView" destination="KWj-hx-4mP" id="tRw-Sj-0Bk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyBackground_For6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O4K-5q-fUD">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyThreeButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="479-iI-bdu">
+                    <rect key="frame" x="67" y="171" width="240" height="103"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="双色球" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xga-7F-ujL">
+                    <rect key="frame" x="67" y="225" width="65" height="31"/>
+                    <color key="textColor" red="0.94560842803030298" green="0.93976312965116993" blue="0.63918332809251555" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="星座" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NWi-jy-1E6">
+                    <rect key="frame" x="155" y="191" width="65" height="31"/>
+                    <color key="textColor" red="0.945608428" green="0.93976312969999998" blue="0.6391833281" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5注" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ck-sy-hOz">
+                    <rect key="frame" x="242" y="225" width="65" height="31"/>
+                    <color key="textColor" red="0.945608428" green="0.93976312969999998" blue="0.6391833281" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyBaseBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-PX-Tca">
+                    <rect key="frame" x="20" y="278" width="334" height="334"/>
+                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-hx-4mP" customClass="HYLuckLoopView">
+                    <rect key="frame" x="24" y="282" width="326" height="326"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyRotateWheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z4G-Gm-Kjs">
+                            <rect key="frame" x="0.0" y="0.0" width="326" height="326"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyRotateButton.png" translatesAutoresizingMaskIntoConstraints="NO" id="dNz-t2-f1J">
+                    <rect key="frame" x="98" y="356" width="178" height="178"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FX-BS-6ak">
+                    <rect key="frame" x="133" y="390" width="109" height="110"/>
+                    <state key="normal" image="LuckyCenterButton.png" backgroundImage="LuckyCenterButtonPressed.png"/>
+                    <connections>
+                        <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="psY-6u-LDY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="471.5" y="313.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LuckyBackground_For6.jpg" width="375" height="667"/>
+        <image name="LuckyBaseBackground.png" width="358" height="358"/>
+        <image name="LuckyCenterButton.png" width="109" height="110"/>
+        <image name="LuckyCenterButtonPressed.png" width="103" height="103"/>
+        <image name="LuckyRotateButton.png" width="194" height="194"/>
+        <image name="LuckyRotateWheel.png" width="359" height="360"/>
+        <image name="LuckyThreeButton.png" width="256" height="116"/>
+    </resources>
+</document>

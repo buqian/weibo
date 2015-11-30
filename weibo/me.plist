@@ -26,5 +26,11 @@
 		<key>name</key>
 		<string>Table下拉样式</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYLuckLoopController</string>
+		<key>name</key>
+		<string>大转盘</string>
+	</dict>
 </array>
 </plist>
