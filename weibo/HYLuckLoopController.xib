@@ -44,9 +44,9 @@
                     <rect key="frame" x="20" y="278" width="334" height="334"/>
                 </imageView>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-hx-4mP" customClass="HYLuckLoopView">
-                    <rect key="frame" x="24" y="282" width="326" height="326"/>
+                    <rect key="frame" x="24" y="283" width="326" height="326"/>
                     <subviews>
-                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyRotateWheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z4G-Gm-Kjs">
+                        <imageView tag="998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LuckyRotateWheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="Z4G-Gm-Kjs">
                             <rect key="frame" x="0.0" y="0.0" width="326" height="326"/>
                         </imageView>
                     </subviews>

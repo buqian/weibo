@@ -63,7 +63,6 @@
         
         self.timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(run) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
-        [self addAnimation];
     }
     return self;
 }
@@ -95,7 +94,7 @@
     CAShapeLayer *shapeLayer2 = self.currentShapeLayer == self.shapeLayer ? self.shapeLayer2 : self.shapeLayer;
     if(shapeLayer.strokeEnd > 0.02 && ![self.imageView.layer.animationKeys containsObject:@"yellowrun"])
     {
-        [self.imageView.layer addAnimation:[self addAnimation] forKey:@"yellowrun"];
+        [self.imageView.layer addAnimation:[self getAnimation] forKey:@"yellowrun"];
     }
     if(shapeLayer.strokeEnd - shapeLayer.strokeStart < 0.15)
     {
@@ -124,7 +123,7 @@
     }
 }
 
-- (CAAnimation *)addAnimation
+- (CAAnimation *)getAnimation
 {
     
     CAKeyframeAnimation *keyAnima = [CAKeyframeAnimation animation];
@@ -139,6 +138,34 @@
     keyAnima.repeatCount = MAXFLOAT;
 
     return keyAnima;
+}
+
+- (void)stopAnimationChangeImage
+{
+    [self.imageView.layer removeAllAnimations];
+    self.imageView.image = nil;
+    [self.timer invalidate];
+    self.timer = nil;
+    self.shapeLayer.lineWidth = 0;
+    self.shapeLayer2.lineWidth = 0;
+    
+    self.shapeLayer.strokeStart = 0;
+    self.shapeLayer.strokeEnd = 0;
+    
+    self.shapeLayer2.strokeStart = 0;
+    self.shapeLayer2.strokeEnd = 0;
+}
+
+- (void)startAnimationChangeImage
+{
+    self.imageView.image = [UIImage imageNamed:@"lucky_birthday_yellowcircle"];
+    self.imageView.center = CGPointMake(57, 21.5);
+    
+    self.shapeLayer.lineWidth = 3.0;
+    self.shapeLayer2.lineWidth = 3.0;
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(run) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
 @end

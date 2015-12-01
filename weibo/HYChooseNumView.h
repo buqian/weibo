@@ -10,4 +10,7 @@
 
 @interface HYChooseNumView : UIView
 
+- (void)stopAnimationChangeImage;
+- (void)startAnimationChangeImage;
+
 @end

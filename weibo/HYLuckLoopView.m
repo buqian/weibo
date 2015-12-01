@@ -35,6 +35,7 @@
 {
     self = [super initWithCoder:coder];
     if (self) {
+        self.tag = 999;
         for (int i = 0; i < 12; i ++) {
             HYLuckLoopButton *btn = [HYLuckLoopButton buttonWithType:UIButtonTypeCustom];
             btn.backgroundColor = [UIColor clearColor];
@@ -93,14 +94,22 @@
     [sender convertPoint:sender.center toView:self.superview];
 }
 
-- (void)startChoose
-{
-    self.displayLink.paused = YES;
+#pragma mark 没用了
+//- (void)startChoose
+//{
+//    self.displayLink.paused = YES;
 //    self.chooseDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(chooseLoop)];
 //    [self.chooseDisplayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
 //    self.userInteractionEnabled = NO;
-    self.stap = 30;
-    self.isJian = NO;
+//    self.stap = 30;
+//    self.isJian = NO;
+//}
+
+#pragma mark 新方法
+- (void)startChoose
+{
+    self.displayLink.paused = YES;
+    [self reLoyoutBtns];
     [self addAnimation];
 }
 
@@ -110,16 +119,55 @@
     //1.1设置动画执行时间
     anima.duration=2.0;
     //1.2修改属性，执行动画
-    self.angle = M_PI * 6 + M_PI / 180 * self.angle;
-    anima.toValue=[NSNumber numberWithFloat:self.angle];
+    
+    CGFloat f = M_PI * 10;
+//    anima.fromValue = [NSNumber numberWithFloat:self.angle];
+    anima.toValue=[NSNumber numberWithFloat:f];
     //1.3设置动画执行完毕后不删除动画
-    anima.removedOnCompletion=NO;
+    anima.removedOnCompletion=YES;
     //1.4设置保存动画的最新状态
-    anima.fillMode=kCAFillModeForwards;
+//    anima.fillMode=kCAFillModeForwards;
+    
+    anima.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    anima.delegate = self;
     //2.添加动画到layer
-    [self.layer addAnimation:anima forKey:nil];
+    [self.layer addAnimation:anima forKey:@"1"];
 }
 
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.displayLink.paused = NO;
+    });
+}
+
+- (void)reLoyoutBtns
+{
+    self.transform = CGAffineTransformIdentity;
+    self.angle = 0;
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = (int)self.selectedBtn.tag; i < 12; i ++) {
+        [array addObject:[self viewWithTag:i]];
+    }
+    for (int i = 0; i < (int)self.selectedBtn.tag; i ++) {
+        [array addObject:[self viewWithTag:i]];
+    }
+    for (int i = 0; i < 12; i ++) {
+        UIView *view = array[i];
+        [view removeFromSuperview];
+        [self addSubview:view];
+        view.transform = CGAffineTransformMakeRotation(M_PI / 180 * (i * 30));
+        view.tag = i;
+    }
+
+}
+
+#pragma mark 没用了
 - (void)chooseLoop
 {
     self.angle += self.stap;

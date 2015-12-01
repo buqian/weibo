@@ -42,5 +42,11 @@
 		<key>name</key>
 		<string>生日选号仪</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYYaoQianController</string>
+		<key>name</key>
+		<string>无敌上上签</string>
+	</dict>
 </array>
 </plist>
