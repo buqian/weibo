@@ -25,6 +25,8 @@
 
 @property (nonatomic, assign) CGFloat stap;
 
+@property (nonatomic, assign) BOOL isJian;
+
 @end
 
 @implementation HYLuckLoopView
@@ -39,6 +41,8 @@
             btn.bounds = CGRectMake(0, 0, ButtonWidth, self.frame.size.height * 0.5);
             btn.layer.anchorPoint = CGPointMake(0.5, 1);
             btn.layer.position = CGPointMake(self.frame.size.width * 0.5, self.frame.size.height * 0.5);
+            btn.tag = i;
+            
             btn.transform = CGAffineTransformMakeRotation(M_PI / 180 * (i * 30));
             
             UIImage *image = [UIImage imageNamed:@"LuckyAstrology"];
@@ -59,21 +63,22 @@
             [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
             [self addSubview:btn];
             
-            if(i == 11)
+            if(i == 0)
             {
                 [self btnClick:btn];
             }
         }
         
-//        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(loop)];
-//        [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+        self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(loop)];
+        [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
     }
     return self;
 }
 
 - (void)loop
 {
-    self.transform = CGAffineTransformRotate(self.transform, M_PI / 180 * 0.1);
+    self.angle += 0.1;
+    self.transform = CGAffineTransformMakeRotation(M_PI / 180 * self.angle);
 }
 
 -(void)awakeFromNib
@@ -91,29 +96,67 @@
 - (void)startChoose
 {
     self.displayLink.paused = YES;
-    self.chooseDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(chooseLoop)];
-    [self.chooseDisplayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
-    self.userInteractionEnabled = NO;
+//    self.chooseDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(chooseLoop)];
+//    [self.chooseDisplayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+//    self.userInteractionEnabled = NO;
     self.stap = 30;
+    self.isJian = NO;
+    [self addAnimation];
+}
+
+- (void)addAnimation
+{
+    CABasicAnimation *anima=[CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    //1.1设置动画执行时间
+    anima.duration=2.0;
+    //1.2修改属性，执行动画
+    self.angle = M_PI * 6 + M_PI / 180 * self.angle;
+    anima.toValue=[NSNumber numberWithFloat:self.angle];
+    //1.3设置动画执行完毕后不删除动画
+    anima.removedOnCompletion=NO;
+    //1.4设置保存动画的最新状态
+    anima.fillMode=kCAFillModeForwards;
+    //2.添加动画到layer
+    [self.layer addAnimation:anima forKey:nil];
 }
 
 - (void)chooseLoop
 {
-    NSLog(@"%@", NSStringFromCGPoint([self convertPoint:self.center toView:self.superview]));
-    self.transform = CGAffineTransformRotate(self.transform, M_PI / 180 * self.stap);
+    self.angle += self.stap;
+    self.transform = CGAffineTransformMakeRotation(M_PI / 180 * self.angle);
     self.index ++;
-    if(self.index >= 100)
+    if(self.index >= 60)
     {
-        self.chooseDisplayLink.frameInterval -= 30;
-
-        self.stap -= 2;
-        if(self.stap <= 0)
+        CGFloat loop = (self.angle + self.selectedBtn.tag * 30) - ((int)(self.angle + self.selectedBtn.tag * 30) / 360 * 360);
+        if(!self.isJian)
+        {
+            if(loop < 270)
+            {
+                self.isJian = YES;
+            }
+            return;
+        }
+        else if(loop >= 270 && loop< 300)
+        {
+            self.stap = 10;
+        }
+        else if(loop >= 300 && loop < 330)
+        {
+            self.stap = 5;
+        }
+        else if(loop >= 330 && loop <= 358)
+        {
+            self.stap = 1;
+        }
+        else if(loop > 358)
         {
             [self.chooseDisplayLink invalidate];
             self.chooseDisplayLink = nil;
             self.index = 0;
-            self.displayLink.paused = NO;
             self.userInteractionEnabled = YES;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.displayLink.paused = NO;
+            });
         }
     }
 }

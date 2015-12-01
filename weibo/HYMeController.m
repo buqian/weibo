@@ -38,6 +38,12 @@
     }
     cell.textLabel.text = self.plistArray[indexPath.row][@"name"];
     cell.textLabel.font = [UIFont systemFontOfSize:14];
+    NSString *image = self.plistArray[indexPath.row][@"image"];
+    if(nil == image)
+    {
+        image = @"lucky_lots_taohua";
+    }
+    cell.imageView.image = [UIImage imageNamed:image];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

@@ -27,10 +27,20 @@
 		<string>Table下拉样式</string>
 	</dict>
 	<dict>
+		<key>image</key>
+		<string>luck_entry_roulette_button_normal</string>
 		<key>clazz</key>
 		<string>HYLuckLoopController</string>
 		<key>name</key>
-		<string>大转盘</string>
+		<string>梦想大转盘</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>luck_entry_birthday_button_normal</string>
+		<key>clazz</key>
+		<string>HYChooseNumberController</string>
+		<key>name</key>
+		<string>生日选号仪</string>
 	</dict>
 </array>
 </plist>
