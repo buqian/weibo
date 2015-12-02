@@ -48,5 +48,11 @@
 		<key>name</key>
 		<string>无敌上上签</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYLFTController</string>
+		<key>name</key>
+		<string>立方体旋转</string>
+	</dict>
 </array>
 </plist>

@@ -40,7 +40,9 @@
             
             view.transform = CGAffineTransformMakeRotation(M_PI / 180 * ([self getRandomNumber:-10 to:10]));
             
-//            [self addSubview:view];
+            view.layer.zPosition = -1;
+            
+            [self addSubview:view];
             [array addObject:view];
         }
         self.imageViewArray = array;
@@ -52,6 +54,7 @@
         [btn addTarget:self action:@selector(yqBtnClick) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
         self.yqBtn = btn;
+        self.yqBtn.layer.zPosition = 100;
     }
     return self;
 }
@@ -63,68 +66,130 @@
 
 -(void)startYaoAnimation
 {
+    [self startQianAnimation];
     [self startFanAnimation];
-//    if(self.index > 5)
-//    {
-//        self.index = 0;
-//        return;
-//    }
-//    [UIView animateWithDuration:5 animations:^{
-////        CGRect frame = self.yqBtn.frame;
-////        if(self.index %2 == 0)
-////        {
-////            frame.origin.y += 15;
-////        }
-////        else
-////        {
-////            frame.origin.y -= 15;
-////        }
-////        self.yqBtn.frame = frame;
-////        CGFloat angle;
-////        if(self.index %2 == 0)
-////        {
-////            angle = -M_PI_4 * 0.5;
-////        }
-////        else
-////        {
-////            angle = M_PI_4 * 0.5;
-////        }
-////        self.yqBtn.layer.transform = CATransform3DRotate(self.yqBtn.layer.transform, M_2_PI, 0, 0, 1);
-////        self.index ++;
-//    } completion:^(BOOL finished) {
-//        [self startYaoAnimation];
-//    }];
+}
+
+- (void)startQianAnimation
+{
+    unsigned long count = self.imageViewArray.count;
+    for (int i = 0; i < count; i ++) {
+        UIImageView *view = self.imageViewArray[i];
+        int num1 = [self getRandomNumber:5 to:10];
+        CGFloat position = view.layer.position.y;
+        CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"position.y"];
+        anim.values = @[
+                         [NSNumber numberWithFloat:position],
+                         [NSNumber numberWithFloat:position - num1],
+                         [NSNumber numberWithFloat:position + num1],
+                         [NSNumber numberWithFloat:position]
+                         ];
+        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        anim.calculationMode = kCAAnimationPaced;
+        anim.duration = 0.5;
+        anim.repeatCount = 5;
+        anim.removedOnCompletion = NO;
+        anim.fillMode = kCAFillModeForwards;
+
+        CAKeyframeAnimation *anim2 = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+        num1 = [self getRandomNumber:5 to:10];
+        int num2 = [self getRandomNumber:-10 to:-5];
+        CATransform3D transform = CATransform3DMakeAffineTransform(view.transform);
+        anim2.values = @[
+                         [NSValue valueWithCATransform3D:transform],
+                         [NSValue valueWithCATransform3D:CATransform3DRotate(transform, M_PI / 180 * num1, 0, 0, 1)],
+                         [NSValue valueWithCATransform3D:CATransform3DRotate(transform, M_PI / 180 * num2, 0, 0, 1)],
+                         [NSValue valueWithCATransform3D:transform]
+                        ];
+        anim2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        anim2.calculationMode = kCAAnimationPaced;
+        anim2.duration = 0.5;
+        anim2.repeatCount = 5;
+        anim2.removedOnCompletion = NO;
+        anim2.fillMode = kCAFillModeForwards;
+        
+        CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
+        group.animations = @[anim, anim2];
+        group.duration = 0.5;
+        group.repeatCount = 5;
+        group.removedOnCompletion = NO;
+        group.fillMode = kCAFillModeForwards;
+        
+        [view.layer addAnimation:group forKey:nil];
+    }
 }
 
 - (void)startFanAnimation
 {
-    CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.x"];
-    NSNumber *avalue1 = [NSNumber numberWithFloat:0];
-    NSNumber *avalue2 = [NSNumber numberWithFloat:-M_PI_4 * 0.5];
-    NSNumber *avalue3 = [NSNumber numberWithFloat:0];
-    anim.values = @[avalue1, avalue2, avalue3];
-//    anim.duration = 0.5;
-//    anim.repeatCount = 5;
+ 
+    CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     
-    CAKeyframeAnimation *anim2 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    NSValue *a2value1 = [NSValue valueWithCGPoint:self.yqBtn.layer.position];
-    NSValue *a2value2 = [NSValue valueWithCGPoint:CGPointMake(self.yqBtn.layer.position.x, self.yqBtn.layer.position.y + 20)];
-    NSValue *a2value3 = [NSValue valueWithCGPoint:self.yqBtn.layer.position];
-    anim2.values = @[a2value1, a2value2, a2value3];
-//    anim2.duration = 0.5;
-//    anim2.repeatCount = 5;
+    CATransform3D o = self.yqBtn.layer.transform;
+    anim.values = @[
+                    [NSValue valueWithCATransform3D:o],
+                    [NSValue valueWithCATransform3D:[self CATransform3DPerspect:CATransform3DMakeRotation(-M_PI / 9, 1, 0, 0) point:CGPointMake(0, 0) dis:500]],
+                    [NSValue valueWithCATransform3D:[self CATransform3DPerspect:CATransform3DMakeRotation(M_PI / 18, 1, 0, 0) point:CGPointMake(0, 0) dis:500]],
+                    [NSValue valueWithCATransform3D:o]
+                    ];
+    anim.duration = 0.5;
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    anim.calculationMode = kCAAnimationPaced;
+    anim.repeatCount = 5;
+    anim.removedOnCompletion = NO;
+    anim.fillMode = kCAFillModeForwards;
     
-    CAKeyframeAnimation *anim3 = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
-    NSValue *a3value1 = [NSNumber numberWithFloat:1];
-    NSValue *a3value2 = [NSNumber numberWithFloat:1.05];
-    NSValue *a3value3 = [NSNumber numberWithFloat:1];
-    anim3.values = @[a3value1, a3value2, a3value3];
-    
+    CAKeyframeAnimation *anim2 = [CAKeyframeAnimation animationWithKeyPath:@"position.y"];
+    CGFloat position = self.yqBtn.layer.position.y;
+    anim2.values = @[
+                     [NSNumber numberWithFloat:position],
+                     [NSNumber numberWithFloat:position + 20],
+                     [NSNumber numberWithFloat:position]
+                     ];
+    anim2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    anim2.calculationMode = kCAAnimationPaced;
+    anim2.duration = 0.5;
+    anim2.repeatCount = 5;
+    anim2.removedOnCompletion = NO;
+    anim2.fillMode = kCAFillModeForwards;
+
+    //
     CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
-    group.animations = @[anim, anim2, anim3];
     group.duration = 0.5;
     group.repeatCount = 5;
+    group.removedOnCompletion = NO;
+    group.fillMode = kCAFillModeForwards;
+    
+    group.animations = @[anim, anim2];
+    
     [self.yqBtn.layer addAnimation:group forKey:nil];
 }
+
+- (CATransform3D)CATransform3DMakePerspective:(CGPoint )center dis:(float)disZ
+{
+    CATransform3D transToCenter = CATransform3DMakeTranslation(-center.x, -center.y, 0);
+    CATransform3D transBack = CATransform3DMakeTranslation(center.x, center.y, 0);
+    CATransform3D scale = CATransform3DIdentity;
+    scale.m34 = -1.0f/disZ;
+    return CATransform3DConcat(CATransform3DConcat(transToCenter, scale), transBack);
+}
+
+- (CATransform3D)CATransform3DPerspect:(CATransform3D)t point:(CGPoint)center dis:(float)disZ
+{
+    return CATransform3DConcat(t, [self CATransform3DMakePerspective:center dis:disZ]);
+}
+
+//CATransform3D CATransform3DMakePerspective(CGPoint center, float disZ)
+//{
+//    CATransform3D transToCenter = CATransform3DMakeTranslation(-center.x, -center.y, 0);
+//    CATransform3D transBack = CATransform3DMakeTranslation(center.x, center.y, 0);
+//    CATransform3D scale = CATransform3DIdentity;
+//    scale.m34 = -1.0f/disZ;
+//    return CATransform3DConcat(CATransform3DConcat(transToCenter, scale), transBack);
+//}
+//
+//CATransform3D CATransform3DPerspect(CATransform3D t, CGPoint center, float disZ)
+//{
+//    return CATransform3DConcat(t, CATransform3DMakePerspective(center, disZ));
+//}
 
 @end

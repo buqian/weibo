@@ -13,6 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "HYHelper.h"
+#import <UIKit/UIKit.h>
 
 #define client_id @"1499277281"
 #define redirect_uri @"http://www.boyacai.com"
