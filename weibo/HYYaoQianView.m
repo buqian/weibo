@@ -98,14 +98,33 @@
 
 - (void)startFanAnimation
 {
-    CABasicAnimation * anim = [CABasicAnimation animationWithKeyPath:@"transform"];
-//    anim.fromValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(-M_PI_4, 1, 0, 0)];
-    anim.toValue = [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI_4 * 0.5, 1, 0, 0)];
-    anim.duration = 0.5;
-    anim.autoreverses = YES;
-    anim.repeatCount = 5;
+    CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.x"];
+    NSNumber *avalue1 = [NSNumber numberWithFloat:0];
+    NSNumber *avalue2 = [NSNumber numberWithFloat:-M_PI_4 * 0.5];
+    NSNumber *avalue3 = [NSNumber numberWithFloat:0];
+    anim.values = @[avalue1, avalue2, avalue3];
+//    anim.duration = 0.5;
+//    anim.repeatCount = 5;
     
-    [self.yqBtn.layer addAnimation:anim forKey:nil];
+    CAKeyframeAnimation *anim2 = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    NSValue *a2value1 = [NSValue valueWithCGPoint:self.yqBtn.layer.position];
+    NSValue *a2value2 = [NSValue valueWithCGPoint:CGPointMake(self.yqBtn.layer.position.x, self.yqBtn.layer.position.y + 20)];
+    NSValue *a2value3 = [NSValue valueWithCGPoint:self.yqBtn.layer.position];
+    anim2.values = @[a2value1, a2value2, a2value3];
+//    anim2.duration = 0.5;
+//    anim2.repeatCount = 5;
+    
+    CAKeyframeAnimation *anim3 = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    NSValue *a3value1 = [NSNumber numberWithFloat:1];
+    NSValue *a3value2 = [NSNumber numberWithFloat:1.05];
+    NSValue *a3value3 = [NSNumber numberWithFloat:1];
+    anim3.values = @[a3value1, a3value2, a3value3];
+    
+    CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
+    group.animations = @[anim, anim2, anim3];
+    group.duration = 0.5;
+    group.repeatCount = 5;
+    [self.yqBtn.layer addAnimation:group forKey:nil];
 }
 
 @end
