@@ -54,5 +54,13 @@
 		<key>name</key>
 		<string>立方体旋转</string>
 	</dict>
+	<dict>
+		<key>model</key>
+		<string>model</string>
+		<key>clazz</key>
+		<string>HYStateBarShowHideController</string>
+		<key>name</key>
+		<string>状态栏显示隐藏</string>
+	</dict>
 </array>
 </plist>

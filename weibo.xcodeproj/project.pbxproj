@@ -168,6 +168,11 @@
 		2DF3F10E1C0B0E2000C94C97 /* g-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DF3F1091C0B0E2000C94C97 /* g-5.jpg */; };
 		2DF4FB5B1C0F3D3F0082C5C4 /* HYLFTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF4FB591C0F3D3F0082C5C4 /* HYLFTController.m */; };
 		2DF4FB5C1C0F3D3F0082C5C4 /* HYLFTController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF4FB5A1C0F3D3F0082C5C4 /* HYLFTController.xib */; };
+		AF00D7911C0FE633002C32DF /* HYStateBarShowHideController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF00D78F1C0FE633002C32DF /* HYStateBarShowHideController.m */; };
+		AF00D7921C0FE633002C32DF /* HYStateBarShowHideController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF00D7901C0FE633002C32DF /* HYStateBarShowHideController.xib */; };
+		AF00D7941C0FE750002C32DF /* dog.gif in Resources */ = {isa = PBXBuildFile; fileRef = AF00D7931C0FE750002C32DF /* dog.gif */; };
+		AF00D7981C100A98002C32DF /* HYLFTController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AF00D7961C100A98002C32DF /* HYLFTController2.m */; };
+		AF00D7991C100A98002C32DF /* HYLFTController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF00D7971C100A98002C32DF /* HYLFTController2.xib */; };
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
 		AF3F530B1C0C1723003B867F /* HYTableDrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F53091C0C1723003B867F /* HYTableDrapController.m */; };
 		AF3F53131C0C18DE003B867F /* SightAction@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3F53111C0C18DE003B867F /* SightAction@2x.png */; };
@@ -423,6 +428,13 @@
 		2DF4FB581C0F3D3F0082C5C4 /* HYLFTController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLFTController.h; sourceTree = "<group>"; };
 		2DF4FB591C0F3D3F0082C5C4 /* HYLFTController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLFTController.m; sourceTree = "<group>"; };
 		2DF4FB5A1C0F3D3F0082C5C4 /* HYLFTController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYLFTController.xib; sourceTree = "<group>"; };
+		AF00D78E1C0FE633002C32DF /* HYStateBarShowHideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYStateBarShowHideController.h; sourceTree = "<group>"; };
+		AF00D78F1C0FE633002C32DF /* HYStateBarShowHideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYStateBarShowHideController.m; sourceTree = "<group>"; };
+		AF00D7901C0FE633002C32DF /* HYStateBarShowHideController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYStateBarShowHideController.xib; sourceTree = "<group>"; };
+		AF00D7931C0FE750002C32DF /* dog.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dog.gif; sourceTree = "<group>"; };
+		AF00D7951C100A98002C32DF /* HYLFTController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLFTController2.h; sourceTree = "<group>"; };
+		AF00D7961C100A98002C32DF /* HYLFTController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLFTController2.m; sourceTree = "<group>"; };
+		AF00D7971C100A98002C32DF /* HYLFTController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYLFTController2.xib; sourceTree = "<group>"; };
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
 		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
 		AF3F53081C0C1723003B867F /* HYTableDrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableDrapController.h; sourceTree = "<group>"; };
@@ -743,8 +755,21 @@
 				2DF4FB581C0F3D3F0082C5C4 /* HYLFTController.h */,
 				2DF4FB591C0F3D3F0082C5C4 /* HYLFTController.m */,
 				2DF4FB5A1C0F3D3F0082C5C4 /* HYLFTController.xib */,
+				AF00D7951C100A98002C32DF /* HYLFTController2.h */,
+				AF00D7961C100A98002C32DF /* HYLFTController2.m */,
+				AF00D7971C100A98002C32DF /* HYLFTController2.xib */,
 			);
 			name = "立方体旋转";
+			sourceTree = "<group>";
+		};
+		AF00D7871C0FE60F002C32DF /* 状态栏显示隐藏 */ = {
+			isa = PBXGroup;
+			children = (
+				AF00D78E1C0FE633002C32DF /* HYStateBarShowHideController.h */,
+				AF00D78F1C0FE633002C32DF /* HYStateBarShowHideController.m */,
+				AF00D7901C0FE633002C32DF /* HYStateBarShowHideController.xib */,
+			);
+			name = "状态栏显示隐藏";
 			sourceTree = "<group>";
 		};
 		AF36CE341BF6326100238C59 /* login */ = {
@@ -820,6 +845,7 @@
 		AF85B8441BF4B70F00044DF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF00D7931C0FE750002C32DF /* dog.gif */,
 				AF85B8551BF4B70F00044DF4 /* Info.plist */,
 				2D866AF61C0DE94C00642CA0 /* birthday.ttf */,
 				2D9029911C0C80A2003919C6 /* luck */,
@@ -918,6 +944,7 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				AF00D7871C0FE60F002C32DF /* 状态栏显示隐藏 */,
 				2DF4FB511C0F3D270082C5C4 /* 立方体旋转 */,
 				2D866B001C0DF3EC00642CA0 /* 无敌上上签 */,
 				AF8386401C0D41E50052C07A /* 生日选号仪 */,
@@ -1228,6 +1255,7 @@
 				2D902A901C0C80B7003919C6 /* LuckyRototeSelected@2x.png in Resources */,
 				2D902A681C0C80B7003919C6 /* LuckyConfirmBack@2x.png in Resources */,
 				2D902A411C0C80B7003919C6 /* lucky_lots_coin@2x.png in Resources */,
+				AF00D7941C0FE750002C32DF /* dog.gif in Resources */,
 				2D902A881C0C80B7003919C6 /* luckyNumBox_paperImage@2x.png in Resources */,
 				AF3F53131C0C18DE003B867F /* SightAction@2x.png in Resources */,
 				2D902A661C0C80B7003919C6 /* LuckyCenterButton@2x.png in Resources */,
@@ -1253,6 +1281,7 @@
 				2D902A3A1C0C80B7003919C6 /* lucky_lots_bao@2x.png in Resources */,
 				2D902A5E1C0C80B7003919C6 /* LuckyBackground_For6@2x.jpg in Resources */,
 				2D902A441C0C80B7003919C6 /* lucky_lots_haoyun@2x.png in Resources */,
+				AF00D7991C100A98002C32DF /* HYLFTController2.xib in Resources */,
 				2D902A231C0C80B7003919C6 /* lucky_birthday_choose@2x.png in Resources */,
 				2D902A821C0C80B7003919C6 /* luckyNumBox_moneyShineImage_1@2x.png in Resources */,
 				2D902A3E1C0C80B7003919C6 /* lucky_lots_cell_seperator@2x.png in Resources */,
@@ -1270,6 +1299,7 @@
 				2D902A1C1C0C80B7003919C6 /* luck_entry_roulette_button_normal@2x.png in Resources */,
 				2D902A5B1C0C80B7003919C6 /* LuckyAstrology@2x.png in Resources */,
 				2D902A191C0C80B7003919C6 /* luck_entry_birthday_button_normal@2x.png in Resources */,
+				AF00D7921C0FE633002C32DF /* HYStateBarShowHideController.xib in Resources */,
 				2D902A401C0C80B7003919C6 /* lucky_lots_cloud1@2x.png in Resources */,
 				2D902A8F1C0C80B7003919C6 /* LuckyRotateWheel@2x.png in Resources */,
 				2D902A811C0C80B7003919C6 /* luckyNumBox_hintImage@2x.png in Resources */,
@@ -1307,6 +1337,7 @@
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
 				2D866B0E1C0DFCDD00642CA0 /* HYQianImageView.m in Sources */,
 				2D866B081C0DF78200642CA0 /* HYYaoQianButton.m in Sources */,
+				AF00D7981C100A98002C32DF /* HYLFTController2.m in Sources */,
 				2D902A961C0C8164003919C6 /* HYLuckLoopController.m in Sources */,
 				AFD968151BFC65FF00A9764A /* HYUser.m in Sources */,
 				AFF376AA1C05B905003EDA9A /* HYRetweetView.m in Sources */,
@@ -1323,6 +1354,7 @@
 				AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */,
 				2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */,
 				2D902A9D1C0C93B0003919C6 /* HYLuckLoopButton.m in Sources */,
+				AF00D7911C0FE633002C32DF /* HYStateBarShowHideController.m in Sources */,
 				AF58FB201C06B598007473BD /* HYRefreshHeaderView.m in Sources */,
 				AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */,
 				2D902A9A1C0C8191003919C6 /* HYLuckLoopView.m in Sources */,

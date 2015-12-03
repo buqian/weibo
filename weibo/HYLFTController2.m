@@ -1,15 +1,14 @@
 //
-//  HYLFTController.m
+//  HYLFTController2.m
 //  weibo
 //
-//  Created by bala on 2/12/15.
+//  Created by zhangfuqiang on 15/12/3.
 //  Copyright © 2015年 zhangfuqiang. All rights reserved.
 //
 
-#import "HYLFTController.h"
 #import "HYLFTController2.h"
 
-@interface HYLFTController ()
+@interface HYLFTController2 ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView1;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView2;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView3;
@@ -21,6 +20,7 @@
 
 @property (nonatomic, assign) BOOL isStart;
 
+
 - (IBAction)click:(id)sender;
 - (IBAction)hide1:(id)sender;
 - (IBAction)hide2:(id)sender;
@@ -28,11 +28,11 @@
 - (IBAction)hide4:(id)sender;
 - (IBAction)stop:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *label;
-- (IBAction)jump:(id)sender;
+- (IBAction)goback:(id)sender;
 
 @end
 
-@implementation HYLFTController
+@implementation HYLFTController2
 
 @synthesize imageView1;
 @synthesize imageView2;
@@ -42,11 +42,11 @@
 
 - (CATransform3D)CATransform3DMakePerspective:(CGPoint )center dis:(float)disZ
 {
-//    CATransform3D transToCenter = CATransform3DMakeTranslation(-center.x, -center.y, 0);
-//    CATransform3D transBack = CATransform3DMakeTranslation(center.x, center.y, 0);
+    //    CATransform3D transToCenter = CATransform3DMakeTranslation(-center.x, -center.y, 0);
+    //    CATransform3D transBack = CATransform3DMakeTranslation(center.x, center.y, 0);
     CATransform3D scale = CATransform3DIdentity;
     scale.m34 = -1.0f/disZ;
-//    return CATransform3DConcat(CATransform3DConcat(transToCenter, scale), transBack);
+    //    return CATransform3DConcat(CATransform3DConcat(transToCenter, scale), transBack);
     return scale;
 }
 
@@ -58,17 +58,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.imageView1.hidden = YES;
-//    self.imageView2.hidden = YES;
-//    self.imageView3.hidden = YES;
-//    self.imageView4.hidden = YES;
+    //    self.imageView1.hidden = YES;
+    //    self.imageView2.hidden = YES;
+    //    self.imageView3.hidden = YES;
+    //    self.imageView4.hidden = YES;
     
     self.isStart = NO;
 }
 
 - (void)loop
 {
-    angle += 0.5 / 180.0 * M_PI;
+    angle += 5 / 180.0 * M_PI;
     //    NSLog(@"%f", angle / M_PI * 180);
     //    CATransform3D transloate = CATransform3DMakeTranslation(0, 0, 0);
     //    CATransform3D rotate = CATransform3DMakeRotation(angle, 0, 1, 0);
@@ -82,31 +82,34 @@
     CATransform3D move = CATransform3DMakeTranslation(0, 0, 160);
     CATransform3D back = CATransform3DMakeTranslation(0, 0, -160);
     
+    CATransform3D move25 = CATransform3DMakeTranslation(0, 0, 160);
+    CATransform3D back25 = CATransform3DMakeTranslation(0, 0, -160);
+    
     CATransform3D rotate0 = CATransform3DMakeRotation(-angle, 0, 1, 0);
     CATransform3D rotate1 = CATransform3DMakeRotation(M_PI_2-angle, 0, 1, 0);
     CATransform3D rotate2 = CATransform3DMakeRotation(M_PI_2*2-angle, 0, 1, 0);
     CATransform3D rotate3 = CATransform3DMakeRotation(M_PI_2*3-angle, 0, 1, 0);
     
-    CATransform3D mat0 = CATransform3DConcat(CATransform3DConcat(move, rotate0), back);
+    CATransform3D mat0 = CATransform3DConcat(CATransform3DConcat(CATransform3DMakeTranslation(0, 0, 25), rotate0), CATransform3DMakeTranslation(0, 0, -25));
     CATransform3D mat1 = CATransform3DConcat(CATransform3DConcat(move, rotate1), back);
-    CATransform3D mat2 = CATransform3DConcat(CATransform3DConcat(move, rotate2), back);
+    CATransform3D mat2 = CATransform3DConcat(CATransform3DConcat(move25, rotate2), back25);
     CATransform3D mat3 = CATransform3DConcat(CATransform3DConcat(move, rotate3), back);
     
     imageView1.layer.transform = [self CATransform3DPerspect:mat0 point:CGPointZero dis:500];
     imageView2.layer.transform = [self CATransform3DPerspect:mat1 point:CGPointZero dis:500];
     imageView3.layer.transform = [self CATransform3DPerspect:mat2 point:CGPointZero dis:500];
-    imageView4.layer.transform = [self CATransform3DPerspect:mat3 point:CGPointZero dis:500];
-
+    imageView4.layer.transform = [self CATransform3DPerspect:mat3 point:CGPointZero dis:100];
+    
 }
 
 - (IBAction)click:(id)sender {
-    
-    if(!self.isStart)
-    {
-        self.timer = [NSTimer timerWithTimeInterval:0.05 target:self selector:@selector(loop) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
-        self.isStart = YES;
-    }
+    [self loop];
+//    if(!self.isStart)
+//    {
+//        self.timer = [NSTimer timerWithTimeInterval:0.05 target:self selector:@selector(loop) userInfo:nil repeats:YES];
+//        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+//    self.isStart = YES;
+//    }
 }
 
 - (IBAction)stop:(id)sender {
@@ -135,9 +138,9 @@
 }
 
 
-- (IBAction)jump:(id)sender {
-    HYLFTController2 *vc = [[HYLFTController2 alloc] init];
-    [self presentViewController:vc animated:YES completion:^{
+
+- (IBAction)goback:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
         [self stop:nil];
     }];
 }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYStateBarShowHideController">
+            <connections>
+                <outlet property="gifView" destination="ubA-HI-FXW" id="YTB-No-9hh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c4-6A-OgJ">
+                    <rect key="frame" x="164" y="269" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="显示"/>
+                    <connections>
+                        <action selector="showClick:" destination="-1" eventType="touchUpInside" id="N37-lt-Jf1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeN-pg-dSJ">
+                    <rect key="frame" x="241" y="269" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="隐藏"/>
+                    <connections>
+                        <action selector="hideClick:" destination="-1" eventType="touchUpInside" id="fS9-H6-C7W"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xup-C1-X6P">
+                    <rect key="frame" x="84" y="269" width="46" height="30"/>
+                    <animations/>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="returnClick:" destination="-1" eventType="touchUpInside" id="3UK-1p-ycD"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubA-HI-FXW" customClass="HYGIFImageView">
+                    <rect key="frame" x="6" y="67" width="362" height="74"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="362" id="9zw-sn-wHL"/>
+                        <constraint firstAttribute="height" constant="74" id="KzE-Kx-6Yn"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="0.5103895396" green="1" blue="0.47274665659999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ubA-HI-FXW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TVl-XW-j8c"/>
+                <constraint firstItem="ubA-HI-FXW" firstAttribute="centerX" secondItem="7c4-6A-OgJ" secondAttribute="centerX" id="bWJ-Nn-MNw"/>
+                <constraint firstItem="ubA-HI-FXW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="xVM-To-nYg"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

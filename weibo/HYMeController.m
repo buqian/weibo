@@ -64,7 +64,21 @@
     NSString *clazz = self.plistArray[indexPath.row][@"clazz"];
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"回家" style:UIBarButtonItemStyleDone target:nil action:nil];
     UIViewController *vc = [[NSClassFromString(clazz) alloc] initWithNibName:clazz bundle:nil];
-    [self.navigationController pushViewController:vc animated:YES];
+    if ([self.plistArray[indexPath.row][@"model"]  isEqual:@"model"]) {
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+    else
+    {
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+-(void)hideTabbar
+{
+}
+
+-(void)showTabbar
+{
 }
 
 -(void)viewWillAppear:(BOOL)animated
