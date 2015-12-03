@@ -62,5 +62,13 @@
 		<key>name</key>
 		<string>状态栏显示隐藏</string>
 	</dict>
+	<dict>
+		<key>model</key>
+		<string>model</string>
+		<key>clazz</key>
+		<string>HYAnimatedController</string>
+		<key>name</key>
+		<string>GIF - FLAnimatedImage</string>
+	</dict>
 </array>
 </plist>

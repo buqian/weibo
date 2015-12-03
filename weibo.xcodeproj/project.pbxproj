@@ -173,6 +173,11 @@
 		AF00D7941C0FE750002C32DF /* dog.gif in Resources */ = {isa = PBXBuildFile; fileRef = AF00D7931C0FE750002C32DF /* dog.gif */; };
 		AF00D7981C100A98002C32DF /* HYLFTController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AF00D7961C100A98002C32DF /* HYLFTController2.m */; };
 		AF00D7991C100A98002C32DF /* HYLFTController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF00D7971C100A98002C32DF /* HYLFTController2.xib */; };
+		AF00D7BA1C1044EF002C32DF /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AF00D7B71C1044EF002C32DF /* FLAnimatedImage.m */; };
+		AF00D7BB1C1044EF002C32DF /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF00D7B91C1044EF002C32DF /* FLAnimatedImageView.m */; };
+		AF00D7BD1C104684002C32DF /* rock.gif in Resources */ = {isa = PBXBuildFile; fileRef = AF00D7BC1C104684002C32DF /* rock.gif */; };
+		AF00D7C91C104843002C32DF /* HYAnimatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF00D7C71C104843002C32DF /* HYAnimatedController.m */; };
+		AF00D7CA1C104843002C32DF /* HYAnimatedController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF00D7C81C104843002C32DF /* HYAnimatedController.xib */; };
 		AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF36CE361BF6327400238C59 /* HYLoginController.m */; };
 		AF3F530B1C0C1723003B867F /* HYTableDrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3F53091C0C1723003B867F /* HYTableDrapController.m */; };
 		AF3F53131C0C18DE003B867F /* SightAction@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3F53111C0C18DE003B867F /* SightAction@2x.png */; };
@@ -435,6 +440,14 @@
 		AF00D7951C100A98002C32DF /* HYLFTController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLFTController2.h; sourceTree = "<group>"; };
 		AF00D7961C100A98002C32DF /* HYLFTController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLFTController2.m; sourceTree = "<group>"; };
 		AF00D7971C100A98002C32DF /* HYLFTController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYLFTController2.xib; sourceTree = "<group>"; };
+		AF00D7B61C1044EF002C32DF /* FLAnimatedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImage.h; sourceTree = "<group>"; };
+		AF00D7B71C1044EF002C32DF /* FLAnimatedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImage.m; sourceTree = "<group>"; };
+		AF00D7B81C1044EF002C32DF /* FLAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLAnimatedImageView.h; sourceTree = "<group>"; };
+		AF00D7B91C1044EF002C32DF /* FLAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLAnimatedImageView.m; sourceTree = "<group>"; };
+		AF00D7BC1C104684002C32DF /* rock.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rock.gif; sourceTree = "<group>"; };
+		AF00D7C61C104843002C32DF /* HYAnimatedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAnimatedController.h; sourceTree = "<group>"; };
+		AF00D7C71C104843002C32DF /* HYAnimatedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAnimatedController.m; sourceTree = "<group>"; };
+		AF00D7C81C104843002C32DF /* HYAnimatedController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYAnimatedController.xib; sourceTree = "<group>"; };
 		AF36CE351BF6327400238C59 /* HYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoginController.h; sourceTree = "<group>"; };
 		AF36CE361BF6327400238C59 /* HYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoginController.m; sourceTree = "<group>"; };
 		AF3F53081C0C1723003B867F /* HYTableDrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableDrapController.h; sourceTree = "<group>"; };
@@ -772,6 +785,28 @@
 			name = "状态栏显示隐藏";
 			sourceTree = "<group>";
 		};
+		AF00D7A91C1044C0002C32DF /* GIF - HYAnimatedController */ = {
+			isa = PBXGroup;
+			children = (
+				AF00D7B51C1044D7002C32DF /* lib */,
+				AF00D7C61C104843002C32DF /* HYAnimatedController.h */,
+				AF00D7C71C104843002C32DF /* HYAnimatedController.m */,
+				AF00D7C81C104843002C32DF /* HYAnimatedController.xib */,
+			);
+			name = "GIF - HYAnimatedController";
+			sourceTree = "<group>";
+		};
+		AF00D7B51C1044D7002C32DF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				AF00D7B61C1044EF002C32DF /* FLAnimatedImage.h */,
+				AF00D7B71C1044EF002C32DF /* FLAnimatedImage.m */,
+				AF00D7B81C1044EF002C32DF /* FLAnimatedImageView.h */,
+				AF00D7B91C1044EF002C32DF /* FLAnimatedImageView.m */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		AF36CE341BF6326100238C59 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,6 +880,7 @@
 		AF85B8441BF4B70F00044DF4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF00D7BC1C104684002C32DF /* rock.gif */,
 				AF00D7931C0FE750002C32DF /* dog.gif */,
 				AF85B8551BF4B70F00044DF4 /* Info.plist */,
 				2D866AF61C0DE94C00642CA0 /* birthday.ttf */,
@@ -944,6 +980,7 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				AF00D7A91C1044C0002C32DF /* GIF - HYAnimatedController */,
 				AF00D7871C0FE60F002C32DF /* 状态栏显示隐藏 */,
 				2DF4FB511C0F3D270082C5C4 /* 立方体旋转 */,
 				2D866B001C0DF3EC00642CA0 /* 无敌上上签 */,
@@ -1226,6 +1263,7 @@
 				2D902A251C0C80B7003919C6 /* lucky_birthday_confirm_normal@2x.png in Resources */,
 				2D902A8E1C0C80B7003919C6 /* LuckyRotateButton@2x.png in Resources */,
 				2D902A421C0C80B7003919C6 /* lucky_lots_confirm@2x.png in Resources */,
+				AF00D7BD1C104684002C32DF /* rock.gif in Resources */,
 				2D902A3C1C0C80B7003919C6 /* lucky_lots_button_close@2x.png in Resources */,
 				2D902A271C0C80B7003919C6 /* lucky_birthday_inputbackgroundword@2x.png in Resources */,
 				2DEFCADE1C08900700F530F6 /* lottery.jpg in Resources */,
@@ -1303,6 +1341,7 @@
 				2D902A401C0C80B7003919C6 /* lucky_lots_cloud1@2x.png in Resources */,
 				2D902A8F1C0C80B7003919C6 /* LuckyRotateWheel@2x.png in Resources */,
 				2D902A811C0C80B7003919C6 /* luckyNumBox_hintImage@2x.png in Resources */,
+				AF00D7CA1C104843002C32DF /* HYAnimatedController.xib in Resources */,
 				2DF3F10E1C0B0E2000C94C97 /* g-5.jpg in Resources */,
 				2D902A7E1C0C80B7003919C6 /* luckyNumBox_boxImage_2@2x.png in Resources */,
 				2D902A701C0C80B7003919C6 /* LuckyLoverIcon@2x.png in Resources */,
@@ -1328,6 +1367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DF3F0FD1C0AF3D100C94C97 /* HYGIFImageView.m in Sources */,
+				AF00D7C91C104843002C32DF /* HYAnimatedController.m in Sources */,
 				AF47261E1BFD91AA00933F3A /* HYWeiboFrame.m in Sources */,
 				AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */,
 				2DEFCAD01C08872900F530F6 /* HYLotteryView.m in Sources */,
@@ -1340,6 +1380,7 @@
 				AF00D7981C100A98002C32DF /* HYLFTController2.m in Sources */,
 				2D902A961C0C8164003919C6 /* HYLuckLoopController.m in Sources */,
 				AFD968151BFC65FF00A9764A /* HYUser.m in Sources */,
+				AF00D7BB1C1044EF002C32DF /* FLAnimatedImageView.m in Sources */,
 				AFF376AA1C05B905003EDA9A /* HYRetweetView.m in Sources */,
 				2DF3F1021C0B0AA100C94C97 /* HYImageLoopController.m in Sources */,
 				2DF0F2C41C072F9F00CE7B86 /* HYRefreshFooterView.m in Sources */,
@@ -1368,6 +1409,7 @@
 				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
 				AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */,
 				AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */,
+				AF00D7BA1C1044EF002C32DF /* FLAnimatedImage.m in Sources */,
 				2DB00E361C099830003052A8 /* OBShapedButton.m in Sources */,
 				AFF74AFC1BF9863E003B8C61 /* HYLoginLogoView.m in Sources */,
 				AF8386511C0D693E0052C07A /* HYChooseButton.m in Sources */,
