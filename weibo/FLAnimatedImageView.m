@@ -110,20 +110,20 @@
 
 #pragma mark Auto Layout
 
-- (CGSize)intrinsicContentSize
-{
-    // Default to let UIImageView handle the sizing of its image, and anything else it might consider.
-    CGSize intrinsicContentSize = [super intrinsicContentSize];
-    
-    // If we have have an animated image, use its image size.
-    // UIImageView's intrinsic content size seems to be the size of its image. The obvious approach, simply calling `-invalidateIntrinsicContentSize` when setting an animated image, results in UIImageView steadfastly returning `{UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric}` for its intrinsicContentSize.
-    // (Perhaps UIImageView bypasses its `-image` getter in its implementation of `-intrinsicContentSize`, as `-image` is not called after calling `-invalidateIntrinsicContentSize`.)
-    if (self.animatedImage) {
-        intrinsicContentSize = self.image.size;
-    }
-    
-    return intrinsicContentSize;
-}
+//- (CGSize)intrinsicContentSize
+//{
+//    // Default to let UIImageView handle the sizing of its image, and anything else it might consider.
+//    CGSize intrinsicContentSize = [super intrinsicContentSize];
+//    
+//    // If we have have an animated image, use its image size.
+//    // UIImageView's intrinsic content size seems to be the size of its image. The obvious approach, simply calling `-invalidateIntrinsicContentSize` when setting an animated image, results in UIImageView steadfastly returning `{UIViewNoIntrinsicMetric, UIViewNoIntrinsicMetric}` for its intrinsicContentSize.
+//    // (Perhaps UIImageView bypasses its `-image` getter in its implementation of `-intrinsicContentSize`, as `-image` is not called after calling `-invalidateIntrinsicContentSize`.)
+//    if (self.animatedImage) {
+//        intrinsicContentSize = self.image.size;
+//    }
+//    
+//    return intrinsicContentSize;
+//}
 
 
 #pragma mark - UIImageView Method Overrides

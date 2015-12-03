@@ -738,7 +738,6 @@ static NSHashTable *allAnimatedImagesWeak;
     return weakProxy;
 }
 
-
 #pragma mark Forwarding Messages
 
 - (id)forwardingTargetForSelector:(SEL)selector

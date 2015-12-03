@@ -8,6 +8,7 @@
 
 #import "HYGIFImageView.h"
 #import <ImageIO/ImageIO.h>
+#import <QuartzCore/QuartzCore.h>
 
 @interface HYGIFImageView ()
 
@@ -29,11 +30,42 @@
 {
     if(nil == _displayLink)
     {
+        NSString *mode = NSDefaultRunLoopMode;
+        if([NSProcessInfo processInfo].activeProcessorCount > 1)
+        {
+            mode = NSRunLoopCommonModes;
+        }
         _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(play)];
-        [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+        [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:mode];
         _displayLink.paused = YES;
     }
     return _displayLink;
+}
+
+-(void)didMoveToSuperview
+{
+    if(self.superview && self.window)
+    {
+        _displayLink.paused = NO;
+    }
+    else
+    {
+        [_displayLink invalidate];
+        _displayLink = nil;
+    }
+}
+
+-(void)didMoveToWindow
+{
+    if(self.superview && self.window)
+    {
+        _displayLink.paused = NO;
+    }
+    else
+    {
+        [_displayLink invalidate];
+        _displayLink = nil;
+    }
 }
 
 -(void)dealloc
@@ -80,6 +112,10 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.sourceRef = gifSourceRef;
                     self.frameCount = CGImageSourceGetCount(gifSourceRef);
+                    if(self.frameCount > 0)
+                    {
+                        [self show];
+                    }
                 });
             }
     });
@@ -115,26 +151,37 @@
 }
 
 - (void)play{
+
     float nextFrameDuration = [self frameDurationAtIndex:self.index == self.frameCount - 1? 0 : self.index];
-    if (self.timestamp < nextFrameDuration) {
-        self.timestamp += self.displayLink.duration;
-        return;
+    
+    self.timestamp += self.displayLink.duration;
+    if (self.timestamp >= nextFrameDuration) {
+        self.timestamp -= nextFrameDuration;
+
+        self.index ++;
+        self.index = self.index % self.frameCount;
+        [self show];
     }
-    self.index ++;
-    self.index = self.index % self.frameCount;
+}
+
+- (void)show
+{
     CGImageRef ref = CGImageSourceCreateImageAtIndex(self.sourceRef, self.index, NULL);
     self.layer.contents = (__bridge id)(ref);
     CGImageRelease(ref);
-    self.timestamp = 0;
 }
 
 - (float)frameDurationAtIndex:(size_t)index{
+
     CFDictionaryRef dictRef = CGImageSourceCopyPropertiesAtIndex(self.sourceRef, index, NULL);
     NSDictionary *dict = (__bridge NSDictionary *)dictRef;
     NSDictionary *gifDict = (dict[(NSString *)kCGImagePropertyGIFDictionary]);
     NSNumber *unclampedDelayTime = gifDict[(NSString *)kCGImagePropertyGIFUnclampedDelayTime];
     NSNumber *delayTime = gifDict[(NSString *)kCGImagePropertyGIFDelayTime];
-    CFRelease(dictRef);
+    if(dictRef)
+    {
+        CFRelease(dictRef);
+    }
     if (unclampedDelayTime.floatValue) {
         return unclampedDelayTime.floatValue;
     }else if (delayTime.floatValue) {
