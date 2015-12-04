@@ -12,6 +12,5 @@ IB_DESIGNABLE
 @interface HYUnlockButton : UIButton
 
 @property (nonatomic, assign) CGPoint centerPoint;
-@property (nonatomic, strong) IBInspectable UIColor *secondColor;
 
 @end

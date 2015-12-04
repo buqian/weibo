@@ -10,16 +10,16 @@
 
 @class HYUnlockView;
 
-@protocol HYUnlockViewDataSource <NSObject>
+@protocol HYUnlockViewDelegate <NSObject>
 
-@required
-- (UIBezierPath *)drawRectUseBezierPath:(HYUnlockView *)unlockView;
-- (UIColor *)drawRectUseColor:(HYUnlockView *)unlockView;
+@optional
+-(BOOL)unlockViewSuccess:(HYUnlockView *)unlockView result:(NSString *)result;
+-(void)unlockViewCancel:(HYUnlockView *)unlockView;
 
 @end
 
 @interface HYUnlockView <HYUnlockViewDataSource> : UIView
 
-@property (nonatomic, weak) id<HYUnlockViewDataSource> dataSource;
+@property (nonatomic, weak) id<HYUnlockViewDelegate> delegate;
 
 @end

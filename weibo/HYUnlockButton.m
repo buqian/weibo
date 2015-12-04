@@ -10,9 +10,6 @@
 
 @interface HYUnlockButton ()
 
-
-@property (nonatomic, strong) IBInspectable UIColor *firstColor;
-
 @end
 
 @implementation HYUnlockButton

@@ -27,6 +27,8 @@
 
 @property (nonatomic, assign) BOOL isJian;
 
+@property (nonatomic, assign) BOOL isStartChoose;
+
 @end
 
 @implementation HYLuckLoopView
@@ -108,9 +110,13 @@
 #pragma mark 新方法
 - (void)startChoose
 {
-    self.displayLink.paused = YES;
-    [self reLoyoutBtns];
-    [self addAnimation];
+    if(!_isStartChoose)
+    {
+        _isStartChoose = YES;
+        self.displayLink.paused = YES;
+        [self reLoyoutBtns];
+        [self addAnimation];
+    }
 }
 
 - (void)addAnimation
@@ -143,6 +149,7 @@
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.displayLink.paused = NO;
+        _isStartChoose = NO;
     });
 }
 
