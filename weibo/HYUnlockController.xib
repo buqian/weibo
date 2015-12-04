@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HYUnlockController">
+            <connections>
+                <outlet property="label" destination="H23-nQ-bzl" id="Dbe-Tz-85D"/>
+                <outlet property="unlockView" destination="i5M-Pr-FkT" id="pKw-hp-fGo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="HYUnlockView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手势解锁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-j0-q6E">
+                    <rect key="frame" x="20" y="75.5" width="335" height="40"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="O3f-fz-Xoi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qro-hZ-69y" userLabel="1" customClass="HYUnlockButton">
+                    <rect key="frame" x="30" y="176" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="height" multiplier="1:1" id="4oA-Vc-2Ld"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JO5-1x-IUU" userLabel="3" customClass="HYUnlockButton">
+                    <rect key="frame" x="260" y="176" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="JO5-1x-IUU" secondAttribute="height" multiplier="1:1" id="YRl-lO-WS5"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ex-rK-tdS" userLabel="5" customClass="HYUnlockButton">
+                    <rect key="frame" x="145" y="291" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8ex-rK-tdS" secondAttribute="height" multiplier="1:1" id="Dij-hM-xbc"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tA-Lp-DlP" userLabel="6" customClass="HYUnlockButton">
+                    <rect key="frame" x="260" y="291" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="2tA-Lp-DlP" secondAttribute="height" multiplier="1:1" id="eZN-nb-H4h"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHo-hd-ISU" userLabel="7" customClass="HYUnlockButton">
+                    <rect key="frame" x="30" y="406" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="QHo-hd-ISU" secondAttribute="height" multiplier="1:1" id="SwN-cF-pZC"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5w-0M-kFC" userLabel="8" customClass="HYUnlockButton">
+                    <rect key="frame" x="145" y="406" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="F5w-0M-kFC" secondAttribute="height" multiplier="1:1" id="td1-vT-qqT"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-kZ-MTj" userLabel="9" customClass="HYUnlockButton">
+                    <rect key="frame" x="260" y="406" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Fgm-kZ-MTj" secondAttribute="height" multiplier="1:1" id="6pR-M9-Xuz"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liz-2n-PFi" userLabel="2" customClass="HYUnlockButton">
+                    <rect key="frame" x="145" y="176" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="liz-2n-PFi" secondAttribute="height" multiplier="1:1" id="Vdi-BX-eLt"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqV-IQ-tKw">
+                    <rect key="frame" x="144" y="541" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TqV-IQ-tKw" secondAttribute="height" multiplier="1:1" id="1Ts-3G-QjV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="tintColor" red="0.00055222319224842162" green="0.0011618589743589425" blue="0.0011059414377068576" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="CT2-mW-8ye"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H23-nQ-bzl">
+                    <rect key="frame" x="0.0" y="135.5" width="375" height="20.5"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vc-ub-Pm3" userLabel="4" customClass="HYUnlockButton">
+                    <rect key="frame" x="30" y="291" width="85" height="85"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0vc-ub-Pm3" secondAttribute="height" multiplier="1:1" id="tQN-yX-TVo"/>
+                    </constraints>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="F5w-0M-kFC" firstAttribute="centerY" secondItem="QHo-hd-ISU" secondAttribute="centerY" id="1Jk-PE-VJ4"/>
+                <constraint firstItem="0vc-ub-Pm3" firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="width" id="2C5-Lo-gfw"/>
+                <constraint firstItem="TqV-IQ-tKw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Fe-RC-H5X"/>
+                <constraint firstItem="Fgm-kZ-MTj" firstAttribute="centerY" secondItem="QHo-hd-ISU" secondAttribute="centerY" id="5mN-a7-BGA"/>
+                <constraint firstItem="TqV-IQ-tKw" firstAttribute="height" secondItem="F5w-0M-kFC" secondAttribute="height" id="6XQ-B9-x5e"/>
+                <constraint firstItem="Fgm-kZ-MTj" firstAttribute="centerX" secondItem="2tA-Lp-DlP" secondAttribute="centerX" id="7p8-Uw-QIc"/>
+                <constraint firstItem="QHo-hd-ISU" firstAttribute="centerX" secondItem="0vc-ub-Pm3" secondAttribute="centerX" id="99I-bt-NKC"/>
+                <constraint firstItem="liz-2n-PFi" firstAttribute="top" secondItem="H23-nQ-bzl" secondAttribute="bottom" constant="20" id="F6j-mv-dXU"/>
+                <constraint firstItem="8ex-rK-tdS" firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="width" id="FjK-dT-Dcw"/>
+                <constraint firstItem="8ex-rK-tdS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="FzS-DR-6fu"/>
+                <constraint firstItem="2tA-Lp-DlP" firstAttribute="centerX" secondItem="JO5-1x-IUU" secondAttribute="centerX" id="Hdu-Fa-4tx"/>
+                <constraint firstItem="8ex-rK-tdS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="IRV-SX-OnQ"/>
+                <constraint firstItem="F5w-0M-kFC" firstAttribute="centerX" secondItem="8ex-rK-tdS" secondAttribute="centerX" id="Jb0-OM-8cH"/>
+                <constraint firstItem="TqV-IQ-tKw" firstAttribute="width" secondItem="F5w-0M-kFC" secondAttribute="width" id="LMV-Cg-r6W"/>
+                <constraint firstItem="8ex-rK-tdS" firstAttribute="top" secondItem="liz-2n-PFi" secondAttribute="bottom" constant="30" id="LPM-FY-dn2"/>
+                <constraint firstItem="TqV-IQ-tKw" firstAttribute="top" secondItem="F5w-0M-kFC" secondAttribute="bottom" constant="50" id="Ltx-n2-CcL"/>
+                <constraint firstItem="2tA-Lp-DlP" firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="width" id="QFa-2y-egR"/>
+                <constraint firstItem="qro-hZ-69y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="RSg-0l-Fzp"/>
+                <constraint firstItem="4v5-j0-q6E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="SUB-n8-Svj"/>
+                <constraint firstItem="0vc-ub-Pm3" firstAttribute="centerX" secondItem="qro-hZ-69y" secondAttribute="centerX" id="UCg-LX-i7X"/>
+                <constraint firstItem="F5w-0M-kFC" firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="width" id="Uq2-7N-Ewn"/>
+                <constraint firstItem="liz-2n-PFi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Wee-uc-YJW"/>
+                <constraint firstItem="QHo-hd-ISU" firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="width" id="Xwv-2S-V8D"/>
+                <constraint firstItem="H23-nQ-bzl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ZUy-gH-fEM"/>
+                <constraint firstItem="2tA-Lp-DlP" firstAttribute="width" secondItem="0vc-ub-Pm3" secondAttribute="width" id="Zy2-Fu-Ztt"/>
+                <constraint firstItem="liz-2n-PFi" firstAttribute="centerY" secondItem="qro-hZ-69y" secondAttribute="centerY" id="bx1-5d-7b9"/>
+                <constraint firstAttribute="trailing" secondItem="H23-nQ-bzl" secondAttribute="trailing" id="c56-9A-Ofe"/>
+                <constraint firstItem="8ex-rK-tdS" firstAttribute="width" secondItem="0vc-ub-Pm3" secondAttribute="width" id="cpV-u0-EcZ"/>
+                <constraint firstItem="liz-2n-PFi" firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="width" id="f1d-ns-xRf"/>
+                <constraint firstItem="JO5-1x-IUU" firstAttribute="width" secondItem="liz-2n-PFi" secondAttribute="width" id="fRS-e1-GCk"/>
+                <constraint firstItem="liz-2n-PFi" firstAttribute="leading" secondItem="qro-hZ-69y" secondAttribute="trailing" constant="30" id="iYI-d8-Mx2"/>
+                <constraint firstItem="8ex-rK-tdS" firstAttribute="centerY" secondItem="0vc-ub-Pm3" secondAttribute="centerY" id="iom-wR-oa2"/>
+                <constraint firstItem="Fgm-kZ-MTj" firstAttribute="width" secondItem="qro-hZ-69y" secondAttribute="width" id="jKk-yp-HcN"/>
+                <constraint firstItem="JO5-1x-IUU" firstAttribute="leading" secondItem="liz-2n-PFi" secondAttribute="trailing" constant="30" id="qaA-U0-YoP"/>
+                <constraint firstItem="H23-nQ-bzl" firstAttribute="top" secondItem="4v5-j0-q6E" secondAttribute="bottom" constant="20" id="r4v-Qx-DWT"/>
+                <constraint firstItem="2tA-Lp-DlP" firstAttribute="centerY" secondItem="0vc-ub-Pm3" secondAttribute="centerY" id="rMx-ev-ncQ"/>
+                <constraint firstAttribute="trailing" secondItem="4v5-j0-q6E" secondAttribute="trailing" constant="20" id="smu-IO-09T"/>
+                <constraint firstAttribute="trailing" secondItem="JO5-1x-IUU" secondAttribute="trailing" constant="30" id="t8x-7H-5SA"/>
+                <constraint firstItem="JO5-1x-IUU" firstAttribute="centerY" secondItem="qro-hZ-69y" secondAttribute="centerY" id="vSO-jn-xQ9"/>
+                <constraint firstItem="F5w-0M-kFC" firstAttribute="top" secondItem="8ex-rK-tdS" secondAttribute="bottom" constant="30" id="wnj-pw-urU"/>
+                <constraint firstItem="8ex-rK-tdS" firstAttribute="centerX" secondItem="liz-2n-PFi" secondAttribute="centerX" id="zme-qF-iK4"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="303.5" y="229.5"/>
+        </view>
+    </objects>
+</document>

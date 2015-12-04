@@ -70,5 +70,13 @@
 		<key>name</key>
 		<string>GIF - FLAnimatedImage</string>
 	</dict>
+	<dict>
+		<key>model</key>
+		<string>model</string>
+		<key>clazz</key>
+		<string>HYUnlockController</string>
+		<key>name</key>
+		<string>手势解锁</string>
+	</dict>
 </array>
 </plist>

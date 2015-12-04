@@ -239,7 +239,6 @@
         FLLogWarn(@"Trying to animate image when we shouldn't: %@", self);
         return;
     }
-    
     NSNumber *delayTimeNumber = [self.animatedImage.delayTimesForIndexes objectForKey:@(self.currentFrameIndex)];
     // If we don't have a frame delay (e.g. corrupt frame), don't update the view but skip the playhead to the next frame (in else-block).
     if (delayTimeNumber) {

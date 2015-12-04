@@ -204,6 +204,10 @@
 		AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A91BF5C76D00EABE40 /* HYHomeController.m */; };
 		AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */; };
 		AFBDB6E31C04A72D004794B0 /* HYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBDB6E21C04A72D004794B0 /* HYTableViewController.m */; };
+		AFD35C2C1C113BF900C0B7E9 /* HYUnlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD35C2A1C113BF900C0B7E9 /* HYUnlockController.m */; };
+		AFD35C2D1C113BF900C0B7E9 /* HYUnlockController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD35C2B1C113BF900C0B7E9 /* HYUnlockController.xib */; };
+		AFD35C301C11738B00C0B7E9 /* HYUnlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD35C2F1C11738B00C0B7E9 /* HYUnlockButton.m */; };
+		AFD35C331C118FFC00C0B7E9 /* HYUnlockView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD35C321C118FFC00C0B7E9 /* HYUnlockView.m */; };
 		AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */; };
 		AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD968111BFC657A00A9764A /* HYWeibo.m */; };
 		AFD968151BFC65FF00A9764A /* HYUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD968141BFC65FF00A9764A /* HYUser.m */; };
@@ -494,6 +498,13 @@
 		AFA7F8AC1BF5D1E700EABE40 /* HyNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyNavigationController.m; sourceTree = "<group>"; };
 		AFBDB6E11C04A72D004794B0 /* HYTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableViewController.h; sourceTree = "<group>"; };
 		AFBDB6E21C04A72D004794B0 /* HYTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTableViewController.m; sourceTree = "<group>"; };
+		AFD35C291C113BF900C0B7E9 /* HYUnlockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYUnlockController.h; sourceTree = "<group>"; };
+		AFD35C2A1C113BF900C0B7E9 /* HYUnlockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYUnlockController.m; sourceTree = "<group>"; };
+		AFD35C2B1C113BF900C0B7E9 /* HYUnlockController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYUnlockController.xib; sourceTree = "<group>"; };
+		AFD35C2E1C11738B00C0B7E9 /* HYUnlockButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYUnlockButton.h; sourceTree = "<group>"; };
+		AFD35C2F1C11738B00C0B7E9 /* HYUnlockButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYUnlockButton.m; sourceTree = "<group>"; };
+		AFD35C311C118FFC00C0B7E9 /* HYUnlockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYUnlockView.h; sourceTree = "<group>"; };
+		AFD35C321C118FFC00C0B7E9 /* HYUnlockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYUnlockView.m; sourceTree = "<group>"; };
 		AFD9680C1BFC5FB500A9764A /* HYTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTableViewCell.h; sourceTree = "<group>"; };
 		AFD9680D1BFC5FB500A9764A /* HYTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTableViewCell.m; sourceTree = "<group>"; };
 		AFD968101BFC657A00A9764A /* HYWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWeibo.h; sourceTree = "<group>"; };
@@ -980,6 +991,7 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				AFD35C221C113BE500C0B7E9 /* 手势解锁 */,
 				AF00D7A91C1044C0002C32DF /* GIF - HYAnimatedController */,
 				AF00D7871C0FE60F002C32DF /* 状态栏显示隐藏 */,
 				2DF4FB511C0F3D270082C5C4 /* 立方体旋转 */,
@@ -1028,6 +1040,20 @@
 				AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		AFD35C221C113BE500C0B7E9 /* 手势解锁 */ = {
+			isa = PBXGroup;
+			children = (
+				AFD35C2E1C11738B00C0B7E9 /* HYUnlockButton.h */,
+				AFD35C2F1C11738B00C0B7E9 /* HYUnlockButton.m */,
+				AFD35C311C118FFC00C0B7E9 /* HYUnlockView.h */,
+				AFD35C321C118FFC00C0B7E9 /* HYUnlockView.m */,
+				AFD35C291C113BF900C0B7E9 /* HYUnlockController.h */,
+				AFD35C2A1C113BF900C0B7E9 /* HYUnlockController.m */,
+				AFD35C2B1C113BF900C0B7E9 /* HYUnlockController.xib */,
+			);
+			name = "手势解锁";
 			sourceTree = "<group>";
 		};
 		AFD9680B1BFC5F6A00A9764A /* view */ = {
@@ -1325,6 +1351,7 @@
 				2D902A3E1C0C80B7003919C6 /* lucky_lots_cell_seperator@2x.png in Resources */,
 				2D902A391C0C80B7003919C6 /* lucky_lots_background@2x.jpg in Resources */,
 				2D902A571C0C80B7003919C6 /* lucky_lots_water@2x.png in Resources */,
+				AFD35C2D1C113BF900C0B7E9 /* HYUnlockController.xib in Resources */,
 				2D902A501C0C80B7003919C6 /* lucky_lots_tab_highlighted3@2x.png in Resources */,
 				2D902A5C1C0C80B7003919C6 /* LuckyAstrologyPressed@2x.png in Resources */,
 				2D902A891C0C80B7003919C6 /* luckyNumBox_picker_backgroundImage@2x.png in Resources */,
@@ -1374,12 +1401,14 @@
 				2D866B0B1C0DF79200642CA0 /* HYYaoQianView.m in Sources */,
 				AFF376A11C056ABB003EDA9A /* HYPhotoView.m in Sources */,
 				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
+				AFD35C2C1C113BF900C0B7E9 /* HYUnlockController.m in Sources */,
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
 				2D866B0E1C0DFCDD00642CA0 /* HYQianImageView.m in Sources */,
 				2D866B081C0DF78200642CA0 /* HYYaoQianButton.m in Sources */,
 				AF00D7981C100A98002C32DF /* HYLFTController2.m in Sources */,
 				2D902A961C0C8164003919C6 /* HYLuckLoopController.m in Sources */,
 				AFD968151BFC65FF00A9764A /* HYUser.m in Sources */,
+				AFD35C301C11738B00C0B7E9 /* HYUnlockButton.m in Sources */,
 				AF00D7BB1C1044EF002C32DF /* FLAnimatedImageView.m in Sources */,
 				AFF376AA1C05B905003EDA9A /* HYRetweetView.m in Sources */,
 				2DF3F1021C0B0AA100C94C97 /* HYImageLoopController.m in Sources */,
@@ -1389,6 +1418,7 @@
 				2DF4FB5B1C0F3D3F0082C5C4 /* HYLFTController.m in Sources */,
 				2DF3F0F01C0AD8A000C94C97 /* HYGifController.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
+				AFD35C331C118FFC00C0B7E9 /* HYUnlockView.m in Sources */,
 				2DF3F0F71C0AE42400C94C97 /* UIImage+GIF.m in Sources */,
 				2D866B041C0DF41700642CA0 /* HYYaoQianController.m in Sources */,
 				AF83864E1C0D67080052C07A /* HYChooseNumView.m in Sources */,

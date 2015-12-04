@@ -71,6 +71,9 @@
     {
         [self.navigationController pushViewController:vc animated:YES];
     }
+    [UIView animateWithDuration:0.5 animations:^{
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }];
 }
 
 -(void)hideTabbar
