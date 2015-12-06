@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D79A9AB1C140B400025ED62 /* HYLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D79A9A91C140B400025ED62 /* HYLayerController.m */; };
+		2D79A9AC1C140B400025ED62 /* HYLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D79A9AA1C140B400025ED62 /* HYLayerController.xib */; };
+		2D7BF7941C130B84008C62E8 /* HYConsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BF7921C130B84008C62E8 /* HYConsController.m */; };
+		2D7BF7951C130B84008C62E8 /* HYConsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7BF7931C130B84008C62E8 /* HYConsController.xib */; };
 		2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */; };
 		2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847F1BFDFFED006A1E88 /* MapKit.framework */; };
 		2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D84A81BFE071D006A1E88 /* libSDWebImage.a */; };
@@ -258,6 +262,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D79A9A81C140B400025ED62 /* HYLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLayerController.h; sourceTree = "<group>"; };
+		2D79A9A91C140B400025ED62 /* HYLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLayerController.m; sourceTree = "<group>"; };
+		2D79A9AA1C140B400025ED62 /* HYLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYLayerController.xib; sourceTree = "<group>"; };
+		2D7BF7911C130B84008C62E8 /* HYConsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYConsController.h; sourceTree = "<group>"; };
+		2D7BF7921C130B84008C62E8 /* HYConsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYConsController.m; sourceTree = "<group>"; };
+		2D7BF7931C130B84008C62E8 /* HYConsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYConsController.xib; sourceTree = "<group>"; };
 		2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		2D7D847F1BFDFFED006A1E88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDWebImage.xcodeproj; path = "../../../Downloads/SDWebImage-master/SDWebImage.xcodeproj"; sourceTree = "<group>"; };
@@ -540,6 +550,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D79A9A11C140B290025ED62 /* 核心动画-阴影视图 */ = {
+			isa = PBXGroup;
+			children = (
+				2D79A9A81C140B400025ED62 /* HYLayerController.h */,
+				2D79A9A91C140B400025ED62 /* HYLayerController.m */,
+				2D79A9AA1C140B400025ED62 /* HYLayerController.xib */,
+			);
+			name = "核心动画-阴影视图";
+			sourceTree = "<group>";
+		};
+		2D7BF78A1C130B71008C62E8 /* 控件集合 */ = {
+			isa = PBXGroup;
+			children = (
+				2D7BF7911C130B84008C62E8 /* HYConsController.h */,
+				2D7BF7921C130B84008C62E8 /* HYConsController.m */,
+				2D7BF7931C130B84008C62E8 /* HYConsController.xib */,
+			);
+			name = "控件集合";
+			sourceTree = "<group>";
+		};
 		2D7D84771BFDF23E006A1E88 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -991,6 +1021,8 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				2D79A9A11C140B290025ED62 /* 核心动画-阴影视图 */,
+				2D7BF78A1C130B71008C62E8 /* 控件集合 */,
 				AFD35C221C113BE500C0B7E9 /* 手势解锁 */,
 				AF00D7A91C1044C0002C32DF /* GIF - HYAnimatedController */,
 				AF00D7871C0FE60F002C32DF /* 状态栏显示隐藏 */,
@@ -1355,6 +1387,7 @@
 				2D902A501C0C80B7003919C6 /* lucky_lots_tab_highlighted3@2x.png in Resources */,
 				2D902A5C1C0C80B7003919C6 /* LuckyAstrologyPressed@2x.png in Resources */,
 				2D902A891C0C80B7003919C6 /* luckyNumBox_picker_backgroundImage@2x.png in Resources */,
+				2D7BF7951C130B84008C62E8 /* HYConsController.xib in Resources */,
 				2DF4FB5C1C0F3D3F0082C5C4 /* HYLFTController.xib in Resources */,
 				AF3F53141C0C18DE003B867F /* SightAction@3x.png in Resources */,
 				2D902A791C0C80B7003919C6 /* luckyNumBox_backgroundImage.jpg in Resources */,
@@ -1365,6 +1398,7 @@
 				2D902A5B1C0C80B7003919C6 /* LuckyAstrology@2x.png in Resources */,
 				2D902A191C0C80B7003919C6 /* luck_entry_birthday_button_normal@2x.png in Resources */,
 				AF00D7921C0FE633002C32DF /* HYStateBarShowHideController.xib in Resources */,
+				2D79A9AC1C140B400025ED62 /* HYLayerController.xib in Resources */,
 				2D902A401C0C80B7003919C6 /* lucky_lots_cloud1@2x.png in Resources */,
 				2D902A8F1C0C80B7003919C6 /* LuckyRotateWheel@2x.png in Resources */,
 				2D902A811C0C80B7003919C6 /* luckyNumBox_hintImage@2x.png in Resources */,
@@ -1417,6 +1451,8 @@
 				AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */,
 				2DF4FB5B1C0F3D3F0082C5C4 /* HYLFTController.m in Sources */,
 				2DF3F0F01C0AD8A000C94C97 /* HYGifController.m in Sources */,
+				2D79A9AB1C140B400025ED62 /* HYLayerController.m in Sources */,
+				2D7BF7941C130B84008C62E8 /* HYConsController.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
 				AFD35C331C118FFC00C0B7E9 /* HYUnlockView.m in Sources */,
 				2DF3F0F71C0AE42400C94C97 /* UIImage+GIF.m in Sources */,

@@ -78,5 +78,17 @@
 		<key>name</key>
 		<string>手势解锁</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYConsController</string>
+		<key>name</key>
+		<string>控件集合</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYLayerController</string>
+		<key>name</key>
+		<string>核心动画-阴影视图</string>
+	</dict>
 </array>
 </plist>
