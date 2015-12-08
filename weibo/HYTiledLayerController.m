@@ -8,6 +8,8 @@
 
 #import "HYTiledLayerController.h"
 #import "HYTiledLayer.h"
+#import "HYPrintObject.h"
+#import <objc/runtime.h>
 
 @interface HYTiledLayerController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -34,6 +36,16 @@
     
     //draw layer
     [tileLayer setNeedsDisplay];
+    
+//    [HYPrintObject print:[UIDevice currentDevice]];
+    
+    unsigned int count;
+    Ivar *varA = class_copyIvarList([UIDevice class], &count);
+    for (unsigned int i=0; i<count; i++) {
+        Ivar v = varA[i];
+        const char *name = ivar_getName(v);
+        NSLog(@"%s==",name);
+    }
 }
 
 - (IBAction)goBack:(id)sender {

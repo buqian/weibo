@@ -226,6 +226,9 @@
 		AF950DDB1C16C36F007CFFE9 /* HYTiledLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DD91C16C36F007CFFE9 /* HYTiledLayerController.xib */; };
 		AF950DF31C16CF72007CFFE9 /* HYTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DF21C16CF72007CFFE9 /* HYTiledLayer.m */; };
 		AF950DF71C16D55A007CFFE9 /* tiledlayer-image in Resources */ = {isa = PBXBuildFile; fileRef = AF950DF61C16D55A007CFFE9 /* tiledlayer-image */; };
+		AF950DFC1C16D7C3007CFFE9 /* HYEmitterLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DFA1C16D7C3007CFFE9 /* HYEmitterLayerController.m */; };
+		AF950DFD1C16D7C3007CFFE9 /* HYEmitterLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DFB1C16D7C3007CFFE9 /* HYEmitterLayerController.xib */; };
+		AF950E001C16DCDB007CFFE9 /* HYPrintObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DFF1C16DCDB007CFFE9 /* HYPrintObject.m */; };
 		AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A01BF5C6C000EABE40 /* HYDiscoverController.m */; };
 		AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A31BF5C6D000EABE40 /* HYMeController.m */; };
 		AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */; };
@@ -556,6 +559,11 @@
 		AF950DF11C16CF72007CFFE9 /* HYTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTiledLayer.h; sourceTree = "<group>"; };
 		AF950DF21C16CF72007CFFE9 /* HYTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTiledLayer.m; sourceTree = "<group>"; };
 		AF950DF61C16D55A007CFFE9 /* tiledlayer-image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "tiledlayer-image"; sourceTree = "<group>"; };
+		AF950DF91C16D7C3007CFFE9 /* HYEmitterLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEmitterLayerController.h; sourceTree = "<group>"; };
+		AF950DFA1C16D7C3007CFFE9 /* HYEmitterLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEmitterLayerController.m; sourceTree = "<group>"; };
+		AF950DFB1C16D7C3007CFFE9 /* HYEmitterLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYEmitterLayerController.xib; sourceTree = "<group>"; };
+		AF950DFE1C16DCDB007CFFE9 /* HYPrintObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPrintObject.h; sourceTree = "<group>"; };
+		AF950DFF1C16DCDB007CFFE9 /* HYPrintObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPrintObject.m; sourceTree = "<group>"; };
 		AFA7F89F1BF5C6C000EABE40 /* HYDiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDiscoverController.h; sourceTree = "<group>"; };
 		AFA7F8A01BF5C6C000EABE40 /* HYDiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDiscoverController.m; sourceTree = "<group>"; };
 		AFA7F8A21BF5C6D000EABE40 /* HYMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMeController.h; sourceTree = "<group>"; };
@@ -614,6 +622,7 @@
 		2D79A9A11C140B290025ED62 /* 核心动画 */ = {
 			isa = PBXGroup;
 			children = (
+				AF950DF81C16D794007CFFE9 /* CAEmitterLayer */,
 				AF950DD61C16C33C007CFFE9 /* CATiledLayer */,
 				AF950DCD1C16BDCD007CFFE9 /* CAScrollLayer */,
 				AF950DC41C16B69B007CFFE9 /* CAReplicatorLayer */,
@@ -1105,6 +1114,16 @@
 			name = CATiledLayer;
 			sourceTree = "<group>";
 		};
+		AF950DF81C16D794007CFFE9 /* CAEmitterLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DF91C16D7C3007CFFE9 /* HYEmitterLayerController.h */,
+				AF950DFA1C16D7C3007CFFE9 /* HYEmitterLayerController.m */,
+				AF950DFB1C16D7C3007CFFE9 /* HYEmitterLayerController.xib */,
+			);
+			name = CAEmitterLayer;
+			sourceTree = "<group>";
+		};
 		AFA7F88F1BF5BFBD00EABE40 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -1316,6 +1335,8 @@
 			children = (
 				2D7D84771BFDF23E006A1E88 /* lib */,
 				AFF74AFF1BF9D449003B8C61 /* model */,
+				AF950DFE1C16DCDB007CFFE9 /* HYPrintObject.h */,
+				AF950DFF1C16DCDB007CFFE9 /* HYPrintObject.m */,
 			);
 			name = other;
 			sourceTree = "<group>";
@@ -1437,6 +1458,7 @@
 				2D902A8B1C0C80B7003919C6 /* luckyNumBox_seperatorImage@2x.png in Resources */,
 				2DEFCAC21C087CE200F530F6 /* me.plist in Resources */,
 				2D902A691C0C80B7003919C6 /* LuckyConfirmClose@2x.png in Resources */,
+				AF950DFD1C16D7C3007CFFE9 /* HYEmitterLayerController.xib in Resources */,
 				2D902A331C0C80B7003919C6 /* lucky_birthday_tipsbeforeselect@2x.png in Resources */,
 				2D902A6F1C0C80B7003919C6 /* LuckyLocationTitle@2x.png in Resources */,
 				2D902A6B1C0C80B7003919C6 /* luckycoupon_get_btn@2x.png in Resources */,
@@ -1653,12 +1675,14 @@
 				AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */,
 				2D902A9A1C0C8191003919C6 /* HYLuckLoopView.m in Sources */,
 				AFBDB6E31C04A72D004794B0 /* HYTableViewController.m in Sources */,
+				AF950DFC1C16D7C3007CFFE9 /* HYEmitterLayerController.m in Sources */,
 				AFF376A41C0599E1003EDA9A /* HYWeiboToolbar.m in Sources */,
 				AF950DAE1C168F8F007CFFE9 /* HYAnimLftController.m in Sources */,
 				AF8386441C0D42300052C07A /* HYChooseNumberController.m in Sources */,
 				AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */,
 				AFF376971C056750003EDA9A /* HYWeiboTopView.m in Sources */,
 				AF3F530B1C0C1723003B867F /* HYTableDrapController.m in Sources */,
+				AF950E001C16DCDB007CFFE9 /* HYPrintObject.m in Sources */,
 				AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */,
 				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
 				AF950DCC1C16BB30007CFFE9 /* HYReflectionView.m in Sources */,

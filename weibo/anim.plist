@@ -56,5 +56,11 @@
 		<key>name</key>
 		<string>CATiledLayer</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYEmitterLayerController</string>
+		<key>name</key>
+		<string>CAEmitterLayer</string>
+	</dict>
 </array>
 </plist>
