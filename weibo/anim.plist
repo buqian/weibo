@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Hit Testing</string>
+		<key>clazz</key>
+		<string>HYHitTestController</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYHHTransformController</string>
+		<key>name</key>
+		<string>混合变换</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYAnimLftController</string>
+		<key>name</key>
+		<string>立方体</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYTextLayerController</string>
+		<key>name</key>
+		<string>CATextLayer</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYTransformLayerController</string>
+		<key>name</key>
+		<string>CATransformLayer</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYGradientLayerController</string>
+		<key>name</key>
+		<string>CAGradientLayer</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYReplicatorLayerController</string>
+		<key>name</key>
+		<string>CAReplicatorLayer</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYScrollLayerController</string>
+		<key>name</key>
+		<string>CAScrollLayer</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYTiledLayerController</string>
+		<key>name</key>
+		<string>CATiledLayer</string>
+	</dict>
+</array>
+</plist>

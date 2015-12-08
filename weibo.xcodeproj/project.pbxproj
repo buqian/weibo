@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D79A9AB1C140B400025ED62 /* HYLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D79A9A91C140B400025ED62 /* HYLayerController.m */; };
-		2D79A9AC1C140B400025ED62 /* HYLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D79A9AA1C140B400025ED62 /* HYLayerController.xib */; };
 		2D7BF7941C130B84008C62E8 /* HYConsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BF7921C130B84008C62E8 /* HYConsController.m */; };
 		2D7BF7951C130B84008C62E8 /* HYConsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7BF7931C130B84008C62E8 /* HYConsController.xib */; };
 		2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */; };
@@ -202,6 +200,32 @@
 		AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8921BF4E69900044DF4 /* HYButton.m */; };
 		AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8941BF4E69900044DF4 /* HYTabbar.m */; };
 		AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF85B8981BF4E69900044DF4 /* ViewController.m */; };
+		AF950D9A1C166974007CFFE9 /* HYAnimController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950D981C166974007CFFE9 /* HYAnimController.m */; };
+		AF950D9B1C166974007CFFE9 /* HYAnimController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950D991C166974007CFFE9 /* HYAnimController.xib */; };
+		AF950D9D1C166B51007CFFE9 /* anim.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF950D9C1C166B51007CFFE9 /* anim.plist */; };
+		AF950DA21C167BF1007CFFE9 /* HYHitTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DA01C167BF1007CFFE9 /* HYHitTestController.m */; };
+		AF950DA31C167BF1007CFFE9 /* HYHitTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DA11C167BF1007CFFE9 /* HYHitTestController.xib */; };
+		AF950DA81C1688C8007CFFE9 /* HYHHTransformController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DA61C1688C8007CFFE9 /* HYHHTransformController.m */; };
+		AF950DA91C1688C8007CFFE9 /* HYHHTransformController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DA71C1688C8007CFFE9 /* HYHHTransformController.xib */; };
+		AF950DAE1C168F8F007CFFE9 /* HYAnimLftController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DAC1C168F8F007CFFE9 /* HYAnimLftController.m */; };
+		AF950DAF1C168F8F007CFFE9 /* HYAnimLftController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DAD1C168F8F007CFFE9 /* HYAnimLftController.xib */; };
+		AF950DB41C16AB66007CFFE9 /* HYTextLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DB21C16AB66007CFFE9 /* HYTextLayerController.m */; };
+		AF950DB51C16AB66007CFFE9 /* HYTextLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DB31C16AB66007CFFE9 /* HYTextLayerController.xib */; };
+		AF950DB71C16AE3F007CFFE9 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF950DB61C16AE3F007CFFE9 /* CoreText.framework */; };
+		AF950DBC1C16B25E007CFFE9 /* HYTransformLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DBA1C16B25E007CFFE9 /* HYTransformLayerController.m */; };
+		AF950DBD1C16B25E007CFFE9 /* HYTransformLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DBB1C16B25E007CFFE9 /* HYTransformLayerController.xib */; };
+		AF950DC21C16B3E5007CFFE9 /* HYGradientLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DC01C16B3E5007CFFE9 /* HYGradientLayerController.m */; };
+		AF950DC31C16B3E5007CFFE9 /* HYGradientLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DC11C16B3E5007CFFE9 /* HYGradientLayerController.xib */; };
+		AF950DC81C16B6CB007CFFE9 /* HYReplicatorLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DC61C16B6CB007CFFE9 /* HYReplicatorLayerController.m */; };
+		AF950DC91C16B6CB007CFFE9 /* HYReplicatorLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DC71C16B6CB007CFFE9 /* HYReplicatorLayerController.xib */; };
+		AF950DCC1C16BB30007CFFE9 /* HYReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DCB1C16BB30007CFFE9 /* HYReflectionView.m */; };
+		AF950DD11C16BDF9007CFFE9 /* HYScrollLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DCF1C16BDF9007CFFE9 /* HYScrollLayerController.m */; };
+		AF950DD21C16BDF9007CFFE9 /* HYScrollLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DD01C16BDF9007CFFE9 /* HYScrollLayerController.xib */; };
+		AF950DD51C16BE21007CFFE9 /* HYScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DD41C16BE21007CFFE9 /* HYScrollView.m */; };
+		AF950DDA1C16C36F007CFFE9 /* HYTiledLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DD81C16C36F007CFFE9 /* HYTiledLayerController.m */; };
+		AF950DDB1C16C36F007CFFE9 /* HYTiledLayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF950DD91C16C36F007CFFE9 /* HYTiledLayerController.xib */; };
+		AF950DF31C16CF72007CFFE9 /* HYTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF950DF21C16CF72007CFFE9 /* HYTiledLayer.m */; };
+		AF950DF71C16D55A007CFFE9 /* tiledlayer-image in Resources */ = {isa = PBXBuildFile; fileRef = AF950DF61C16D55A007CFFE9 /* tiledlayer-image */; };
 		AFA7F8A11BF5C6C000EABE40 /* HYDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A01BF5C6C000EABE40 /* HYDiscoverController.m */; };
 		AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A31BF5C6D000EABE40 /* HYMeController.m */; };
 		AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA7F8A61BF5C6E100EABE40 /* HYMessageController.m */; };
@@ -262,9 +286,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D79A9A81C140B400025ED62 /* HYLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLayerController.h; sourceTree = "<group>"; };
-		2D79A9A91C140B400025ED62 /* HYLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLayerController.m; sourceTree = "<group>"; };
-		2D79A9AA1C140B400025ED62 /* HYLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYLayerController.xib; sourceTree = "<group>"; };
 		2D7BF7911C130B84008C62E8 /* HYConsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYConsController.h; sourceTree = "<group>"; };
 		2D7BF7921C130B84008C62E8 /* HYConsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYConsController.m; sourceTree = "<group>"; };
 		2D7BF7931C130B84008C62E8 /* HYConsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYConsController.xib; sourceTree = "<group>"; };
@@ -496,6 +517,45 @@
 		AF85B8941BF4E69900044DF4 /* HYTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTabbar.m; sourceTree = "<group>"; };
 		AF85B8971BF4E69900044DF4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AF85B8981BF4E69900044DF4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF950D971C166974007CFFE9 /* HYAnimController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAnimController.h; sourceTree = "<group>"; };
+		AF950D981C166974007CFFE9 /* HYAnimController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAnimController.m; sourceTree = "<group>"; };
+		AF950D991C166974007CFFE9 /* HYAnimController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYAnimController.xib; sourceTree = "<group>"; };
+		AF950D9C1C166B51007CFFE9 /* anim.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = anim.plist; sourceTree = "<group>"; };
+		AF950D9F1C167BF1007CFFE9 /* HYHitTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYHitTestController.h; sourceTree = "<group>"; };
+		AF950DA01C167BF1007CFFE9 /* HYHitTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHitTestController.m; sourceTree = "<group>"; };
+		AF950DA11C167BF1007CFFE9 /* HYHitTestController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYHitTestController.xib; sourceTree = "<group>"; };
+		AF950DA51C1688C8007CFFE9 /* HYHHTransformController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYHHTransformController.h; sourceTree = "<group>"; };
+		AF950DA61C1688C8007CFFE9 /* HYHHTransformController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHHTransformController.m; sourceTree = "<group>"; };
+		AF950DA71C1688C8007CFFE9 /* HYHHTransformController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYHHTransformController.xib; sourceTree = "<group>"; };
+		AF950DAB1C168F8F007CFFE9 /* HYAnimLftController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAnimLftController.h; sourceTree = "<group>"; };
+		AF950DAC1C168F8F007CFFE9 /* HYAnimLftController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAnimLftController.m; sourceTree = "<group>"; };
+		AF950DAD1C168F8F007CFFE9 /* HYAnimLftController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYAnimLftController.xib; sourceTree = "<group>"; };
+		AF950DB11C16AB66007CFFE9 /* HYTextLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTextLayerController.h; sourceTree = "<group>"; };
+		AF950DB21C16AB66007CFFE9 /* HYTextLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTextLayerController.m; sourceTree = "<group>"; };
+		AF950DB31C16AB66007CFFE9 /* HYTextLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYTextLayerController.xib; sourceTree = "<group>"; };
+		AF950DB61C16AE3F007CFFE9 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		AF950DB91C16B25E007CFFE9 /* HYTransformLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTransformLayerController.h; sourceTree = "<group>"; };
+		AF950DBA1C16B25E007CFFE9 /* HYTransformLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTransformLayerController.m; sourceTree = "<group>"; };
+		AF950DBB1C16B25E007CFFE9 /* HYTransformLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYTransformLayerController.xib; sourceTree = "<group>"; };
+		AF950DBF1C16B3E5007CFFE9 /* HYGradientLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYGradientLayerController.h; sourceTree = "<group>"; };
+		AF950DC01C16B3E5007CFFE9 /* HYGradientLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYGradientLayerController.m; sourceTree = "<group>"; };
+		AF950DC11C16B3E5007CFFE9 /* HYGradientLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYGradientLayerController.xib; sourceTree = "<group>"; };
+		AF950DC51C16B6CB007CFFE9 /* HYReplicatorLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYReplicatorLayerController.h; sourceTree = "<group>"; };
+		AF950DC61C16B6CB007CFFE9 /* HYReplicatorLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYReplicatorLayerController.m; sourceTree = "<group>"; };
+		AF950DC71C16B6CB007CFFE9 /* HYReplicatorLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYReplicatorLayerController.xib; sourceTree = "<group>"; };
+		AF950DCA1C16BB30007CFFE9 /* HYReflectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYReflectionView.h; sourceTree = "<group>"; };
+		AF950DCB1C16BB30007CFFE9 /* HYReflectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYReflectionView.m; sourceTree = "<group>"; };
+		AF950DCE1C16BDF9007CFFE9 /* HYScrollLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYScrollLayerController.h; sourceTree = "<group>"; };
+		AF950DCF1C16BDF9007CFFE9 /* HYScrollLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYScrollLayerController.m; sourceTree = "<group>"; };
+		AF950DD01C16BDF9007CFFE9 /* HYScrollLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYScrollLayerController.xib; sourceTree = "<group>"; };
+		AF950DD31C16BE21007CFFE9 /* HYScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYScrollView.h; sourceTree = "<group>"; };
+		AF950DD41C16BE21007CFFE9 /* HYScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYScrollView.m; sourceTree = "<group>"; };
+		AF950DD71C16C36F007CFFE9 /* HYTiledLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTiledLayerController.h; sourceTree = "<group>"; };
+		AF950DD81C16C36F007CFFE9 /* HYTiledLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTiledLayerController.m; sourceTree = "<group>"; };
+		AF950DD91C16C36F007CFFE9 /* HYTiledLayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYTiledLayerController.xib; sourceTree = "<group>"; };
+		AF950DF11C16CF72007CFFE9 /* HYTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTiledLayer.h; sourceTree = "<group>"; };
+		AF950DF21C16CF72007CFFE9 /* HYTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTiledLayer.m; sourceTree = "<group>"; };
+		AF950DF61C16D55A007CFFE9 /* tiledlayer-image */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "tiledlayer-image"; sourceTree = "<group>"; };
 		AFA7F89F1BF5C6C000EABE40 /* HYDiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDiscoverController.h; sourceTree = "<group>"; };
 		AFA7F8A01BF5C6C000EABE40 /* HYDiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDiscoverController.m; sourceTree = "<group>"; };
 		AFA7F8A21BF5C6D000EABE40 /* HYMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMeController.h; sourceTree = "<group>"; };
@@ -541,6 +601,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF950DB71C16AE3F007CFFE9 /* CoreText.framework in Frameworks */,
 				2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */,
 				2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */,
 				2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */,
@@ -550,14 +611,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D79A9A11C140B290025ED62 /* 核心动画-阴影视图 */ = {
+		2D79A9A11C140B290025ED62 /* 核心动画 */ = {
 			isa = PBXGroup;
 			children = (
-				2D79A9A81C140B400025ED62 /* HYLayerController.h */,
-				2D79A9A91C140B400025ED62 /* HYLayerController.m */,
-				2D79A9AA1C140B400025ED62 /* HYLayerController.xib */,
+				AF950DD61C16C33C007CFFE9 /* CATiledLayer */,
+				AF950DCD1C16BDCD007CFFE9 /* CAScrollLayer */,
+				AF950DC41C16B69B007CFFE9 /* CAReplicatorLayer */,
+				AF950DBE1C16B3B7007CFFE9 /* CAGradientLayer */,
+				AF950DB81C16B234007CFFE9 /* CATransformLayer */,
+				AF950DB01C16AB53007CFFE9 /* CATextLayer */,
+				AF950DAA1C168F76007CFFE9 /* 立方体 */,
+				AF950DA41C1688B4007CFFE9 /* 混合变换 */,
+				AF950D9E1C167BDA007CFFE9 /* Hit Testing */,
+				AF950D971C166974007CFFE9 /* HYAnimController.h */,
+				AF950D981C166974007CFFE9 /* HYAnimController.m */,
+				AF950D991C166974007CFFE9 /* HYAnimController.xib */,
+				AF950D9C1C166B51007CFFE9 /* anim.plist */,
 			);
-			name = "核心动画-阴影视图";
+			name = "核心动画";
 			sourceTree = "<group>";
 		};
 		2D7BF78A1C130B71008C62E8 /* 控件集合 */ = {
@@ -888,6 +959,7 @@
 		AF85B8381BF4B70F00044DF4 = {
 			isa = PBXGroup;
 			children = (
+				AF950DB61C16AE3F007CFFE9 /* CoreText.framework */,
 				2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */,
 				2D7D847F1BFDFFED006A1E88 /* MapKit.framework */,
 				2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */,
@@ -934,6 +1006,103 @@
 				2DEFCAC11C087CE200F530F6 /* me.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF950D9E1C167BDA007CFFE9 /* Hit Testing */ = {
+			isa = PBXGroup;
+			children = (
+				AF950D9F1C167BF1007CFFE9 /* HYHitTestController.h */,
+				AF950DA01C167BF1007CFFE9 /* HYHitTestController.m */,
+				AF950DA11C167BF1007CFFE9 /* HYHitTestController.xib */,
+			);
+			name = "Hit Testing";
+			sourceTree = "<group>";
+		};
+		AF950DA41C1688B4007CFFE9 /* 混合变换 */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DA51C1688C8007CFFE9 /* HYHHTransformController.h */,
+				AF950DA61C1688C8007CFFE9 /* HYHHTransformController.m */,
+				AF950DA71C1688C8007CFFE9 /* HYHHTransformController.xib */,
+			);
+			name = "混合变换";
+			sourceTree = "<group>";
+		};
+		AF950DAA1C168F76007CFFE9 /* 立方体 */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DAB1C168F8F007CFFE9 /* HYAnimLftController.h */,
+				AF950DAC1C168F8F007CFFE9 /* HYAnimLftController.m */,
+				AF950DAD1C168F8F007CFFE9 /* HYAnimLftController.xib */,
+			);
+			name = "立方体";
+			sourceTree = "<group>";
+		};
+		AF950DB01C16AB53007CFFE9 /* CATextLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DB11C16AB66007CFFE9 /* HYTextLayerController.h */,
+				AF950DB21C16AB66007CFFE9 /* HYTextLayerController.m */,
+				AF950DB31C16AB66007CFFE9 /* HYTextLayerController.xib */,
+			);
+			name = CATextLayer;
+			sourceTree = "<group>";
+		};
+		AF950DB81C16B234007CFFE9 /* CATransformLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DB91C16B25E007CFFE9 /* HYTransformLayerController.h */,
+				AF950DBA1C16B25E007CFFE9 /* HYTransformLayerController.m */,
+				AF950DBB1C16B25E007CFFE9 /* HYTransformLayerController.xib */,
+			);
+			name = CATransformLayer;
+			sourceTree = "<group>";
+		};
+		AF950DBE1C16B3B7007CFFE9 /* CAGradientLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DBF1C16B3E5007CFFE9 /* HYGradientLayerController.h */,
+				AF950DC01C16B3E5007CFFE9 /* HYGradientLayerController.m */,
+				AF950DC11C16B3E5007CFFE9 /* HYGradientLayerController.xib */,
+			);
+			name = CAGradientLayer;
+			sourceTree = "<group>";
+		};
+		AF950DC41C16B69B007CFFE9 /* CAReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DCA1C16BB30007CFFE9 /* HYReflectionView.h */,
+				AF950DCB1C16BB30007CFFE9 /* HYReflectionView.m */,
+				AF950DC51C16B6CB007CFFE9 /* HYReplicatorLayerController.h */,
+				AF950DC61C16B6CB007CFFE9 /* HYReplicatorLayerController.m */,
+				AF950DC71C16B6CB007CFFE9 /* HYReplicatorLayerController.xib */,
+			);
+			name = CAReplicatorLayer;
+			sourceTree = "<group>";
+		};
+		AF950DCD1C16BDCD007CFFE9 /* CAScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DD31C16BE21007CFFE9 /* HYScrollView.h */,
+				AF950DD41C16BE21007CFFE9 /* HYScrollView.m */,
+				AF950DCE1C16BDF9007CFFE9 /* HYScrollLayerController.h */,
+				AF950DCF1C16BDF9007CFFE9 /* HYScrollLayerController.m */,
+				AF950DD01C16BDF9007CFFE9 /* HYScrollLayerController.xib */,
+			);
+			name = CAScrollLayer;
+			sourceTree = "<group>";
+		};
+		AF950DD61C16C33C007CFFE9 /* CATiledLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF950DF61C16D55A007CFFE9 /* tiledlayer-image */,
+				AF950DF11C16CF72007CFFE9 /* HYTiledLayer.h */,
+				AF950DF21C16CF72007CFFE9 /* HYTiledLayer.m */,
+				AF950DD71C16C36F007CFFE9 /* HYTiledLayerController.h */,
+				AF950DD81C16C36F007CFFE9 /* HYTiledLayerController.m */,
+				AF950DD91C16C36F007CFFE9 /* HYTiledLayerController.xib */,
+			);
+			name = CATiledLayer;
 			sourceTree = "<group>";
 		};
 		AFA7F88F1BF5BFBD00EABE40 /* home */ = {
@@ -1021,7 +1190,7 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
-				2D79A9A11C140B290025ED62 /* 核心动画-阴影视图 */,
+				2D79A9A11C140B290025ED62 /* 核心动画 */,
 				2D7BF78A1C130B71008C62E8 /* 控件集合 */,
 				AFD35C221C113BE500C0B7E9 /* 手势解锁 */,
 				AF00D7A91C1044C0002C32DF /* GIF - HYAnimatedController */,
@@ -1273,6 +1442,7 @@
 				2D902A6B1C0C80B7003919C6 /* luckycoupon_get_btn@2x.png in Resources */,
 				2D902A721C0C80B7003919C6 /* LuckyMidPressed@2x.png in Resources */,
 				2D902A4D1C0C80B7003919C6 /* lucky_lots_tab_highlighted0@2x.png in Resources */,
+				AF950DC91C16B6CB007CFFE9 /* HYReplicatorLayerController.xib in Resources */,
 				2D902A2F1C0C80B7003919C6 /* lucky_birthday_resultbackground@2x.png in Resources */,
 				2D902A7A1C0C80B7003919C6 /* luckyNumBox_backMoneyImage@2x.png in Resources */,
 				AF8386451C0D42300052C07A /* HYChooseNumberController.xib in Resources */,
@@ -1299,6 +1469,7 @@
 				2D902A211C0C80B7003919C6 /* lucky_birthday_background@3x.jpg in Resources */,
 				AF85B8541BF4B70F00044DF4 /* LaunchScreen.storyboard in Resources */,
 				2D902A741C0C80B7003919C6 /* LuckyNameTitle@2x.png in Resources */,
+				AF950DF71C16D55A007CFFE9 /* tiledlayer-image in Resources */,
 				2D902A6A1C0C80B7003919C6 /* luckycoupon_arrow@2x.png in Resources */,
 				2D902A531C0C80B7003919C6 /* lucky_lots_tab_normal2@2x.png in Resources */,
 				2D902A5A1C0C80B7003919C6 /* LuckyAnimalPressed@2x.png in Resources */,
@@ -1338,6 +1509,7 @@
 				2D902A521C0C80B7003919C6 /* lucky_lots_tab_normal1@2x.png in Resources */,
 				2D902A351C0C80B7003919C6 /* lucky_birthday_yellowcircle@2x.png in Resources */,
 				2D902A171C0C80B7003919C6 /* luck_entry_background@2x.jpg in Resources */,
+				AF950DD21C16BDF9007CFFE9 /* HYScrollLayerController.xib in Resources */,
 				2D902A601C0C80B7003919C6 /* LuckyBackground@3x.jpg in Resources */,
 				2DF3F0E01C0ACDD000C94C97 /* sleep.jpg in Resources */,
 				2DF3F10C1C0B0E2000C94C97 /* g-3.jpg in Resources */,
@@ -1348,6 +1520,7 @@
 				2D902A4E1C0C80B7003919C6 /* lucky_lots_tab_highlighted1@2x.png in Resources */,
 				2D902A2E1C0C80B7003919C6 /* lucky_birthday_result_verticalline@2x.png in Resources */,
 				2D902A3B1C0C80B7003919C6 /* lucky_lots_bucket_hands@2x.png in Resources */,
+				AF950DBD1C16B25E007CFFE9 /* HYTransformLayerController.xib in Resources */,
 				2D902A901C0C80B7003919C6 /* LuckyRototeSelected@2x.png in Resources */,
 				2D902A681C0C80B7003919C6 /* LuckyConfirmBack@2x.png in Resources */,
 				2D902A411C0C80B7003919C6 /* lucky_lots_coin@2x.png in Resources */,
@@ -1363,6 +1536,7 @@
 				2D902A4F1C0C80B7003919C6 /* lucky_lots_tab_highlighted2@2x.png in Resources */,
 				2D902A5D1C0C80B7003919C6 /* LuckyBackground_For5@2x.jpg in Resources */,
 				2D902A6C1C0C80B7003919C6 /* luckycoupon_question_btn@2x.png in Resources */,
+				AF950D9B1C166974007CFFE9 /* HYAnimController.xib in Resources */,
 				2D902A3F1C0C80B7003919C6 /* lucky_lots_cloud@2x.png in Resources */,
 				2D902A461C0C80B7003919C6 /* lucky_lots_pagecontrol_inactive@2x.png in Resources */,
 				2D902A471C0C80B7003919C6 /* lucky_lots_reshake@2x.png in Resources */,
@@ -1374,10 +1548,13 @@
 				2D902A481C0C80B7003919C6 /* lucky_lots_result_background@3x.jpg in Resources */,
 				2D902A1A1C0C80B7003919C6 /* luck_entry_lots_button_normal@2x.png in Resources */,
 				2D902A861C0C80B7003919C6 /* luckyNumBox_moneyShineImage_5@2x.png in Resources */,
+				AF950DB51C16AB66007CFFE9 /* HYTextLayerController.xib in Resources */,
 				2D902A3A1C0C80B7003919C6 /* lucky_lots_bao@2x.png in Resources */,
+				AF950DDB1C16C36F007CFFE9 /* HYTiledLayerController.xib in Resources */,
 				2D902A5E1C0C80B7003919C6 /* LuckyBackground_For6@2x.jpg in Resources */,
 				2D902A441C0C80B7003919C6 /* lucky_lots_haoyun@2x.png in Resources */,
 				AF00D7991C100A98002C32DF /* HYLFTController2.xib in Resources */,
+				AF950DA31C167BF1007CFFE9 /* HYHitTestController.xib in Resources */,
 				2D902A231C0C80B7003919C6 /* lucky_birthday_choose@2x.png in Resources */,
 				2D902A821C0C80B7003919C6 /* luckyNumBox_moneyShineImage_1@2x.png in Resources */,
 				2D902A3E1C0C80B7003919C6 /* lucky_lots_cell_seperator@2x.png in Resources */,
@@ -1398,7 +1575,9 @@
 				2D902A5B1C0C80B7003919C6 /* LuckyAstrology@2x.png in Resources */,
 				2D902A191C0C80B7003919C6 /* luck_entry_birthday_button_normal@2x.png in Resources */,
 				AF00D7921C0FE633002C32DF /* HYStateBarShowHideController.xib in Resources */,
-				2D79A9AC1C140B400025ED62 /* HYLayerController.xib in Resources */,
+				AF950DAF1C168F8F007CFFE9 /* HYAnimLftController.xib in Resources */,
+				AF950D9D1C166B51007CFFE9 /* anim.plist in Resources */,
+				AF950DC31C16B3E5007CFFE9 /* HYGradientLayerController.xib in Resources */,
 				2D902A401C0C80B7003919C6 /* lucky_lots_cloud1@2x.png in Resources */,
 				2D902A8F1C0C80B7003919C6 /* LuckyRotateWheel@2x.png in Resources */,
 				2D902A811C0C80B7003919C6 /* luckyNumBox_hintImage@2x.png in Resources */,
@@ -1409,6 +1588,7 @@
 				2D902A1D1C0C80B7003919C6 /* luckBetIcon@2x.png in Resources */,
 				2D902A491C0C80B7003919C6 /* lucky_lots_resultlot@2x.png in Resources */,
 				2DF3F0F11C0AD8A000C94C97 /* HYGifController.xib in Resources */,
+				AF950DA91C1688C8007CFFE9 /* HYHHTransformController.xib in Resources */,
 				2D902A641C0C80B7003919C6 /* LuckyBaseTitleBackTwo@2x.png in Resources */,
 				2D902A561C0C80B7003919C6 /* lucky_lots_tuhao@2x.png in Resources */,
 				2D902A6D1C0C80B7003919C6 /* LuckyLeftPressed@2x.png in Resources */,
@@ -1437,6 +1617,8 @@
 				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
 				AFD35C2C1C113BF900C0B7E9 /* HYUnlockController.m in Sources */,
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
+				AF950DD51C16BE21007CFFE9 /* HYScrollView.m in Sources */,
+				AF950DA21C167BF1007CFFE9 /* HYHitTestController.m in Sources */,
 				2D866B0E1C0DFCDD00642CA0 /* HYQianImageView.m in Sources */,
 				2D866B081C0DF78200642CA0 /* HYYaoQianButton.m in Sources */,
 				AF00D7981C100A98002C32DF /* HYLFTController2.m in Sources */,
@@ -1449,17 +1631,22 @@
 				2DF0F2C41C072F9F00CE7B86 /* HYRefreshFooterView.m in Sources */,
 				AFA7F8A41BF5C6D000EABE40 /* HYMeController.m in Sources */,
 				AFA7F8A71BF5C6E100EABE40 /* HYMessageController.m in Sources */,
+				AF950DA81C1688C8007CFFE9 /* HYHHTransformController.m in Sources */,
 				2DF4FB5B1C0F3D3F0082C5C4 /* HYLFTController.m in Sources */,
 				2DF3F0F01C0AD8A000C94C97 /* HYGifController.m in Sources */,
-				2D79A9AB1C140B400025ED62 /* HYLayerController.m in Sources */,
+				AF950DBC1C16B25E007CFFE9 /* HYTransformLayerController.m in Sources */,
 				2D7BF7941C130B84008C62E8 /* HYConsController.m in Sources */,
+				AF950DF31C16CF72007CFFE9 /* HYTiledLayer.m in Sources */,
 				AF85B8491BF4B70F00044DF4 /* AppDelegate.m in Sources */,
 				AFD35C331C118FFC00C0B7E9 /* HYUnlockView.m in Sources */,
 				2DF3F0F71C0AE42400C94C97 /* UIImage+GIF.m in Sources */,
 				2D866B041C0DF41700642CA0 /* HYYaoQianController.m in Sources */,
+				AF950DC21C16B3E5007CFFE9 /* HYGradientLayerController.m in Sources */,
 				AF83864E1C0D67080052C07A /* HYChooseNumView.m in Sources */,
 				AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */,
+				AF950D9A1C166974007CFFE9 /* HYAnimController.m in Sources */,
 				2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */,
+				AF950DC81C16B6CB007CFFE9 /* HYReplicatorLayerController.m in Sources */,
 				2D902A9D1C0C93B0003919C6 /* HYLuckLoopButton.m in Sources */,
 				AF00D7911C0FE633002C32DF /* HYStateBarShowHideController.m in Sources */,
 				AF58FB201C06B598007473BD /* HYRefreshHeaderView.m in Sources */,
@@ -1467,12 +1654,17 @@
 				2D902A9A1C0C8191003919C6 /* HYLuckLoopView.m in Sources */,
 				AFBDB6E31C04A72D004794B0 /* HYTableViewController.m in Sources */,
 				AFF376A41C0599E1003EDA9A /* HYWeiboToolbar.m in Sources */,
+				AF950DAE1C168F8F007CFFE9 /* HYAnimLftController.m in Sources */,
 				AF8386441C0D42300052C07A /* HYChooseNumberController.m in Sources */,
 				AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */,
 				AFF376971C056750003EDA9A /* HYWeiboTopView.m in Sources */,
 				AF3F530B1C0C1723003B867F /* HYTableDrapController.m in Sources */,
 				AFA7F8AA1BF5C76D00EABE40 /* HYHomeController.m in Sources */,
 				AF36CE371BF6327400238C59 /* HYLoginController.m in Sources */,
+				AF950DCC1C16BB30007CFFE9 /* HYReflectionView.m in Sources */,
+				AF950DDA1C16C36F007CFFE9 /* HYTiledLayerController.m in Sources */,
+				AF950DD11C16BDF9007CFFE9 /* HYScrollLayerController.m in Sources */,
+				AF950DB41C16AB66007CFFE9 /* HYTextLayerController.m in Sources */,
 				AFA7F8AD1BF5D1E700EABE40 /* HyNavigationController.m in Sources */,
 				AFD968121BFC657A00A9764A /* HYWeibo.m in Sources */,
 				AF00D7BA1C1044EF002C32DF /* FLAnimatedImage.m in Sources */,

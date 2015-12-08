@@ -1,13 +1,13 @@
 //
-//  HYLayerController.h
+//  HYScrollView.h
 //  weibo
 //
-//  Created by bala on 6/12/15.
+//  Created by zhangfuqiang on 15/12/8.
 //  Copyright © 2015年 zhangfuqiang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface HYLayerController : UIViewController
+@interface HYScrollView : UIView
 
 @end
