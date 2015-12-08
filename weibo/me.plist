@@ -84,5 +84,11 @@
 		<key>name</key>
 		<string>核心动画</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYLabelController</string>
+		<key>name</key>
+		<string>UILabel 富文本</string>
+	</dict>
 </array>
 </plist>

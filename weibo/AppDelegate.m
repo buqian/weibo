@@ -24,6 +24,17 @@
 ////    self.window.rootViewController = [[ViewController alloc] init];
 //    [self.window makeKeyAndVisible];
     
+    // ios 7
+//    UIRemoteNotificationType apn_type = (UIRemoteNotificationType)(UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeBadge);
+//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:apn_type];
+
+    //ios 8
+//    [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings
+//                                                                         settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge)
+//                                                                         categories:nil]];
+//    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
+//    NSString *udid = [[UIDevice currentDevice] uniqueIdentifier];
     return YES;
 }
 
@@ -49,4 +60,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(nonnull NSData *)deviceToken
+{
+    HYLogFun;
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    HYLogObj(error);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    HYLogFun;
+}
 @end

@@ -13,6 +13,7 @@
 
 + (NSDictionary*)getObjectData:(id)obj
 {
+    
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     unsigned int propsCount;
     objc_property_t *props = class_copyPropertyList([obj class], &propsCount);
@@ -21,7 +22,26 @@
         objc_property_t prop = props[i];
         
         NSString *propName = [NSString stringWithUTF8String:property_getName(prop)];
-        id value = [obj valueForKey:propName];
+        NSString *propertyType = [NSString stringWithCString:property_getAttributes(prop) encoding:NSUTF8StringEncoding];
+        NSString *propertyMethod = nil;
+        if ([propertyType hasPrefix:@"TB"]) {
+            while ([propertyType containsString:@","]) {
+                NSRange range = [propertyType rangeOfString:@","];
+                propertyType = [propertyType substringFromIndex:range.location + range.length];
+            }
+            if ([propertyType hasPrefix:@"G"]) {
+                propertyMethod = [propertyType substringFromIndex:1];
+            }
+        }
+        
+        id value;
+        if (nil != propertyMethod && [obj respondsToSelector:NSSelectorFromString(propertyMethod)]) {
+            value = [NSNumber numberWithBool:[obj performSelector:NSSelectorFromString(propertyMethod)]];
+        }
+        else
+        {
+            value = [obj valueForKey:propName];
+        }
         if(value == nil)
         {
             value = [NSNull null];

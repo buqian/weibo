@@ -37,15 +37,7 @@
     //draw layer
     [tileLayer setNeedsDisplay];
     
-//    [HYPrintObject print:[UIDevice currentDevice]];
-    
-    unsigned int count;
-    Ivar *varA = class_copyIvarList([UIDevice class], &count);
-    for (unsigned int i=0; i<count; i++) {
-        Ivar v = varA[i];
-        const char *name = ivar_getName(v);
-        NSLog(@"%s==",name);
-    }
+    [HYPrintObject print:[UIDevice currentDevice] ];
 }
 
 - (IBAction)goBack:(id)sender {

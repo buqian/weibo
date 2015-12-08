@@ -150,6 +150,8 @@
 		2DB00E2D1C09980A003052A8 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB00E2C1C09980A003052A8 /* UIImage+ColorAtPixel.m */; };
 		2DB00E361C099830003052A8 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB00E351C099830003052A8 /* OBShapedButton.m */; };
 		2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC551EF1C05EBFF008FB12E /* HYModelView.m */; };
+		2DEC2FB91C17119300379C60 /* HYLabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC2FB71C17119300379C60 /* HYLabelController.m */; };
+		2DEC2FBA1C17119300379C60 /* HYLabelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC2FB81C17119300379C60 /* HYLabelController.xib */; };
 		2DEFCAC21C087CE200F530F6 /* me.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DEFCAC11C087CE200F530F6 /* me.plist */; };
 		2DEFCAD01C08872900F530F6 /* HYLotteryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEFCACF1C08872900F530F6 /* HYLotteryView.m */; };
 		2DEFCAD91C088F0D00F530F6 /* HYJKCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEFCAD71C088F0D00F530F6 /* HYJKCController.m */; };
@@ -443,6 +445,9 @@
 		2DB00E351C099830003052A8 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
 		2DC551EE1C05EBFF008FB12E /* HYModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYModelView.h; sourceTree = "<group>"; };
 		2DC551EF1C05EBFF008FB12E /* HYModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYModelView.m; sourceTree = "<group>"; };
+		2DEC2FB61C17119300379C60 /* HYLabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLabelController.h; sourceTree = "<group>"; };
+		2DEC2FB71C17119300379C60 /* HYLabelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLabelController.m; sourceTree = "<group>"; };
+		2DEC2FB81C17119300379C60 /* HYLabelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYLabelController.xib; sourceTree = "<group>"; };
 		2DEFCAC11C087CE200F530F6 /* me.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = me.plist; sourceTree = "<group>"; };
 		2DEFCACE1C08872900F530F6 /* HYLotteryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLotteryView.h; sourceTree = "<group>"; };
 		2DEFCACF1C08872900F530F6 /* HYLotteryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLotteryView.m; sourceTree = "<group>"; };
@@ -837,6 +842,16 @@
 			name = "梦想大转盘";
 			sourceTree = "<group>";
 		};
+		2DEC2FAF1C17114D00379C60 /* UILabel 富文本 */ = {
+			isa = PBXGroup;
+			children = (
+				2DEC2FB61C17119300379C60 /* HYLabelController.h */,
+				2DEC2FB71C17119300379C60 /* HYLabelController.m */,
+				2DEC2FB81C17119300379C60 /* HYLabelController.xib */,
+			);
+			name = "UILabel 富文本";
+			sourceTree = "<group>";
+		};
 		2DEFCAC91C08864200F530F6 /* 即开彩票 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1012,7 +1027,6 @@
 				2DEFCADD1C08900700F530F6 /* lottery.jpg */,
 				AF85B8451BF4B70F00044DF4 /* main.m */,
 				AFF74AFD1BF9ADE3003B8C61 /* weibo.pch */,
-				2DEFCAC11C087CE200F530F6 /* me.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1209,6 +1223,7 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				2DEC2FAF1C17114D00379C60 /* UILabel 富文本 */,
 				2D79A9A11C140B290025ED62 /* 核心动画 */,
 				2D7BF78A1C130B71008C62E8 /* 控件集合 */,
 				AFD35C221C113BE500C0B7E9 /* 手势解锁 */,
@@ -1249,6 +1264,7 @@
 			children = (
 				AFA7F8A21BF5C6D000EABE40 /* HYMeController.h */,
 				AFA7F8A31BF5C6D000EABE40 /* HYMeController.m */,
+				2DEFCAC11C087CE200F530F6 /* me.plist */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -1535,6 +1551,7 @@
 				2D902A601C0C80B7003919C6 /* LuckyBackground@3x.jpg in Resources */,
 				2DF3F0E01C0ACDD000C94C97 /* sleep.jpg in Resources */,
 				2DF3F10C1C0B0E2000C94C97 /* g-3.jpg in Resources */,
+				2DEC2FBA1C17119300379C60 /* HYLabelController.xib in Resources */,
 				2D902A341C0C80B7003919C6 /* lucky_birthday_title@2x.png in Resources */,
 				2D902A371C0C80B7003919C6 /* lucky_entry_light1@2x.png in Resources */,
 				2D902A261C0C80B7003919C6 /* lucky_birthday_inputbackground@2x.png in Resources */,
@@ -1667,6 +1684,7 @@
 				AF83864E1C0D67080052C07A /* HYChooseNumView.m in Sources */,
 				AF85B8991BF4E69900044DF4 /* HYButton.m in Sources */,
 				AF950D9A1C166974007CFFE9 /* HYAnimController.m in Sources */,
+				2DEC2FB91C17119300379C60 /* HYLabelController.m in Sources */,
 				2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */,
 				AF950DC81C16B6CB007CFFE9 /* HYReplicatorLayerController.m in Sources */,
 				2D902A9D1C0C93B0003919C6 /* HYLuckLoopButton.m in Sources */,
