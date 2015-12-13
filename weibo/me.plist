@@ -90,5 +90,17 @@
 		<key>name</key>
 		<string>UILabel 富文本</string>
 	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYHCollectionController</string>
+		<key>name</key>
+		<string>CollectionView 横</string>
+	</dict>
+	<dict>
+		<key>clazz</key>
+		<string>HYWaterCollectionController</string>
+		<key>name</key>
+		<string>CollectionView 流水</string>
+	</dict>
 </array>
 </plist>

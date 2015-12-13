@@ -14,6 +14,8 @@
 @interface HYTiledLayerController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
+@property (nonatomic, weak) HYTiledLayer *tileLayer;
+
 - (IBAction)goBack:(id)sender;
 
 @end
@@ -37,7 +39,14 @@
     //draw layer
     [tileLayer setNeedsDisplay];
     
+    _tileLayer = tileLayer;
+    
     [HYPrintObject print:[UIDevice currentDevice] ];
+}
+
+- (void)dealloc
+{
+    _tileLayer.delegate = nil;
 }
 
 - (IBAction)goBack:(id)sender {

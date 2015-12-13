@@ -19,7 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
 //    self.window.rootViewController = [[HYGifController alloc] initWithNibName:@"HYGifController" bundle:nil];
 ////    self.window.rootViewController = [[ViewController alloc] init];
 //    [self.window makeKeyAndVisible];

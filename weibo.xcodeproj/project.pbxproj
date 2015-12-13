@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D5065AF1C1AF8F80057FA45 /* HYHCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5065AD1C1AF8F80057FA45 /* HYHCollectionController.m */; };
+		2D5065B01C1AF8F80057FA45 /* HYHCollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D5065AE1C1AF8F80057FA45 /* HYHCollectionController.xib */; };
+		2D5065B31C1AFF7E0057FA45 /* HYCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5065B21C1AFF7E0057FA45 /* HYCollectionViewFlowLayout.m */; };
+		2D5065B61C1B11810057FA45 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5065B51C1B11810057FA45 /* SystemConfiguration.framework */; };
 		2D7BF7941C130B84008C62E8 /* HYConsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7BF7921C130B84008C62E8 /* HYConsController.m */; };
 		2D7BF7951C130B84008C62E8 /* HYConsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D7BF7931C130B84008C62E8 /* HYConsController.xib */; };
 		2D7D847B1BFDFE31006A1E88 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D847A1BFDFE31006A1E88 /* ImageIO.framework */; };
@@ -150,6 +154,9 @@
 		2DB00E2D1C09980A003052A8 /* UIImage+ColorAtPixel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB00E2C1C09980A003052A8 /* UIImage+ColorAtPixel.m */; };
 		2DB00E361C099830003052A8 /* OBShapedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB00E351C099830003052A8 /* OBShapedButton.m */; };
 		2DC551F01C05EBFF008FB12E /* HYModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC551EF1C05EBFF008FB12E /* HYModelView.m */; };
+		2DDBDC2A1C1BFB2A00E829FA /* HYWaterCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDC281C1BFB2A00E829FA /* HYWaterCollectionController.m */; };
+		2DDBDC2B1C1BFB2A00E829FA /* HYWaterCollectionController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DDBDC291C1BFB2A00E829FA /* HYWaterCollectionController.xib */; };
+		2DDBDC381C1C042300E829FA /* WaterFLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DDBDC371C1C042300E829FA /* WaterFLayout.m */; };
 		2DEC2FB91C17119300379C60 /* HYLabelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC2FB71C17119300379C60 /* HYLabelController.m */; };
 		2DEC2FBA1C17119300379C60 /* HYLabelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC2FB81C17119300379C60 /* HYLabelController.xib */; };
 		2DEFCAC21C087CE200F530F6 /* me.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DEFCAC11C087CE200F530F6 /* me.plist */; };
@@ -291,6 +298,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D5065AC1C1AF8F80057FA45 /* HYHCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYHCollectionController.h; sourceTree = "<group>"; };
+		2D5065AD1C1AF8F80057FA45 /* HYHCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYHCollectionController.m; sourceTree = "<group>"; };
+		2D5065AE1C1AF8F80057FA45 /* HYHCollectionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYHCollectionController.xib; sourceTree = "<group>"; };
+		2D5065B11C1AFF7E0057FA45 /* HYCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		2D5065B21C1AFF7E0057FA45 /* HYCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		2D5065B51C1B11810057FA45 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2D7BF7911C130B84008C62E8 /* HYConsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYConsController.h; sourceTree = "<group>"; };
 		2D7BF7921C130B84008C62E8 /* HYConsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYConsController.m; sourceTree = "<group>"; };
 		2D7BF7931C130B84008C62E8 /* HYConsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYConsController.xib; sourceTree = "<group>"; };
@@ -445,6 +458,11 @@
 		2DB00E351C099830003052A8 /* OBShapedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBShapedButton.m; sourceTree = "<group>"; };
 		2DC551EE1C05EBFF008FB12E /* HYModelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYModelView.h; sourceTree = "<group>"; };
 		2DC551EF1C05EBFF008FB12E /* HYModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYModelView.m; sourceTree = "<group>"; };
+		2DDBDC271C1BFB2A00E829FA /* HYWaterCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYWaterCollectionController.h; sourceTree = "<group>"; };
+		2DDBDC281C1BFB2A00E829FA /* HYWaterCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYWaterCollectionController.m; sourceTree = "<group>"; };
+		2DDBDC291C1BFB2A00E829FA /* HYWaterCollectionController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYWaterCollectionController.xib; sourceTree = "<group>"; };
+		2DDBDC361C1C042300E829FA /* WaterFLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WaterFLayout.h; path = CollectionViewLayout/WaterFLayout.h; sourceTree = "<group>"; };
+		2DDBDC371C1C042300E829FA /* WaterFLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WaterFLayout.m; path = CollectionViewLayout/WaterFLayout.m; sourceTree = "<group>"; };
 		2DEC2FB61C17119300379C60 /* HYLabelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLabelController.h; sourceTree = "<group>"; };
 		2DEC2FB71C17119300379C60 /* HYLabelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLabelController.m; sourceTree = "<group>"; };
 		2DEC2FB81C17119300379C60 /* HYLabelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HYLabelController.xib; sourceTree = "<group>"; };
@@ -614,6 +632,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5065B61C1B11810057FA45 /* SystemConfiguration.framework in Frameworks */,
 				AF950DB71C16AE3F007CFFE9 /* CoreText.framework in Frameworks */,
 				2D7D84B21BFE073F006A1E88 /* libSDWebImage.a in Frameworks */,
 				2D7D84801BFDFFED006A1E88 /* MapKit.framework in Frameworks */,
@@ -624,6 +643,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D5065A01C1AF6EB0057FA45 /* CollectionView 横 */ = {
+			isa = PBXGroup;
+			children = (
+				2D5065AC1C1AF8F80057FA45 /* HYHCollectionController.h */,
+				2D5065AD1C1AF8F80057FA45 /* HYHCollectionController.m */,
+				2D5065B11C1AFF7E0057FA45 /* HYCollectionViewFlowLayout.h */,
+				2D5065B21C1AFF7E0057FA45 /* HYCollectionViewFlowLayout.m */,
+				2D5065AE1C1AF8F80057FA45 /* HYHCollectionController.xib */,
+			);
+			name = "CollectionView 横";
+			sourceTree = "<group>";
+		};
 		2D79A9A11C140B290025ED62 /* 核心动画 */ = {
 			isa = PBXGroup;
 			children = (
@@ -842,6 +873,26 @@
 			name = "梦想大转盘";
 			sourceTree = "<group>";
 		};
+		2DDBDC321C1BFB3300E829FA /* CollectionView 流水 */ = {
+			isa = PBXGroup;
+			children = (
+				2DDBDC351C1C041300E829FA /* CollectionLayout */,
+				2DDBDC271C1BFB2A00E829FA /* HYWaterCollectionController.h */,
+				2DDBDC281C1BFB2A00E829FA /* HYWaterCollectionController.m */,
+				2DDBDC291C1BFB2A00E829FA /* HYWaterCollectionController.xib */,
+			);
+			name = "CollectionView 流水";
+			sourceTree = "<group>";
+		};
+		2DDBDC351C1C041300E829FA /* CollectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2DDBDC361C1C042300E829FA /* WaterFLayout.h */,
+				2DDBDC371C1C042300E829FA /* WaterFLayout.m */,
+			);
+			name = CollectionLayout;
+			sourceTree = "<group>";
+		};
 		2DEC2FAF1C17114D00379C60 /* UILabel 富文本 */ = {
 			isa = PBXGroup;
 			children = (
@@ -983,6 +1034,7 @@
 		AF85B8381BF4B70F00044DF4 = {
 			isa = PBXGroup;
 			children = (
+				2D5065B51C1B11810057FA45 /* SystemConfiguration.framework */,
 				AF950DB61C16AE3F007CFFE9 /* CoreText.framework */,
 				2D7D849E1BFE071C006A1E88 /* SDWebImage.xcodeproj */,
 				2D7D847F1BFDFFED006A1E88 /* MapKit.framework */,
@@ -1223,6 +1275,8 @@
 		AFA7F89A1BF5C67100EABE40 /* me */ = {
 			isa = PBXGroup;
 			children = (
+				2DDBDC321C1BFB3300E829FA /* CollectionView 流水 */,
+				2D5065A01C1AF6EB0057FA45 /* CollectionView 横 */,
 				2DEC2FAF1C17114D00379C60 /* UILabel 富文本 */,
 				2D79A9A11C140B290025ED62 /* 核心动画 */,
 				2D7BF78A1C130B71008C62E8 /* 控件集合 */,
@@ -1538,6 +1592,7 @@
 				2D902A831C0C80B7003919C6 /* luckyNumBox_moneyShineImage_2@2x.png in Resources */,
 				2D902A651C0C80B7003919C6 /* luckyBlueQuestionMark@2x.png in Resources */,
 				2D902A311C0C80B7003919C6 /* lucky_birthday_selectbutton_disable@2x.png in Resources */,
+				2DDBDC2B1C1BFB2A00E829FA /* HYWaterCollectionController.xib in Resources */,
 				2D902A4A1C0C80B7003919C6 /* lucky_lots_shiye_ying@2x.png in Resources */,
 				AF85B84F1BF4B70F00044DF4 /* Main.storyboard in Resources */,
 				2D902A731C0C80B7003919C6 /* LuckyNameIcon@2x.png in Resources */,
@@ -1576,6 +1631,7 @@
 				2D902A5D1C0C80B7003919C6 /* LuckyBackground_For5@2x.jpg in Resources */,
 				2D902A6C1C0C80B7003919C6 /* luckycoupon_question_btn@2x.png in Resources */,
 				AF950D9B1C166974007CFFE9 /* HYAnimController.xib in Resources */,
+				2D5065B01C1AF8F80057FA45 /* HYHCollectionController.xib in Resources */,
 				2D902A3F1C0C80B7003919C6 /* lucky_lots_cloud@2x.png in Resources */,
 				2D902A461C0C80B7003919C6 /* lucky_lots_pagecontrol_inactive@2x.png in Resources */,
 				2D902A471C0C80B7003919C6 /* lucky_lots_reshake@2x.png in Resources */,
@@ -1656,6 +1712,7 @@
 				AF85B89C1BF4E69900044DF4 /* ViewController.m in Sources */,
 				AFD35C2C1C113BF900C0B7E9 /* HYUnlockController.m in Sources */,
 				AFD9680E1BFC5FB500A9764A /* HYTableViewCell.m in Sources */,
+				2D5065B31C1AFF7E0057FA45 /* HYCollectionViewFlowLayout.m in Sources */,
 				AF950DD51C16BE21007CFFE9 /* HYScrollView.m in Sources */,
 				AF950DA21C167BF1007CFFE9 /* HYHitTestController.m in Sources */,
 				2D866B0E1C0DFCDD00642CA0 /* HYQianImageView.m in Sources */,
@@ -1665,6 +1722,7 @@
 				AFD968151BFC65FF00A9764A /* HYUser.m in Sources */,
 				AFD35C301C11738B00C0B7E9 /* HYUnlockButton.m in Sources */,
 				AF00D7BB1C1044EF002C32DF /* FLAnimatedImageView.m in Sources */,
+				2DDBDC2A1C1BFB2A00E829FA /* HYWaterCollectionController.m in Sources */,
 				AFF376AA1C05B905003EDA9A /* HYRetweetView.m in Sources */,
 				2DF3F1021C0B0AA100C94C97 /* HYImageLoopController.m in Sources */,
 				2DF0F2C41C072F9F00CE7B86 /* HYRefreshFooterView.m in Sources */,
@@ -1691,11 +1749,13 @@
 				AF00D7911C0FE633002C32DF /* HYStateBarShowHideController.m in Sources */,
 				AF58FB201C06B598007473BD /* HYRefreshHeaderView.m in Sources */,
 				AFF74B021BF9D467003B8C61 /* HYHelper.m in Sources */,
+				2D5065AF1C1AF8F80057FA45 /* HYHCollectionController.m in Sources */,
 				2D902A9A1C0C8191003919C6 /* HYLuckLoopView.m in Sources */,
 				AFBDB6E31C04A72D004794B0 /* HYTableViewController.m in Sources */,
 				AF950DFC1C16D7C3007CFFE9 /* HYEmitterLayerController.m in Sources */,
 				AFF376A41C0599E1003EDA9A /* HYWeiboToolbar.m in Sources */,
 				AF950DAE1C168F8F007CFFE9 /* HYAnimLftController.m in Sources */,
+				2DDBDC381C1C042300E829FA /* WaterFLayout.m in Sources */,
 				AF8386441C0D42300052C07A /* HYChooseNumberController.m in Sources */,
 				AF85B89A1BF4E69900044DF4 /* HYTabbar.m in Sources */,
 				AFF376971C056750003EDA9A /* HYWeiboTopView.m in Sources */,
